@@ -1,118 +1,141 @@
 # Pokemmo Myself
 
-自托管的宝可梦对战平台，集成 AI / PvP 对战、队伍管理、本地化及 RAG 增强功能。当前处于 **重构阶段**，目标是在不牺牲功能的前提下让架构更清晰、体积更可控、开发体验更现代。
+自托管的宝可梦对战/练习平台，提供 **AI 对战、真人 PvP、队伍管理、中文化资源、性能与可观测性** 等完整能力。经过 Phase 0–5 全量重构，前后端已经模块化、脚本/文档齐备，可直接用于二次开发或教学研究。
 
 ---
 
-## 重构总览
+## 1. 核心特性
 
-| 阶段 | 目标 | 状态 |
-| ---- | ---- | ---- |
-| Phase 0 | 盘点脚本/文档、删除冗余（如 `tools/ts2json.js`） | ✅ |
-| Phase 1 | 梳理文档&架构蓝图，统一前后端术语 | ✅ |
-| Phase 2 | 前端模块化（`battle-system` → 打包产物 + 共享库） | ✅ |
-| Phase 3 | 后端分层与配置中心化，拆分 `battle-server.js` 职责 | ✅ |
-| Phase 4 | 资源/数据流水线与自动化测试、CI 体积守卫 | ✅ |
+- **多入口前端**：`pokemmo.html`（AI）、`pvp-lobby.html`（匹配）、`battle.html`（调试）、`team.html`（队伍搭建）
+- **模块化对战引擎**：`packages/battle-engine` 拆分 connection / protocol / state / UI / utils，可单独复用
+- **分层后端**：`poke-proxy-server` 拆成 bootstrap → controller → domain → adapters，内建 AI 队伍、PvP 房间、健康检查
+- **资源流水线**：Sprites / 数据 Manifest 生成、资源校验、体积阈值守卫
+- **测试与 CI 能力**：Jest（单元/集成）、Playwright（E2E）、ESLint、bundle-size 检查脚本
+- **可观测性**：统一 Logger + LogAggregator、Prometheus 指标 `/metrics`、前端性能上报 `/api/metrics`、诊断端点 `/api/diagnostics`
 
-详细路线请见 `docs/architecture/重构路线图.md`。
-
----
-
-## 快速开始
-
-### 依赖
-
-- Node.js 18+
-- npm 或 pnpm
-- （可选）Python 3.8+：RAG 相关脚本
-- 现代浏览器（Chrome / Edge / Firefox）
-
-### 安装
-
-```bash
-# 根目录依赖（工具、静态服务器等）
-npm install
-
-# 对战服务器依赖
-cd "pokemmo myself/poke-proxy-server"
-npm install
-```
-
-### 运行
-
-```bash
-# 1. 启动对战服务器（必需）
-cd "pokemmo myself/poke-proxy-server"
-node battle-server.js
-# ws://localhost:3071/battle
-
-# 2. 启动静态前端（分享或多端调试时）
-cd "pokemmo myself"
-node simple-http-server.js 8080
-# http://localhost:8080
-```
-
-本地调试可直接打开 `pokemmo.html` / `pvp-lobby.html`；远程分享请带上 `?server=` 查询参数并参考 `docs/部署和分享指南.md`。
+详细路线图与阶段产出见 `docs/architecture/重构路线图.md`、`docs/architecture/Phase5-观测与发布详细计划.md`。
 
 ---
 
-## 当前目录
+## 2. 目录速览
 
 ```
 pokemmo myself/
-├── packages/battle-engine/    # 前端核心逻辑（已模块化）
-├── docs/                      # 文档（重构版）
-├── battle.html / pokemmo.html # 经典入口
-├── poke-proxy-server/         # WebSocket / AI / PvP 服务
-├── tools/                     # 实用工具（manifest 生成、校验、体积检查）
-├── tests/e2e/                 # E2E 测试（Playwright）
-├── cache/、data/              # 资源与中文数据
-└── team/、RAG/                # 队伍示例、RAG 知识库
+├── packages/battle-engine/         # 前端对战引擎（ES Modules）
+├── poke-proxy-server/              # Node.js WebSocket/AI/PvP 服务
+├── docs/                           # 重构后的完整文档体系
+├── data/、cache/                   # 中文数据、Showdown 资源、manifest 输出
+├── tools/                          # 资源/体积脚本、simple-http-server 等
+├── tests/e2e/                      # Playwright 测试
+├── *.html                          # 多入口页面
+└── vendor/ / packages/*/utils/…    # 辅助脚本与前端工具
 ```
 
-更多细节参见：
-- `docs/架构说明文档.md`：前后端分层、数据流以及关键模块
-- `docs/modules/前端模块说明.md`：状态机、UI、工具拆解
-- `docs/modules/后端模块说明.md`：AI / PvP 管理器与依赖
+阅读指引：
+- `docs/学习系列-01~04`：系统学习路线（整体、前端、后端、工程化）
+- `docs/modules/前端模块说明.md`、`docs/modules/后端模块说明.md`：深入每个模块
+- `docs/部署和分享指南.md`：在本机/局域网快速分享
 
 ---
 
-## 可用脚本
+## 3. 环境与依赖
 
-| 命令 | 说明 |
+| 组件 | 版本/说明 |
+| ---- | -------- |
+| Node.js | ≥ 18（推荐与仓库一致，便于运行 `ws`/`prom-client` 等依赖） |
+| npm | 最新稳定版；也可使用 pnpm/yarn |
+| 现代浏览器 | Chrome / Edge / Firefox，需支持 ES Modules & WebSocket |
+| 可选 | Python 3.8+（部分 RAG/数据脚本）、`npx playwright install`（E2E） |
+
+安装依赖：
+```bash
+# 根目录（前端工具、静态服务器、脚本）
+npm install
+
+# 后端服务
+cd "pokemmo myself/poke-proxy-server"
+npm install
+```
+
+---
+
+## 4. 运行与调试
+
+1. **启动后端 battle server**
+   ```bash
+   cd "pokemmo myself/poke-proxy-server"
+   node battle-server.js
+   # 默认 ws://localhost:3071/battle
+   ```
+2. **启动前端静态服务器（便于分享/跨设备访问）**
+   ```bash
+   cd "pokemmo myself"
+   node simple-http-server.js 8080
+   # http://localhost:8080
+   ```
+3. **打开页面**
+   - AI 对战：`http://localhost:8080/pokemmo.html`
+   - PvP 匹配：`http://localhost:8080/pvp-lobby.html`
+   - 对战调试：`http://localhost:8080/battle.html`
+   - 队伍搭建：`http://localhost:8080/team.html`
+
+> 若仅在本机调试，可直接用浏览器打开 HTML 文件；如需让局域网内其他人访问，按 `docs/部署和分享指南.md` 生成 `?server=ws://你的IP:3071` 的入口链接。
+
+---
+
+## 5. 工程脚本
+
+| 命令 | 作用 |
 | ---- | ---- |
-| `npm run battle` | 启动 `poke-proxy-server/battle-server.js` |
-| `npm run proxy` | 资源代理（缓存精灵贴图） |
-| `npm run test` | 运行前端 `battle-engine` 冒烟测试 |
-| `npm run test:e2e` | 运行 E2E 测试（Playwright） |
-| `npm run lint` | 运行 ESLint 代码检查 |
-| `npm run lint:fix` | 自动修复 ESLint 问题 |
-| `npm run manifest:all` | 生成所有资源清单（sprites + data） |
-| `npm run validate:resources` | 校验资源完整性 |
-| `npm run check:bundle-size` | 检查构建产物体积 |
+| `npm run battle` | 从根目录启动 `poke-proxy-server/battle-server.js` |
+| `npm run proxy` | 下载/代理远程资源 |
+| `npm run manifest:all` | 生成 sprites + data manifest |
+| `npm run validate:resources` | 校验资源是否缺失 |
+| `npm run check:bundle-size` | 检查资源/构建体积是否超限 |
+| `npm run test` | `packages/battle-engine` 冒烟测试 |
+| `npm run test:e2e` | Playwright 端到端测试（需先启动前后端服务或在脚本中自启） |
+| `npm run lint` / `lint:fix` | ESLint 检查 / 自动修复 |
 
-> 🔧 旧的 `tools/ts2json.js` 已移除；数据转换改为在重构流水线中统一实现。
-
----
-
-## 功能矩阵
-
-- **AI 对战**：5 档难度（规则 / 策略 / RAG）
-- **PvP**：房间系统、重连、队伍同步
-- **队伍管理**：本地编辑 + Showdown 格式互转
-- **中文本地化**：宝可梦/技能/道具/特性全量翻译
-- **诊断工具**：协议日志、WebSocket 监控、资源缺失报告
+在 `poke-proxy-server` 子目录内还提供：
+| 命令 | 作用 |
+| ---- | ---- |
+| `npm test` | Jest 单元/集成测试 |
+| `npm run test:coverage` | 生成覆盖率 |
 
 ---
 
-## 贡献指南
+## 6. 可观测性 & 调试入口
 
-1. 阅读 `docs/项目开发文档.md` 与 `docs/architecture/重构路线图.md`
-2. 针对当期阶段提交 PR，并附上：
-   - 对应任务或阶段编号
-   - 测试或验证方式
-3. 若涉及体积 / 资源变动，请附带统计脚本输出
+- **日志**：统一 Logger + LogAggregator，可输出 JSON/文本并写文件
+- **Prometheus**：访问 `http://localhost:3071/metrics`
+- **健康/诊断**：
+  - `/health`、`/health/live`、`/health/ready`
+  - `/api/diagnostics`：房间/对战/日志/性能汇总
+  - `/api/metrics`：前端性能数据（可查询最近上报）
+- **前端性能**：内置 `PerformanceMonitor`、`WebVitalsReporter`，通过 `performance-init` 快速启用
 
-欢迎在 Discussions 中交流架构调整建议。MIT License。  
-最新更新时间：2025-11-19 (Phase 4 完成)
+---
+
+## 7. 测试矩阵
+
+- **前端引擎 smoke test**：`npm run test`
+- **后端 Jest**：`cd poke-proxy-server && npm test`
+- **Playwright E2E**：`npm run test:e2e`
+- **静态检查**：`npm run lint`
+- **资源/体积守卫**：`npm run manifest:all && npm run validate:resources && npm run check:bundle-size`
+
+建议在提交前至少执行 `lint + test（前后端）+ manifest 校验`，CI 可直接复用上述脚本。
+
+---
+
+## 8. 贡献与学习
+
+1. 先阅读 `docs/学习系列-01~04`，熟悉整体→前端→后端→工程化顺序
+2. 对照 `docs/architecture/重构路线图.md` 选择你要延伸的方向（Phase 5 已完成，可直接进入功能/性能增强）
+3. 提交修改前附上：
+   - 功能点/修复点描述
+   - 相关脚本输出（测试/校验/体积）
+4. 需要进一步了解子模块，可查 `docs/modules` 目录
+
+项目采用 MIT License。欢迎用于教育、研究或个人部署。最新更新时间：2025-11-20。
 
