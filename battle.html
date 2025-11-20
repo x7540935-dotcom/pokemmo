@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对战 - 宝可梦对战平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial Rounded MT Bold','Arial',sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+      color: #1f2430;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .battle-shell {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .panel {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 20px 50px rgba(31, 28, 44, 0.25);
+      backdrop-filter: blur(6px);
+    }
+    .battle-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(120deg, #ffcb05, #ffe27d);
+      border: 4px solid #315a9a;
+      border-radius: 18px;
+      padding: 18px 30px;
+      box-shadow: 0 15px 35px rgba(49, 90, 154, 0.3);
+    }
+    .battle-header h1 {
+      font-size: 2rem;
+      color: #315a9a;
+      text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.7);
+    }
+    .battle-header .nav {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      background: #315a9a;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 18px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+    .battle-main {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr) 280px;
+      gap: 20px;
+      min-height: 520px;
+    }
+    .team-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-height: 600px;
+    }
+    .team-panel__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .team-list {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-right: 6px;
+    }
+    .pokemon-card {
+      border: 2px solid rgba(49,90,154,0.12);
+      border-radius: 14px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .pokemon-card__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .pokemon-card__name {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #1f2430;
+    }
+    .pokemon-card__types {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .type-badge {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 999px;
+      color: #fff;
+      text-transform: uppercase;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+    }
+    .pokemon-card__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .pokemon-card__item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+      color: #555;
+      min-height: 20px;
+    }
+    .item-icon {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      display: none;
+    }
+    .pokemon-card__statuses {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .status-chip {
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .pokemon-card__hp {
+      height: 8px;
+      background: #e9edf5;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .pokemon-card__hp > div {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #52c234, #061700);
+      transition: width 0.3s ease;
+    }
+    .pokemon-card--fainted {
+      filter: grayscale(1);
+      opacity: 0.6;
+      border-color: rgba(0,0,0,0.1);
+    }
+    .pokemon-card--active {
+      border-color: rgba(49,90,154,0.6);
+      box-shadow: 0 0 15px rgba(49,90,154,0.25);
+    }
+    .pokemon-card__body {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pokemon-card__sprite {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25));
+    }
+    .pokemon-card__details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .battle-stage {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 620px;
+    }
+    .battle-stage__top,
+    .battle-stage__bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .active-card {
+      flex: 1;
+      background: rgba(247,248,252,0.92);
+      border: 1px solid rgba(49,90,154,0.18);
+      border-radius: 14px;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 150px;
+    }
+    .active-card--opponent {
+      align-items: flex-end;
+      text-align: right;
+    }
+    .active-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .active-card__name {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .active-card__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .battle-stage__arena {
+      position: relative;
+      border-radius: 20px;
+      border: 2px dashed rgba(49,90,154,0.18);
+      padding: 60px 30px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      min-height: 360px;
+    }
+    .battle-stage__arena::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: var(--battle-bg-image, url('./pokemon-showdown-client-master/play.pokemonshowdown.com/fx/bg-gen4.png'));
+      background-size: cover;
+      background-position: center;
+      opacity: 0.35;
+      filter: saturate(1.2) brightness(1.05) contrast(1.05);
+      transform: scale(1.1);
+      z-index: 0;
+    }
+    .battle-stage__arena::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.8), rgba(49,90,154,0.1));
+      z-index: 1;
+    }
+    .battle-stage__arena > * {
+      position: relative;
+      z-index: 2;
+    }
+    .arena-slot {
+      width: 40%;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 4;
+    }
+    .arena-slot img {
+      max-width: 160px;
+      max-height: 160px;
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
+    }
+    .control-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 8px 10px;
+      border: 1px solid rgba(49,90,154,0.1);
+      border-radius: 14px;
+      background: rgba(49,90,154,0.05);
+    }
+    .switch-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: rgba(49,90,154,0.06);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    .switch-controls {
+      display: flex;
+      gap: 8px;
+    }
+    #switch-select {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(49,90,154,0.2);
+      background: #fff;
+    }
+    .turn-indicator {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .moves-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .move-btn {
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: none;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: bold;
+      cursor: pointer;
+      min-height: 64px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .move-btn .move-name {
+      font-size: 1rem;
+    }
+    .move-btn .move-meta {
+      font-size: 0.78rem;
+      opacity: 0.85;
+    }
+    .move-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      filter: grayscale(0.5);
+    }
+    .team-panel .lead-selection {
+      margin-top: 12px;
+      padding: 10px;
+      border: 1px dashed rgba(49,90,154,0.3);
+      border-radius: 12px;
+      min-height: 120px;
+    }
+    #battle-log {
+      position: absolute;
+      left: 50%;
+      bottom: 30px;
+      transform: translateX(-50%);
+      width: min(70%, 520px);
+      max-height: 28%;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(8, 22, 48, 0.3);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      overflow-y: auto;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+      z-index: 5;
+    }
+    #battle-log.arena-log--visible {
+      opacity: 0.95;
+    }
+    #battle-log .line {
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.25);
+      font-size: 0.9rem;
+      color: #f4f7ff;
+    }
+    #battle-log .placeholder {
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      font-style: italic;
+    }
+    .placeholder {
+      color: #888;
+      text-align: center;
+      font-style: italic;
+    }
+    .arena-slot {
+      position: relative;
+    }
+    .arena-slot img {
+      --sprite-scale: 1;
+      transform: scaleX(var(--sprite-scale));
+      transition: transform 120ms ease;
+    }
+    .particle-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: visible;
+      z-index: 3;
+    }
+    .particle {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      opacity: 0;
+      transform: scale(0.4);
+      mix-blend-mode: screen;
+      filter: blur(0.5px);
+      box-shadow: 0 0 18px rgba(255,255,255,0.5);
+    }
+    .particle--hit {
+      animation: particle-hit 520ms ease-out forwards;
+    }
+    .particle--charge {
+      animation: particle-charge 560ms ease-out forwards;
+    }
+    .particle--status {
+      animation: particle-status 720ms ease-in-out forwards;
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+    @keyframes particle-hit {
+      0% { opacity: 0; transform: scale(0.4) translate3d(0, 0, 0); }
+      15% { opacity: 1; transform: scale(1) translate3d(-4px, -4px, 0); }
+      60% { opacity: 0.8; transform: scale(1.4) translate3d(6px, 6px, 0); }
+      100% { opacity: 0; transform: scale(1.8) translate3d(10px, 10px, 0); }
+    }
+    @keyframes particle-charge {
+      0% { opacity: 0; transform: scale(0.6); }
+      20% { opacity: 1; transform: scale(1.3); }
+      100% { opacity: 0; transform: scale(2); }
+    }
+    @keyframes particle-status {
+      0% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+      20% { opacity: 0.9; transform: scale(1) rotate(20deg); }
+      70% { opacity: 0.7; transform: scale(1.2) rotate(-25deg); }
+      100% { opacity: 0; transform: scale(1.6) rotate(0deg); }
+    }
+    .sprite--attack {
+      animation: sprite-attack 320ms ease-out;
+    }
+    .sprite--hit {
+      animation: sprite-hit 360ms ease-out;
+    }
+    .sprite--enter {
+      animation: sprite-enter 400ms ease-out;
+    }
+    .sprite--status {
+      animation: sprite-status 480ms ease-in-out;
+    }
+    @keyframes sprite-attack {
+      0% { transform: translate(0) scaleX(var(--sprite-scale, 1)); }
+      40% { transform: translate(-18px, -6px) scaleX(var(--sprite-scale, 1)); }
+      100% { transform: translate(0) scaleX(var(--sprite-scale, 1)); }
+    }
+    @keyframes sprite-hit {
+      0% { transform: translate(0); }
+      25% { transform: translate(6px, 0); }
+      50% { transform: translate(-6px, 0); }
+      75% { transform: translate(4px, 0); }
+      100% { transform: translate(0); }
+    }
+    @keyframes sprite-enter {
+      0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes sprite-status {
+      0% { filter: drop-shadow(0 0 0 rgba(255,255,255,0)); transform: scale(1); }
+      40% { filter: drop-shadow(0 0 12px rgba(255,255,255,0.7)); transform: scale(1.05); }
+      100% { filter: drop-shadow(0 0 0 rgba(255,255,255,0)); transform: scale(1); }
+    }
+    @media (max-width: 1200px) {
+      .battle-main {
+        grid-template-columns: 1fr;
+      }
+      .battle-stage {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="battle-shell">
+    <header class="battle-header">
+      <h1>宝可梦对战</h1>
+      <div class="nav">
+        <button class="btn" id="back-home">返回主页面</button>
+        <button class="btn" id="back-team">队伍搭建</button>
+      </div>
+    </header>
+
+    <div class="battle-main">
+      <aside class="panel team-panel team-panel--player">
+        <div class="team-panel__header">
+          <h2>我方队伍</h2>
+          <span class="team-count" id="player-team-count">0/6</span>
+        </div>
+        <div class="team-list" id="player-team-list">
+        <div class="placeholder">等待队伍加载...</div>
+      </div>
+        <div class="lead-selection" id="lead-selection-container">
+          <div class="placeholder">选择首发宝可梦</div>
+        </div>
+    </aside>
+
+      <section class="panel battle-stage">
+        <div class="battle-stage__top">
+          <div class="active-card active-card--opponent">
+            <div class="active-card__header">
+              <div>
+                <div class="active-card__name" id="opponent-active-name">对手宝可梦</div>
+                <div class="active-card__types" id="opponent-active-types"></div>
+          </div>
+        </div>
+            <div class="active-card__meta">
+              <div class="active-card__statuses" id="opponent-active-statuses"></div>
+      </div>
+            <div class="pokemon-card__hp">
+              <div id="opponent-active-hp"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="battle-stage__arena">
+          <div class="arena-slot arena-slot--player">
+            <div class="particle-layer" id="player-particles"></div>
+            <img id="player-active-sprite" src="" alt="我方上场宝可梦" style="display:none;">
+          </div>
+          <div class="arena-slot arena-slot--opponent">
+            <div class="particle-layer" id="opponent-particles"></div>
+            <img id="opponent-active-sprite" src="" alt="对手上场宝可梦" style="display:none;">
+          </div>
+          <div id="battle-log">
+            <div class="placeholder">这里会显示战斗事件</div>
+          </div>
+        </div>
+
+        <div class="battle-stage__bottom">
+          <div class="active-card active-card--player">
+            <div class="active-card__header">
+              <div>
+                <div class="active-card__name" id="player-active-name">我方宝可梦</div>
+                <div class="active-card__types" id="player-active-types"></div>
+              </div>
+            </div>
+            <div class="active-card__meta">
+              <div class="active-card__item">
+                <img class="item-icon" id="player-active-item-icon" alt="">
+                <span id="player-active-item">无道具</span>
+              </div>
+              <div class="active-card__statuses" id="player-active-statuses"></div>
+            </div>
+            <div class="pokemon-card__hp">
+              <div id="player-active-hp"></div>
+      </div>
+      </div>
+
+          <div class="control-panel">
+            <div class="switch-panel">
+              <span class="turn-indicator" id="turn-status">等待中...</span>
+              <div class="switch-controls">
+        <select id="switch-select" disabled>
+          <option value="">选择要上场的宝可梦（换人）</option>
+        </select>
+        <button class="btn" id="switch-btn" disabled>确认换人</button>
+      </div>
+          </div>
+            <div class="moves-grid" id="moves-grid">
+              <button class="move-btn" id="move-1" disabled>
+                <span class="move-name">技能1</span>
+                <span class="move-meta"></span>
+              </button>
+              <button class="move-btn" id="move-2" disabled>
+                <span class="move-name">技能2</span>
+                <span class="move-meta"></span>
+              </button>
+              <button class="move-btn" id="move-3" disabled>
+                <span class="move-name">技能3</span>
+                <span class="move-meta"></span>
+              </button>
+              <button class="move-btn" id="move-4" disabled>
+                <span class="move-name">技能4</span>
+                <span class="move-meta"></span>
+              </button>
+        </div>
+      </div>
+        </div>
+      </section>
+
+      <aside class="panel team-panel team-panel--opponent">
+        <div class="team-panel__header">
+          <h2>对手队伍</h2>
+          <span class="team-count" id="opponent-team-count">0/6</span>
+        </div>
+        <div class="team-list" id="opponent-team-list">
+          <div class="placeholder">等待对手队伍...</div>
+      </div>
+    </aside>
+      </div>
+
+  </div>
+
+  <!-- 主程序 -->
+  <script type="module">
+    import './packages/battle-engine/src/legacy-shim.js';
+    // 初始化性能监控（可选，如果需要性能数据上报）
+    // import './packages/battle-engine/src/utils/performance-init.js';
+    
+    window.BATTLE_FX_BASE = './pokemon-showdown-client-master/play.pokemonshowdown.com/fx/';
+    
+    const SHOWDOWN_CACHE_KEY = 'pokemmo_showdown_cache_v1';
+    const SHOWDOWN_CACHE_TTL = 1000 * 60 * 60 * 24; // 24h
+    let showdownDataPromise = null;
+
+    function readShowdownCache() {
+      try {
+        if (typeof localStorage === 'undefined') return null;
+        const cached = localStorage.getItem(SHOWDOWN_CACHE_KEY);
+        if (!cached) return null;
+        const parsed = JSON.parse(cached);
+        if (!parsed?.timestamp || !parsed?.data) return null;
+        if (Date.now() - parsed.timestamp > SHOWDOWN_CACHE_TTL) return null;
+        return parsed.data;
+      } catch (error) {
+        console.warn('[Main] 读取 Showdown 数据缓存失败', error);
+        return null;
+      }
+    }
+
+    function writeShowdownCache(data) {
+      try {
+        if (typeof localStorage === 'undefined') return;
+        localStorage.setItem(SHOWDOWN_CACHE_KEY, JSON.stringify({
+          timestamp: Date.now(),
+          data
+        }));
+      } catch (error) {
+        console.warn('[Main] 写入 Showdown 数据缓存失败', error);
+      }
+    }
+
+    async function fetchShowdownDataset(remote, local, exportName) {
+      try {
+        const response = await fetch(remote, { mode: 'cors' });
+        if (response.ok) {
+          return await response.json();
+        }
+      } catch (error) {
+        console.warn(`[Main] 远程获取 ${remote} 失败，尝试本地备份`, error);
+      }
+
+      try {
+        const localRes = await fetch(local);
+        if (!localRes.ok) {
+          console.warn(`[Main] 本地数据 ${local} 加载失败`);
+          return {};
+        }
+        const text = await localRes.text();
+        const prefix = `export const ${exportName} = `;
+        const startIndex = text.indexOf(prefix);
+        if (startIndex === -1) {
+          console.warn(`[Main] 未在 ${local} 中找到 ${exportName}`);
+          return {};
+        }
+        let jsonString = text.slice(startIndex + prefix.length).trim();
+        if (jsonString.endsWith(';')) {
+          jsonString = jsonString.slice(0, -1);
+        }
+        return JSON.parse(jsonString);
+      } catch (error) {
+        console.warn(`[Main] 解析本地数据 ${local} 失败`, error);
+        return {};
+      }
+    }
+
+    async function fetchShowdownData() {
+      const base = 'https://play.pokemonshowdown.com/data';
+      const datasets = [
+        { key: 'moves', remote: `${base}/moves.json`, local: 'data/moves.js', exportName: 'BattleMovedex' },
+        { key: 'pokedex', remote: `${base}/pokedex.json`, local: 'data/pokedex.js', exportName: 'BattlePokedex' },
+        { key: 'items', remote: `${base}/items.json`, local: 'data/items.js', exportName: 'BattleItems' }
+      ];
+      const results = await Promise.all(datasets.map(ds => fetchShowdownDataset(ds.remote, ds.local, ds.exportName)));
+      const data = {
+        moves: results[0] || {},
+        pokedex: results[1] || {},
+        items: results[2] || {}
+      };
+      window.ShowdownData = data;
+      writeShowdownCache(data);
+      return data;
+    }
+
+    async function loadShowdownData(options = {}) {
+      const forceRefresh = !!options.forceRefresh;
+      if (!forceRefresh && window.ShowdownData && Object.keys(window.ShowdownData.moves || {}).length) {
+        return window.ShowdownData;
+      }
+      if (showdownDataPromise && !forceRefresh) {
+        return showdownDataPromise;
+      }
+      if (!forceRefresh) {
+        const cached = readShowdownCache();
+        if (cached) {
+          window.ShowdownData = cached;
+          return cached;
+        }
+      }
+      showdownDataPromise = fetchShowdownData()
+        .catch(error => {
+          console.warn('[Main] 获取 Showdown 数据失败，使用空数据', error);
+          return window.ShowdownData || { moves: {}, pokedex: {}, items: {} };
+        })
+        .finally(() => {
+          showdownDataPromise = null;
+        });
+      return showdownDataPromise;
+    }
+
+    // 初始化协议监控（简化版）
+    window.protocolLogs = [];
+    window.protocolStartTime = Date.now();
+    console.log('[Main] 协议监控已初始化');
+    
+    const localizationPromise = (async () => {
+      if (!window.Localization) {
+        console.error('[Main] ❌ window.Localization 不存在！');
+        return;
+      }
+        console.log('[Main] 开始初始化 Localization...');
+        try {
+          await window.Localization.init();
+          console.log('[Main] ✅ Localization 初始化成功');
+          console.log('[Main] Localization.isReady():', window.Localization.isReady());
+        } catch (e) {
+          console.error('[Main] ❌ Localization 初始化失败', e);
+          console.error('[Main] 错误详情:', e.message, e.stack);
+        }
+    })();
+
+    const showdownReadyPromise = loadShowdownData().catch(error => {
+      console.warn('[Main] Showdown 数据加载失败', error);
+      return { moves: {}, pokedex: {}, items: {} };
+    });
+
+    // 初始化
+    (function() {
+      const domElements = {
+        moves: [
+          document.getElementById('move-1'),
+          document.getElementById('move-2'),
+          document.getElementById('move-3'),
+          document.getElementById('move-4'),
+        ],
+        switchSelect: document.getElementById('switch-select'),
+        switchBtn: document.getElementById('switch-btn'),
+        turnStatus: document.getElementById('turn-status'),
+        playerActive: {
+          sprite: document.getElementById('player-active-sprite'),
+          name: document.getElementById('player-active-name'),
+          types: document.getElementById('player-active-types'),
+          statuses: document.getElementById('player-active-statuses'),
+          item: document.getElementById('player-active-item'),
+          itemIcon: document.getElementById('player-active-item-icon'),
+          hp: document.getElementById('player-active-hp')
+        },
+        opponentActive: {
+          sprite: document.getElementById('opponent-active-sprite'),
+          name: document.getElementById('opponent-active-name'),
+          types: document.getElementById('opponent-active-types'),
+          statuses: document.getElementById('opponent-active-statuses'),
+          hp: document.getElementById('opponent-active-hp')
+        },
+        playerTeamList: document.getElementById('player-team-list'),
+        opponentTeamList: document.getElementById('opponent-team-list'),
+        playerTeamCount: document.getElementById('player-team-count'),
+        opponentTeamCount: document.getElementById('opponent-team-count'),
+        leadSelectionContainer: document.getElementById('lead-selection-container'),
+        battleLog: document.getElementById('battle-log'),
+      };
+
+      // 创建核心组件
+      const battleEngine = new BattleEngine();
+      const stateManager = new StateManager();
+      const battleUI = new BattleUI(domElements);
+      window.__battleUI__ = battleUI;
+      const animationManager = new AnimationManager({
+        sprites: {
+          p1: domElements.playerActive.sprite,
+          p2: domElements.opponentActive.sprite
+        },
+        layers: {
+          p1: document.getElementById('player-particles'),
+          p2: document.getElementById('opponent-particles')
+        },
+        fxBasePath: window.BATTLE_FX_BASE
+      });
+      const stateMachine = new BattleStateMachine();
+      const protocolParser = new ProtocolParser();
+
+      localizationPromise.finally(() => battleUI.onLocalizationReady());
+      showdownReadyPromise.then(data => battleUI.setShowdownData(data || {}));
+
+      const STATUS_MAP = {
+        brn: '灼伤',
+        par: '麻痹',
+        slp: '睡眠',
+        psn: '中毒',
+        tox: '剧毒',
+        frz: '冰冻',
+        confusion: '混乱'
+      };
+
+      const STAT_MAP = {
+        atk: '攻击',
+        def: '防御',
+        spa: '特攻',
+        spd: '特防',
+        spe: '速度',
+        accuracy: '命中',
+        evasion: '回避'
+      };
+
+      function translatePokemonIdentifier(identifier, details) {
+        if (!identifier && !details) return '';
+        let name = '';
+        if (details && typeof SpriteLoader !== 'undefined' && SpriteLoader?.extractSpeciesFromDetails) {
+          name = SpriteLoader.extractSpeciesFromDetails(details);
+        }
+        if (!name && identifier) {
+          const parts = identifier.split(':');
+          if (parts.length > 1) {
+            name = parts[1].trim();
+          } else {
+            name = identifier.trim();
+          }
+        }
+        if (!name) return '';
+        return window.Localization?.translatePokemon(name) || name;
+      }
+
+      function getSideLabel(identifier) {
+        if (!identifier) return '';
+        if (identifier.startsWith('p1')) return '我方';
+        if (identifier.startsWith('p2')) return '对方';
+        return '';
+      }
+
+      function formatConditionForDisplay(condition) {
+        if (!condition) return '';
+        if (condition.includes('fnt')) return '已倒下';
+        if (condition.includes('/')) return `HP ${condition}`;
+        const normalized = condition.trim();
+        return STATUS_MAP[normalized] || normalized;
+      }
+
+      function translateMoveName(move) {
+        if (!move) return '';
+        return window.Localization?.translateMove(move) || move;
+      }
+
+      function translateAbilityName(ability) {
+        if (!ability) return '';
+        return window.Localization?.translateAbility(ability) || ability;
+      }
+
+      function translateItemName(item) {
+        if (!item) return '';
+        return window.Localization?.translateItem(item) || item;
+      }
+
+      function translateStatusId(status) {
+        if (!status) return '';
+        return STATUS_MAP[status] || status;
+      }
+
+      function translateStatId(stat) {
+        if (!stat) return stat || '';
+        return STAT_MAP[stat] || stat;
+      }
+
+      function translatePlayerName(name) {
+        if (!name) return '';
+        if (name === 'Player 1' || name === 'You') return '你';
+        if (name === 'Player 2') return '玩家2';
+        if (name === 'AI') return 'AI';
+        if (name === 'Player 1 (spectator)') return '观战者';
+        return name;
+      }
+
+      function extractSourceInfo(parts) {
+        if (!Array.isArray(parts)) return '';
+        const fromPart = parts.find(part => part?.startsWith('[from]'));
+        if (!fromPart) return '';
+        const info = fromPart.replace('[from] ', '');
+        if (info.startsWith('ability:')) {
+          const abilityId = info.slice('ability:'.length);
+          const abilityName = translateAbilityName(abilityId);
+          return `（来源：特性 ${abilityName}）`;
+        }
+        if (info.startsWith('item:')) {
+          const itemId = info.slice('item:'.length);
+          const itemName = translateItemName(itemId);
+          return `（来源：道具 ${itemName}）`;
+        }
+        if (info.startsWith('move:')) {
+          const moveId = info.slice('move:'.length);
+          const moveName = translateMoveName(moveId);
+          return `（来源：技能 ${moveName}）`;
+        }
+        return `（来源：${info})`;
+      }
+
+      let logFadeTimer = null;
+      function triggerLogFlash() {
+        const log = domElements.battleLog;
+        if (!log) return;
+        log.classList.add('arena-log--visible');
+        if (logFadeTimer) {
+          clearTimeout(logFadeTimer);
+        }
+        logFadeTimer = setTimeout(() => {
+          log.classList.remove('arena-log--visible');
+        }, 2600);
+      }
+
+      function addLogLine(text) {
+        if (!text) return;
+        const log = domElements.battleLog;
+        const placeholder = log.querySelector('.placeholder');
+        if (placeholder) {
+          placeholder.remove();
+        }
+        const lineEl = document.createElement('div');
+        lineEl.className = 'line';
+        lineEl.textContent = text;
+        log.appendChild(lineEl);
+        const maxLogLines = 500;
+        while (log.children.length > maxLogLines) {
+          log.removeChild(log.firstChild);
+        }
+        log.scrollTop = log.scrollHeight;
+        triggerLogFlash();
+      }
+
+      function formatProtocolLine(line) {
+        if (!line || !line.startsWith('|')) return null;
+        const parsed = protocolParser.parseLine(line);
+        if (!parsed) return null;
+        const { type, parts } = parsed;
+        switch (type) {
+          case 'start':
+            return '对战开始！';
+          case 'turn': {
+            const turn = parts?.[0] ? parseInt(parts[0], 10) : NaN;
+            if (!Number.isNaN(turn)) {
+              return `进入第 ${turn} 回合`;
+            }
+            return null;
+          }
+          case 'move': {
+            const actorIdent = parts?.[0] || '';
+            const moveId = parts?.[1] || '';
+            const targetIdent = parts?.[2] || '';
+            const actorName = translatePokemonIdentifier(actorIdent);
+            const targetName = translatePokemonIdentifier(targetIdent);
+            const moveName = translateMoveName(moveId);
+            const actorSide = getSideLabel(actorIdent);
+            const targetSide = getSideLabel(targetIdent);
+            let text = `${actorSide ? actorSide + ' ' : ''}${actorName || actorIdent} 使用了 ${moveName || moveId}`;
+            if (targetName || targetSide) {
+              text += `，目标${targetSide ? `${targetSide} ` : ''}${targetName || targetIdent}`;
+            }
+            return text;
+          }
+          case 'switch':
+          case 'drag': {
+            const ident = parts?.[0] || '';
+            const details = parts?.[1] || '';
+            const condition = parts?.[2] || '';
+            const pokemonName = translatePokemonIdentifier(ident, details);
+            const side = getSideLabel(ident);
+            const hpText = formatConditionForDisplay(condition);
+            return `${side ? side + ' ' : ''}${pokemonName || ident} 上场${hpText ? `（${hpText}）` : ''}`;
+          }
+          case '-damage': {
+            const ident = parts?.[0] || '';
+            const condition = parts?.[1] || '';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            const hpText = formatConditionForDisplay(condition);
+            const extra = extractSourceInfo(parts?.slice(2));
+            let text = `${side ? side + ' ' : ''}${pokemonName || ident} 受到伤害`;
+            if (hpText) {
+              text += `，当前状态：${hpText}`;
+            }
+            return `${text}${extra}`;
+          }
+          case '-heal': {
+            const ident = parts?.[0] || '';
+            const condition = parts?.[1] || '';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            const hpText = formatConditionForDisplay(condition);
+            const extra = extractSourceInfo(parts?.slice(2));
+            let text = `${side ? side + ' ' : ''}${pokemonName || ident} 回复了体力`;
+            if (hpText) {
+              text += `（${hpText}）`;
+            }
+            return `${text}${extra}`;
+          }
+          case 'faint': {
+            const ident = parts?.[0] || '';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            return `${side ? side + ' ' : ''}${pokemonName || ident} 倒下了`;
+          }
+          case '-status': {
+            const ident = parts?.[0] || '';
+            const statusId = parts?.[1] || '';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            const statusName = translateStatusId(statusId);
+            const extra = extractSourceInfo(parts?.slice(2));
+            return `${side ? side + ' ' : ''}${pokemonName || ident} 陷入了 ${statusName} 状态${extra}`;
+          }
+          case '-curestatus': {
+            const ident = parts?.[0] || '';
+            const statusId = parts?.[1] || '';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            const statusName = translateStatusId(statusId);
+            return `${side ? side + ' ' : ''}${pokemonName || ident} 解除 ${statusName} 状态`;
+          }
+          case '-boost': {
+            const ident = parts?.[0] || '';
+            const statId = parts?.[1] || '';
+            const amount = parts?.[2] || '1';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            const statName = translateStatId(statId);
+            const extra = extractSourceInfo(parts?.slice(3));
+            return `${side ? side + ' ' : ''}${pokemonName || ident} 的${statName}提升了 ${amount} 级${extra}`;
+          }
+          case '-unboost': {
+            const ident = parts?.[0] || '';
+            const statId = parts?.[1] || '';
+            const amount = parts?.[2] || '1';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            const statName = translateStatId(statId);
+            const extra = extractSourceInfo(parts?.slice(3));
+            return `${side ? side + ' ' : ''}${pokemonName || ident} 的${statName}下降了 ${amount} 级${extra}`;
+          }
+          case '-activate': {
+            const ident = parts?.[0] || '';
+            const effect = parts?.[1] || '';
+            const pokemonName = translatePokemonIdentifier(ident);
+            const side = getSideLabel(ident);
+            if (effect.startsWith('ability:')) {
+              const abilityId = effect.slice('ability:'.length);
+              const abilityName = translateAbilityName(abilityId);
+              return `${side ? side + ' ' : ''}${pokemonName || ident} 的特性 ${abilityName} 生效`;
+            }
+            if (effect.startsWith('item:')) {
+              const itemId = effect.slice('item:'.length);
+              const itemName = translateItemName(itemId);
+              return `${side ? side + ' ' : ''}${pokemonName || ident} 的道具 ${itemName} 生效`;
+            }
+            const moveName = translateMoveName(effect.replace('move:', ''));
+            return `${side ? side + ' ' : ''}${pokemonName || ident} 触发了 ${moveName || effect}`;
+          }
+          case '-weather': {
+            const weatherId = parts?.[0] || '';
+            const weatherMap = {
+              RainDance: '下起了雨',
+              PrimordialSea: '暴雨不停歇',
+              SunnyDay: '阳光普照',
+              DesolateLand: '烈日炎炎',
+              Sandstorm: '沙暴肆虐',
+              Hail: '冰雹降临',
+              Snow: '暴雪来袭',
+              DeltaStream: '乱流席卷',
+              null: '气象变化'
+            };
+            return weatherMap[weatherId] || `天气变为 ${weatherId}`;
+          }
+          case 'win': {
+            const winner = parts?.[0] || '';
+            const winnerName = translatePlayerName(winner);
+            return `胜利者：${winnerName}`;
+          }
+          case 'tie':
+            return '对战以平局结束';
+          default:
+            return null;
+        }
+      }
+
+      // 创建各个阶段（简化架构：不再依赖独立模块）
+      const teamLoadingPhase = new TeamLoadingPhase(battleEngine, stateManager);
+      const teamPreviewPhase = new TeamPreviewPhase(battleEngine, stateManager, battleUI);
+      const pokemonDataPhase = new PokemonDataPhase(battleEngine, stateManager, battleUI);
+      const battlePhase = new BattlePhase(battleEngine, stateManager, battleUI, animationManager);
+
+      // 注册阶段
+      stateMachine.registerPhase('team-loading', teamLoadingPhase);
+      stateMachine.registerPhase('team-preview', teamPreviewPhase);
+      stateMachine.registerPhase('pokemon-data', pokemonDataPhase);
+      stateMachine.registerPhase('battle', battlePhase);
+
+      // 设置UI回调
+      battleUI.setMoveClickCallback((moveIndex) => {
+        const currentPhase = stateMachine.getCurrentPhase();
+        if (currentPhase) {
+          currentPhase.handleUserAction('use-move', { moveIndex });
+        }
+      });
+
+      battleUI.setSwitchClickCallback((position) => {
+        const currentPhase = stateMachine.getCurrentPhase();
+        if (currentPhase) {
+          const action = currentPhase.name === 'team-preview' ? 'select-lead' : 'switch-pokemon';
+          currentPhase.handleUserAction(action, { position });
+        }
+      });
+
+      // 设置协议监听（转发给当前阶段）
+      battleEngine.onMessage((data) => {
+        // 优化：立即处理协议，减少日志输出
+        const dataStr = String(data);
+        
+        // 检查是否包含 request 协议（快速检查）
+        const hasRequest = dataStr.includes('|request|');
+        if (hasRequest) {
+          console.log(`[Main] 🔥 收到包含 request 协议的数据 (${dataStr.length} 字节)`);
+        }
+        
+        const lines = dataStr.split('\n');
+        const logMessages = [];
+        
+        // 优化：使用 requestAnimationFrame 或 setTimeout 批量处理，避免阻塞
+        // 对于关键协议（request），立即处理；对于其他协议，可以延迟处理
+        const criticalLines = [];
+        const normalLines = [];
+        
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+          if (!line.trim()) {
+            continue;
+          }
+          
+          // 关键协议立即处理
+          if (line.startsWith('|request|') || line.startsWith('|teampreview|') || line.startsWith('|start|')) {
+            criticalLines.push(line);
+            if (line.startsWith('|request|')) {
+              console.log(`[Main] 🔥 立即处理 request 协议`);
+            }
+          } else {
+            normalLines.push(line);
+          }
+        }
+        
+        // 立即处理关键协议
+        criticalLines.forEach(line => {
+          processProtocolLine(line, stateMachine, logMessages);
+        });
+        
+        // 使用 requestAnimationFrame 批量处理其他协议，避免阻塞UI
+        if (normalLines.length > 0) {
+          requestAnimationFrame(() => {
+            normalLines.forEach(line => {
+              processProtocolLine(line, stateMachine, logMessages);
+            });
+            
+            // 更新日志显示
+            if (logMessages.length > 0) {
+              logMessages.forEach(addLogLine);
+            }
+          });
+        } else {
+          // 如果没有普通协议，立即更新日志
+          if (logMessages.length > 0) {
+            logMessages.forEach(addLogLine);
+          }
+        }
+      });
+      
+      // 提取协议处理逻辑为独立函数，便于复用
+      function processProtocolLine(line, stateMachine, logMessages) {
+        // 获取当前阶段并处理协议
+        let currentPhase = stateMachine.getCurrentPhase();
+        if (currentPhase) {
+          const phaseBefore = currentPhase.name;
+          currentPhase.handleProtocol(line);
+          
+          // 如果阶段转换了，检查是否需要重新处理这条消息
+          const phaseAfter = stateMachine.getCurrentPhase();
+          if (phaseAfter && phaseAfter.name !== phaseBefore) {
+            // 只对非动画相关的协议重新处理
+            const shouldReprocess = line.startsWith('|poke|') || 
+                                   line.startsWith('|teampreview|') || 
+                                   line.startsWith('|request|') ||
+                                   line.startsWith('|switch|') ||
+                                   line.startsWith('|start|');
+            
+            if (shouldReprocess) {
+              phaseAfter.handleProtocol(line);
+            }
+          }
+        } else {
+          console.warn('[Main] 没有当前阶段，无法处理协议:', line.substring(0, 50));
+        }
+
+        const formatted = formatProtocolLine(line);
+        if (formatted) {
+          if (Array.isArray(formatted)) {
+            formatted.forEach(msg => msg && logMessages.push(msg));
+          } else {
+            logMessages.push(formatted);
+          }
+        }
+      };
+
+      // 导航按钮
+      document.getElementById('back-home').addEventListener('click', () => {
+        window.location.href = 'pokemmo.html';
+      });
+      document.getElementById('back-team').addEventListener('click', () => {
+        window.location.href = 'team.html';
+      });
+
+      // 队伍显示已由 LeadSelectionModule 处理，这里不再需要
+
+      // 启动状态机
+      console.log('[Main] 启动对战系统');
+      stateMachine.transitionTo('team-loading');
+      
+      // 定期生成协议监控报告（每10秒）
+      setInterval(() => {
+        if (window.protocolLogs) {
+          console.log('[Main] ========== 生成协议监控报告 ==========');
+          const elapsed = Date.now() - (window.protocolStartTime || Date.now());
+          console.log(`[Protocol Report-Frontend] ========== 协议监控报告 [${elapsed}ms] ==========`);
+          console.log(`[Protocol Report-Frontend] 总协议数: ${window.protocolLogs.length}`);
+          
+          const receiveCount = window.protocolLogs.filter(log => log.direction === 'receive').length;
+          const sendCount = window.protocolLogs.filter(log => log.direction === 'send').length;
+          console.log(`[Protocol Report-Frontend] 接收: ${receiveCount} 条, 发送: ${sendCount} 条`);
+          
+          const keyProtocols = ['request', 'teampreview', 'switch', 'poke', 'start'];
+          keyProtocols.forEach(proto => {
+            const hasProtocol = window.protocolLogs.some(log => log.data.includes(`|${proto}|`));
+            console.log(`[Protocol Report-Frontend] ${proto}: ${hasProtocol ? '✅' : '❌'}`);
+          });
+          
+          console.log(`[Protocol Report-Frontend] ============================================\n`);
+        }
+      }, 10000);
+      
+      // 在控制台添加命令，方便手动生成报告
+      window.generateProtocolReport = () => {
+        // 生成协议报告（简化版）
+        if (window.protocolLogs) {
+          const elapsed = Date.now() - (window.protocolStartTime || Date.now());
+          console.log(`\n[Protocol Report-Frontend] ========== 协议监控报告 [${elapsed}ms] ==========`);
+          console.log(`[Protocol Report-Frontend] 总协议数: ${window.protocolLogs.length}`);
+          
+          const receiveCount = window.protocolLogs.filter(log => log.direction === 'receive').length;
+          const sendCount = window.protocolLogs.filter(log => log.direction === 'send').length;
+          console.log(`[Protocol Report-Frontend] 接收: ${receiveCount} 条, 发送: ${sendCount} 条`);
+          
+          const keyProtocols = ['request', 'teampreview', 'switch', 'poke', 'start'];
+          keyProtocols.forEach(proto => {
+            const hasProtocol = window.protocolLogs.some(log => log.data.includes(`|${proto}|`));
+            console.log(`[Protocol Report-Frontend] ${proto}: ${hasProtocol ? '✅' : '❌'}`);
+          });
+          
+          console.log(`[Protocol Report-Frontend] ============================================\n`);
+        } else {
+          console.error('ProtocolMonitor 未初始化');
+        }
+      };
+    })();
+  </script>
+</body>
+</html>

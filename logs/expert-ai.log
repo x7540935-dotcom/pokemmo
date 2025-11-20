@@ -1,0 +1,360 @@
+[2025-11-18T02:15:39.783Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-18T02:15:39.785Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-18T02:15:39.858Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": true,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:15:39.786Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-18T02:15:39.858Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:15:41.292Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:15:41.292Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:15:52.294Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:15:52.295Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:15:52.374Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:15:52.374Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:00.138Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:00.139Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:04.057Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:04.056Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:05.636Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:05.636Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:09.635Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:09.634Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:11.864Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:16:11.864Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:11.931Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:11.931Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:16.941Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:16.941Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:26.617Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:26.616Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:28.161Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:28.161Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:16:28.223Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:28.224Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:36.154Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:36.155Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:46.257Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:46.258Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:51.766Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:51.766Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:55.701Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:16:55.702Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:59.198Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:59.197Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:16:59.226Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:16:59.225Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:19:38.363Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-18T02:19:38.364Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-18T02:19:38.364Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-18T02:19:38.494Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:19:38.494Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": true,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:19:40.061Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:19:40.061Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:19:47.131Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:19:47.131Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:19:53.289Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:19:53.290Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:19:56.761Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:19:56.763Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:19:58.453Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:19:58.453Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:01.744Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:01.744Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:03.307Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:03.306Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:05.885Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:20:05.885Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:05.941Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:05.941Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:07.773Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:20:07.774Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:07.870Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:07.871Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:13.706Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:13.706Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:20.283Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:20.283Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:24.484Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:24.484Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:26.786Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:26.787Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:34.729Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:34.728Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:37.125Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:37.126Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:39.316Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:39.316Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:44.204Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:44.205Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:46.428Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:20:46.429Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:46.486Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:46.487Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:49.508Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:49.508Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:52.792Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:52.792Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:20:57.483Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:20:57.484Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:00.550Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:00.550Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:05.736Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:05.736Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:06.839Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:06.839Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:09.552Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:09.552Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:10.773Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:10.774Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:12.116Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:21:12.116Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:12.179Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:12.179Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:14.036Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:14.036Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:17.276Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": false,
+  "hasTeamPreview": false,
+  "hasForceSwitch": true
+}
+[2025-11-18T02:21:17.276Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:17.358Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-18T02:21:17.359Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:19.515Z] [ExpertAI] [WARN] LLM不可用，使用降级方案
+[2025-11-18T02:21:19.515Z] [ExpertAI] [INFO] 开始生成决策 {
+  "hasActive": true,
+  "hasTeamPreview": false,
+  "hasForceSwitch": false
+}
+[2025-11-20T08:41:42.782Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-20T08:41:42.784Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-20T08:41:42.785Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-20T08:42:26.726Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-20T08:42:26.727Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-20T08:42:26.728Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}

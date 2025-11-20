@@ -1,0 +1,5684 @@
+{
+  "bulbasaur": {
+    "chineseName": "妙蛙种子",
+    "number": 1,
+    "englishName": "bulbasaur",
+    "spriteFile": "1-妙蛙种子.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ivysaur": {
+    "chineseName": "妙蛙草",
+    "number": 2,
+    "englishName": "ivysaur",
+    "spriteFile": "2-妙蛙草.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "venusaur": {
+    "chineseName": "妙蛙花",
+    "number": 3,
+    "englishName": "venusaur",
+    "spriteFile": "3-妙蛙花.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "charmander": {
+    "chineseName": "小火龙",
+    "number": 4,
+    "englishName": "charmander",
+    "spriteFile": "4-小火龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "charmeleon": {
+    "chineseName": "火恐龙",
+    "number": 5,
+    "englishName": "charmeleon",
+    "spriteFile": "5-火恐龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "charizard": {
+    "chineseName": "喷火龙",
+    "number": 6,
+    "englishName": "charizard",
+    "spriteFile": "6-喷火龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "squirtle": {
+    "chineseName": "杰尼龟",
+    "number": 7,
+    "englishName": "squirtle",
+    "spriteFile": "7-杰尼龟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "wartortle": {
+    "chineseName": "卡咪龟",
+    "number": 8,
+    "englishName": "wartortle",
+    "spriteFile": "8-卡咪龟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "blastoise": {
+    "chineseName": "水箭龟",
+    "number": 9,
+    "englishName": "blastoise",
+    "spriteFile": "9-水箭龟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "caterpie": {
+    "chineseName": "绿毛虫",
+    "number": 10,
+    "englishName": "caterpie",
+    "spriteFile": "10-绿毛虫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "metapod": {
+    "chineseName": "铁甲蛹",
+    "number": 11,
+    "englishName": "metapod",
+    "spriteFile": "11-铁甲蛹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "butterfree": {
+    "chineseName": "巴大蝶",
+    "number": 12,
+    "englishName": "butterfree",
+    "spriteFile": "12-巴大蝶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "weedle": {
+    "chineseName": "独角虫",
+    "number": 13,
+    "englishName": "weedle",
+    "spriteFile": "13-独角虫.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f9/0013_cry.opus"
+  },
+  "kakuna": {
+    "chineseName": "鐵殼蛹",
+    "number": 14,
+    "englishName": "kakuna",
+    "spriteFile": "14-鐵殼蛹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "beedrill": {
+    "chineseName": "大针蜂",
+    "number": 15,
+    "englishName": "beedrill",
+    "spriteFile": "15-大针蜂.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pidgey": {
+    "chineseName": "波波",
+    "number": 16,
+    "englishName": "pidgey",
+    "spriteFile": "16-波波.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/9/91/0016_cry.opus"
+  },
+  "pidgeotto": {
+    "chineseName": "比比鸟",
+    "number": 17,
+    "englishName": "pidgeotto",
+    "spriteFile": "17-比比鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pidgeot": {
+    "chineseName": "大比鸟",
+    "number": 18,
+    "englishName": "pidgeot",
+    "spriteFile": "18-大比鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rattata": {
+    "chineseName": "小拉达",
+    "number": 19,
+    "englishName": "rattata",
+    "spriteFile": "19-小拉达.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "raticate": {
+    "chineseName": "拉达",
+    "number": 20,
+    "englishName": "raticate",
+    "spriteFile": "20-拉达.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "spearow": {
+    "chineseName": "烈雀",
+    "number": 21,
+    "englishName": "spearow",
+    "spriteFile": "21-烈雀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "fearow": {
+    "chineseName": "大嘴雀",
+    "number": 22,
+    "englishName": "fearow",
+    "spriteFile": "22-大嘴雀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ekans": {
+    "chineseName": "阿柏蛇",
+    "number": 23,
+    "englishName": "ekans",
+    "spriteFile": "23-阿柏蛇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "arbok": {
+    "chineseName": "阿柏怪",
+    "number": 24,
+    "englishName": "arbok",
+    "spriteFile": "24-阿柏怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pikachu": {
+    "chineseName": "皮卡丘",
+    "number": 25,
+    "englishName": "pikachu",
+    "spriteFile": "25-皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "raichu": {
+    "chineseName": "雷丘",
+    "number": 36,
+    "englishName": "raichu",
+    "spriteFile": "36-雷丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sandshrew": {
+    "chineseName": "穿山鼠",
+    "number": 37,
+    "englishName": "sandshrew",
+    "spriteFile": "37-穿山鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sandslash": {
+    "chineseName": "穿山王",
+    "number": 38,
+    "englishName": "sandslash",
+    "spriteFile": "38-穿山王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "nidorina": {
+    "chineseName": "尼多娜",
+    "number": 39,
+    "englishName": "nidorina",
+    "spriteFile": "39-尼多娜.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "nidoqueen": {
+    "chineseName": "尼多后",
+    "number": 40,
+    "englishName": "nidoqueen",
+    "spriteFile": "40-尼多后.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "nidorino": {
+    "chineseName": "尼多力诺",
+    "number": 41,
+    "englishName": "nidorino",
+    "spriteFile": "41-尼多力诺.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "nidoking": {
+    "chineseName": "尼多王",
+    "number": 42,
+    "englishName": "nidoking",
+    "spriteFile": "42-尼多王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "clefairy": {
+    "chineseName": "皮皮",
+    "number": 43,
+    "englishName": "clefairy",
+    "spriteFile": "43-皮皮.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "clefable": {
+    "chineseName": "皮可西",
+    "number": 44,
+    "englishName": "clefable",
+    "spriteFile": "44-皮可西.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vulpix": {
+    "chineseName": "六尾",
+    "number": 45,
+    "englishName": "vulpix",
+    "spriteFile": "45-六尾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ninetales": {
+    "chineseName": "九尾",
+    "number": 46,
+    "englishName": "ninetales",
+    "spriteFile": "46-九尾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "jigglypuff": {
+    "chineseName": "胖丁",
+    "number": 47,
+    "englishName": "jigglypuff",
+    "spriteFile": "47-胖丁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "wigglytuff": {
+    "chineseName": "胖可丁",
+    "number": 48,
+    "englishName": "wigglytuff",
+    "spriteFile": "48-胖可丁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "zubat": {
+    "chineseName": "超音蝠",
+    "number": 49,
+    "englishName": "zubat",
+    "spriteFile": "49-超音蝠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "golbat": {
+    "chineseName": "大嘴蝠",
+    "number": 50,
+    "englishName": "golbat",
+    "spriteFile": "50-大嘴蝠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "oddish": {
+    "chineseName": "走路草",
+    "number": 51,
+    "englishName": "oddish",
+    "spriteFile": "51-走路草.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gloom": {
+    "chineseName": "臭臭花",
+    "number": 52,
+    "englishName": "gloom",
+    "spriteFile": "52-臭臭花.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vileplume": {
+    "chineseName": "霸王花",
+    "number": 53,
+    "englishName": "vileplume",
+    "spriteFile": "53-霸王花.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "paras": {
+    "chineseName": "派拉斯",
+    "number": 54,
+    "englishName": "paras",
+    "spriteFile": "54-派拉斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "parasect": {
+    "chineseName": "派拉斯特",
+    "number": 55,
+    "englishName": "parasect",
+    "spriteFile": "55-派拉斯特.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "venonat": {
+    "chineseName": "毛球",
+    "number": 56,
+    "englishName": "venonat",
+    "spriteFile": "56-毛球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "venomoth": {
+    "chineseName": "摩魯蛾",
+    "number": 57,
+    "englishName": "venomoth",
+    "spriteFile": "57-摩魯蛾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "diglett": {
+    "chineseName": "地鼠",
+    "number": 58,
+    "englishName": "diglett",
+    "spriteFile": "58-地鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dugtrio": {
+    "chineseName": "三地鼠",
+    "number": 59,
+    "englishName": "dugtrio",
+    "spriteFile": "59-三地鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "meowth": {
+    "chineseName": "喵喵",
+    "number": 60,
+    "englishName": "meowth",
+    "spriteFile": "60-喵喵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "persian": {
+    "chineseName": "猫老大",
+    "number": 61,
+    "englishName": "persian",
+    "spriteFile": "61-猫老大.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "psyduck": {
+    "chineseName": "可达鸭",
+    "number": 62,
+    "englishName": "psyduck",
+    "spriteFile": "62-可达鸭.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "golduck": {
+    "chineseName": "哥达鸭",
+    "number": 63,
+    "englishName": "golduck",
+    "spriteFile": "63-哥达鸭.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mankey": {
+    "chineseName": "猴怪",
+    "number": 64,
+    "englishName": "mankey",
+    "spriteFile": "64-猴怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "primeape": {
+    "chineseName": "火爆猴",
+    "number": 65,
+    "englishName": "primeape",
+    "spriteFile": "65-火爆猴.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "growlithe": {
+    "chineseName": "卡蒂狗",
+    "number": 66,
+    "englishName": "growlithe",
+    "spriteFile": "66-卡蒂狗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "arcanine": {
+    "chineseName": "风速狗",
+    "number": 67,
+    "englishName": "arcanine",
+    "spriteFile": "67-风速狗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "poliwag": {
+    "chineseName": "蚊香蝌蚪",
+    "number": 68,
+    "englishName": "poliwag",
+    "spriteFile": "68-蚊香蝌蚪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "poliwhirl": {
+    "chineseName": "蚊香君",
+    "number": 69,
+    "englishName": "poliwhirl",
+    "spriteFile": "69-蚊香君.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "poliwrath": {
+    "chineseName": "蚊香泳士",
+    "number": 70,
+    "englishName": "poliwrath",
+    "spriteFile": "70-蚊香泳士.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "abra": {
+    "chineseName": "凯西",
+    "number": 71,
+    "englishName": "abra",
+    "spriteFile": "71-凯西.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kadabra": {
+    "chineseName": "勇基拉",
+    "number": 72,
+    "englishName": "kadabra",
+    "spriteFile": "72-勇基拉.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "alakazam": {
+    "chineseName": "胡地",
+    "number": 73,
+    "englishName": "alakazam",
+    "spriteFile": "73-胡地.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "machop": {
+    "chineseName": "腕力",
+    "number": 74,
+    "englishName": "machop",
+    "spriteFile": "74-腕力.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "machoke": {
+    "chineseName": "豪力",
+    "number": 75,
+    "englishName": "machoke",
+    "spriteFile": "75-豪力.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "machamp": {
+    "chineseName": "怪力",
+    "number": 76,
+    "englishName": "machamp",
+    "spriteFile": "76-怪力.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bellsprout": {
+    "chineseName": "喇叭芽",
+    "number": 77,
+    "englishName": "bellsprout",
+    "spriteFile": "77-喇叭芽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "weepinbell": {
+    "chineseName": "口呆花",
+    "number": 78,
+    "englishName": "weepinbell",
+    "spriteFile": "78-口呆花.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "victreebel": {
+    "chineseName": "大食花",
+    "number": 79,
+    "englishName": "victreebel",
+    "spriteFile": "79-大食花.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tentacool": {
+    "chineseName": "玛瑙水母",
+    "number": 80,
+    "englishName": "tentacool",
+    "spriteFile": "80-玛瑙水母.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tentacruel": {
+    "chineseName": "毒刺水母",
+    "number": 81,
+    "englishName": "tentacruel",
+    "spriteFile": "81-毒刺水母.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "geodude": {
+    "chineseName": "小拳石",
+    "number": 82,
+    "englishName": "geodude",
+    "spriteFile": "82-小拳石.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "graveler": {
+    "chineseName": "隆隆石",
+    "number": 83,
+    "englishName": "graveler",
+    "spriteFile": "83-隆隆石.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "golem": {
+    "chineseName": "隆隆岩",
+    "number": 84,
+    "englishName": "golem",
+    "spriteFile": "84-隆隆岩.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ponyta": {
+    "chineseName": "小火马",
+    "number": 85,
+    "englishName": "ponyta",
+    "spriteFile": "85-小火马.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rapidash": {
+    "chineseName": "烈焰马",
+    "number": 86,
+    "englishName": "rapidash",
+    "spriteFile": "86-烈焰马.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "slowpoke": {
+    "chineseName": "呆呆兽",
+    "number": 87,
+    "englishName": "slowpoke",
+    "spriteFile": "87-呆呆兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "slowbro": {
+    "chineseName": "呆壳兽",
+    "number": 88,
+    "englishName": "slowbro",
+    "spriteFile": "88-呆壳兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magnemite": {
+    "chineseName": "小磁怪",
+    "number": 89,
+    "englishName": "magnemite",
+    "spriteFile": "89-小磁怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magneton": {
+    "chineseName": "三合一磁怪",
+    "number": 90,
+    "englishName": "magneton",
+    "spriteFile": "90-三合一磁怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "doduo": {
+    "chineseName": "嘟嘟",
+    "number": 91,
+    "englishName": "doduo",
+    "spriteFile": "91-嘟嘟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dodrio": {
+    "chineseName": "嘟嘟利",
+    "number": 92,
+    "englishName": "dodrio",
+    "spriteFile": "92-嘟嘟利.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "seel": {
+    "chineseName": "小海狮",
+    "number": 93,
+    "englishName": "seel",
+    "spriteFile": "93-小海狮.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dewgong": {
+    "chineseName": "白海狮",
+    "number": 94,
+    "englishName": "dewgong",
+    "spriteFile": "94-白海狮.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "grimer": {
+    "chineseName": "臭泥",
+    "number": 95,
+    "englishName": "grimer",
+    "spriteFile": "95-臭泥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "muk": {
+    "chineseName": "臭臭泥",
+    "number": 96,
+    "englishName": "muk",
+    "spriteFile": "96-臭臭泥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shellder": {
+    "chineseName": "大舌贝",
+    "number": 97,
+    "englishName": "shellder",
+    "spriteFile": "97-大舌贝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cloyster": {
+    "chineseName": "刺甲貝",
+    "number": 98,
+    "englishName": "cloyster",
+    "spriteFile": "98-刺甲貝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gastly": {
+    "chineseName": "鬼斯",
+    "number": 99,
+    "englishName": "gastly",
+    "spriteFile": "99-鬼斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "haunter": {
+    "chineseName": "鬼斯通",
+    "number": 100,
+    "englishName": "haunter",
+    "spriteFile": "100-鬼斯通.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gengar": {
+    "chineseName": "耿鬼",
+    "number": 101,
+    "englishName": "gengar",
+    "spriteFile": "101-耿鬼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "onix": {
+    "chineseName": "大岩蛇",
+    "number": 102,
+    "englishName": "onix",
+    "spriteFile": "102-大岩蛇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "drowzee": {
+    "chineseName": "催眠貘",
+    "number": 103,
+    "englishName": "drowzee",
+    "spriteFile": "103-催眠貘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hypno": {
+    "chineseName": "引夢貘人",
+    "number": 104,
+    "englishName": "hypno",
+    "spriteFile": "104-引夢貘人.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "krabby": {
+    "chineseName": "大钳蟹",
+    "number": 105,
+    "englishName": "krabby",
+    "spriteFile": "105-大钳蟹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kingler": {
+    "chineseName": "巨钳蟹",
+    "number": 106,
+    "englishName": "kingler",
+    "spriteFile": "106-巨钳蟹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "voltorb": {
+    "chineseName": "霹靂電球",
+    "number": 107,
+    "englishName": "voltorb",
+    "spriteFile": "107-霹靂電球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "electrode": {
+    "chineseName": "頑皮雷彈",
+    "number": 108,
+    "englishName": "electrode",
+    "spriteFile": "108-頑皮雷彈.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "exeggcute": {
+    "chineseName": "蛋蛋",
+    "number": 109,
+    "englishName": "exeggcute",
+    "spriteFile": "109-蛋蛋.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "exeggutor": {
+    "chineseName": "椰蛋树",
+    "number": 110,
+    "englishName": "exeggutor",
+    "spriteFile": "110-椰蛋树.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cubone": {
+    "chineseName": "卡拉卡拉",
+    "number": 111,
+    "englishName": "cubone",
+    "spriteFile": "111-卡拉卡拉.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "marowak": {
+    "chineseName": "嘎啦嘎啦",
+    "number": 112,
+    "englishName": "marowak",
+    "spriteFile": "112-嘎啦嘎啦.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hitmonlee": {
+    "chineseName": "飞腿郎",
+    "number": 113,
+    "englishName": "hitmonlee",
+    "spriteFile": "113-飞腿郎.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hitmonchan": {
+    "chineseName": "快拳郎",
+    "number": 114,
+    "englishName": "hitmonchan",
+    "spriteFile": "114-快拳郎.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lickitung": {
+    "chineseName": "大舌头",
+    "number": 115,
+    "englishName": "lickitung",
+    "spriteFile": "115-大舌头.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "koffing": {
+    "chineseName": "瓦斯弹",
+    "number": 116,
+    "englishName": "koffing",
+    "spriteFile": "116-瓦斯弹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "weezing": {
+    "chineseName": "双弹瓦斯",
+    "number": 117,
+    "englishName": "weezing",
+    "spriteFile": "117-双弹瓦斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rhyhorn": {
+    "chineseName": "独角犀牛",
+    "number": 118,
+    "englishName": "rhyhorn",
+    "spriteFile": "118-独角犀牛.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rhydon": {
+    "chineseName": "鑽角犀獸",
+    "number": 119,
+    "englishName": "rhydon",
+    "spriteFile": "119-鑽角犀獸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "chansey": {
+    "chineseName": "吉利蛋",
+    "number": 120,
+    "englishName": "chansey",
+    "spriteFile": "120-吉利蛋.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tangela": {
+    "chineseName": "蔓藤怪",
+    "number": 121,
+    "englishName": "tangela",
+    "spriteFile": "121-蔓藤怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kangaskhan": {
+    "chineseName": "袋獸",
+    "number": 122,
+    "englishName": "kangaskhan",
+    "spriteFile": "122-袋獸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "horsea": {
+    "chineseName": "墨海马",
+    "number": 123,
+    "englishName": "horsea",
+    "spriteFile": "123-墨海马.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "seadra": {
+    "chineseName": "海刺龙",
+    "number": 124,
+    "englishName": "seadra",
+    "spriteFile": "124-海刺龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "goldeen": {
+    "chineseName": "角金鱼",
+    "number": 125,
+    "englishName": "goldeen",
+    "spriteFile": "125-角金鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "seaking": {
+    "chineseName": "金鱼王",
+    "number": 126,
+    "englishName": "seaking",
+    "spriteFile": "126-金鱼王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "staryu": {
+    "chineseName": "海星星",
+    "number": 127,
+    "englishName": "staryu",
+    "spriteFile": "127-海星星.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "starmie": {
+    "chineseName": "宝石海星",
+    "number": 128,
+    "englishName": "starmie",
+    "spriteFile": "128-宝石海星.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "scyther": {
+    "chineseName": "飞天螳螂",
+    "number": 130,
+    "englishName": "scyther",
+    "spriteFile": "130-飞天螳螂.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "jynx": {
+    "chineseName": "迷唇姐",
+    "number": 131,
+    "englishName": "jynx",
+    "spriteFile": "131-迷唇姐.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "electabuzz": {
+    "chineseName": "电击兽",
+    "number": 132,
+    "englishName": "electabuzz",
+    "spriteFile": "132-电击兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magmar": {
+    "chineseName": "鴨嘴火獸",
+    "number": 133,
+    "englishName": "magmar",
+    "spriteFile": "133-鴨嘴火獸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pinsir": {
+    "chineseName": "凱羅斯",
+    "number": 134,
+    "englishName": "pinsir",
+    "spriteFile": "134-凱羅斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tauros": {
+    "chineseName": "肯泰罗",
+    "number": 135,
+    "englishName": "tauros",
+    "spriteFile": "135-肯泰罗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magikarp": {
+    "chineseName": "鲤鱼王",
+    "number": 136,
+    "englishName": "magikarp",
+    "spriteFile": "136-鲤鱼王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gyarados": {
+    "chineseName": "暴鲤龙",
+    "number": 137,
+    "englishName": "gyarados",
+    "spriteFile": "137-暴鲤龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lapras": {
+    "chineseName": "拉普拉斯",
+    "number": 138,
+    "englishName": "lapras",
+    "spriteFile": "138-拉普拉斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ditto": {
+    "chineseName": "百变怪",
+    "number": 139,
+    "englishName": "ditto",
+    "spriteFile": "139-百变怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "eevee": {
+    "chineseName": "伊布",
+    "number": 140,
+    "englishName": "eevee",
+    "spriteFile": "140-伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vaporeon": {
+    "chineseName": "水伊布",
+    "number": 141,
+    "englishName": "vaporeon",
+    "spriteFile": "141-水伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "jolteon": {
+    "chineseName": "雷伊布",
+    "number": 142,
+    "englishName": "jolteon",
+    "spriteFile": "142-雷伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "flareon": {
+    "chineseName": "火伊布",
+    "number": 143,
+    "englishName": "flareon",
+    "spriteFile": "143-火伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "porygon": {
+    "chineseName": "多邊獸",
+    "number": 144,
+    "englishName": "porygon",
+    "spriteFile": "144-多邊獸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "omanyte": {
+    "chineseName": "菊石兽",
+    "number": 145,
+    "englishName": "omanyte",
+    "spriteFile": "145-菊石兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "omastar": {
+    "chineseName": "多刺菊石兽",
+    "number": 146,
+    "englishName": "omastar",
+    "spriteFile": "146-多刺菊石兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kabuto": {
+    "chineseName": "化石盔",
+    "number": 147,
+    "englishName": "kabuto",
+    "spriteFile": "147-化石盔.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kabutops": {
+    "chineseName": "镰刀盔",
+    "number": 148,
+    "englishName": "kabutops",
+    "spriteFile": "148-镰刀盔.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "aerodactyl": {
+    "chineseName": "化石翼龙",
+    "number": 149,
+    "englishName": "aerodactyl",
+    "spriteFile": "149-化石翼龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "snorlax": {
+    "chineseName": "卡比兽",
+    "number": 150,
+    "englishName": "snorlax",
+    "spriteFile": "150-卡比兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "articuno": {
+    "chineseName": "急冻鸟",
+    "number": 151,
+    "englishName": "articuno",
+    "spriteFile": "151-急冻鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "zapdos": {
+    "chineseName": "闪电鸟",
+    "number": 152,
+    "englishName": "zapdos",
+    "spriteFile": "152-闪电鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "moltres": {
+    "chineseName": "火焰鸟",
+    "number": 153,
+    "englishName": "moltres",
+    "spriteFile": "153-火焰鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dratini": {
+    "chineseName": "迷你龙",
+    "number": 154,
+    "englishName": "dratini",
+    "spriteFile": "154-迷你龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dragonair": {
+    "chineseName": "哈克龙",
+    "number": 155,
+    "englishName": "dragonair",
+    "spriteFile": "155-哈克龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dragonite": {
+    "chineseName": "快龙",
+    "number": 156,
+    "englishName": "dragonite",
+    "spriteFile": "156-快龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mewtwo": {
+    "chineseName": "超梦",
+    "number": 157,
+    "englishName": "mewtwo",
+    "spriteFile": "157-超梦.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mew": {
+    "chineseName": "梦幻",
+    "number": 158,
+    "englishName": "mew",
+    "spriteFile": "158-梦幻.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "chikorita": {
+    "chineseName": "菊草叶",
+    "number": 159,
+    "englishName": "chikorita",
+    "spriteFile": "159-菊草叶.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/b/b8/0152_cry.opus"
+  },
+  "bayleef": {
+    "chineseName": "月桂叶",
+    "number": 160,
+    "englishName": "bayleef",
+    "spriteFile": "160-月桂叶.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/44/0153_cry.opus"
+  },
+  "meganium": {
+    "chineseName": "大竺葵",
+    "number": 161,
+    "englishName": "meganium",
+    "spriteFile": "161-大竺葵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cyndaquil": {
+    "chineseName": "火球鼠",
+    "number": 163,
+    "englishName": "cyndaquil",
+    "spriteFile": "163-火球鼠.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d6/0155_cry.opus"
+  },
+  "quilava": {
+    "chineseName": "火岩鼠",
+    "number": 164,
+    "englishName": "quilava",
+    "spriteFile": "164-火岩鼠.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/11/0156_cry.opus"
+  },
+  "typhlosion": {
+    "chineseName": "火暴兽",
+    "number": 165,
+    "englishName": "typhlosion",
+    "spriteFile": "165-火暴兽.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e4/0157_cry.opus"
+  },
+  "totodile": {
+    "chineseName": "小锯鳄",
+    "number": 166,
+    "englishName": "totodile",
+    "spriteFile": "166-小锯鳄.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/53/0158_cry.opus"
+  },
+  "croconaw": {
+    "chineseName": "蓝鳄",
+    "number": 167,
+    "englishName": "croconaw",
+    "spriteFile": "167-蓝鳄.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/5e/0159_cry.opus"
+  },
+  "feraligatr": {
+    "chineseName": "大力鳄",
+    "number": 168,
+    "englishName": "feraligatr",
+    "spriteFile": "168-大力鳄.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/74/0160_cry.opus"
+  },
+  "sentret": {
+    "chineseName": "尾立",
+    "number": 169,
+    "englishName": "sentret",
+    "spriteFile": "169-尾立.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/ed/0161_cry.opus"
+  },
+  "furret": {
+    "chineseName": "大尾立",
+    "number": 170,
+    "englishName": "furret",
+    "spriteFile": "170-大尾立.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/b/b4/0162_cry.opus"
+  },
+  "hoothoot": {
+    "chineseName": "咕咕",
+    "number": 171,
+    "englishName": "hoothoot",
+    "spriteFile": "171-咕咕.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "noctowl": {
+    "chineseName": "猫头夜鹰",
+    "number": 172,
+    "englishName": "noctowl",
+    "spriteFile": "172-猫头夜鹰.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ledyba": {
+    "chineseName": "芭瓢虫",
+    "number": 173,
+    "englishName": "ledyba",
+    "spriteFile": "173-芭瓢虫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ledian": {
+    "chineseName": "安瓢虫",
+    "number": 174,
+    "englishName": "ledian",
+    "spriteFile": "174-安瓢虫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "spinarak": {
+    "chineseName": "圆丝蛛",
+    "number": 175,
+    "englishName": "spinarak",
+    "spriteFile": "175-圆丝蛛.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/74/0167_cry.opus"
+  },
+  "ariados": {
+    "chineseName": "阿利多斯",
+    "number": 176,
+    "englishName": "ariados",
+    "spriteFile": "176-阿利多斯.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/2/22/0168_cry.opus"
+  },
+  "crobat": {
+    "chineseName": "叉字蝠",
+    "number": 177,
+    "englishName": "crobat",
+    "spriteFile": "177-叉字蝠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "chinchou": {
+    "chineseName": "灯笼鱼",
+    "number": 178,
+    "englishName": "chinchou",
+    "spriteFile": "178-灯笼鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lanturn": {
+    "chineseName": "电灯怪",
+    "number": 179,
+    "englishName": "lanturn",
+    "spriteFile": "179-电灯怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pichu": {
+    "chineseName": "皮丘",
+    "number": 180,
+    "englishName": "pichu",
+    "spriteFile": "180-皮丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cleffa": {
+    "chineseName": "皮宝宝",
+    "number": 181,
+    "englishName": "cleffa",
+    "spriteFile": "181-皮宝宝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "igglybuff": {
+    "chineseName": "宝宝丁",
+    "number": 182,
+    "englishName": "igglybuff",
+    "spriteFile": "182-宝宝丁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "togepi": {
+    "chineseName": "波克比",
+    "number": 183,
+    "englishName": "togepi",
+    "spriteFile": "183-波克比.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "togetic": {
+    "chineseName": "波克基古",
+    "number": 184,
+    "englishName": "togetic",
+    "spriteFile": "184-波克基古.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "natu": {
+    "chineseName": "天然雀",
+    "number": 185,
+    "englishName": "natu",
+    "spriteFile": "185-天然雀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "xatu": {
+    "chineseName": "天然鸟",
+    "number": 186,
+    "englishName": "xatu",
+    "spriteFile": "186-天然鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mareep": {
+    "chineseName": "咩利羊",
+    "number": 187,
+    "englishName": "mareep",
+    "spriteFile": "187-咩利羊.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/ff/0179_cry.opus"
+  },
+  "flaaffy": {
+    "chineseName": "茸茸羊",
+    "number": 188,
+    "englishName": "flaaffy",
+    "spriteFile": "188-茸茸羊.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/0c/0180_cry.opus"
+  },
+  "ampharos": {
+    "chineseName": "电龙",
+    "number": 189,
+    "englishName": "ampharos",
+    "spriteFile": "189-电龙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2a/0181M_cry.opus"
+  },
+  "bellossom": {
+    "chineseName": "美丽花",
+    "number": 190,
+    "englishName": "bellossom",
+    "spriteFile": "190-美丽花.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "marill": {
+    "chineseName": "玛力露",
+    "number": 191,
+    "englishName": "marill",
+    "spriteFile": "191-玛力露.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "azumarill": {
+    "chineseName": "玛力露丽",
+    "number": 192,
+    "englishName": "azumarill",
+    "spriteFile": "192-玛力露丽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sudowoodo": {
+    "chineseName": "树才怪",
+    "number": 193,
+    "englishName": "sudowoodo",
+    "spriteFile": "193-树才怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "politoed": {
+    "chineseName": "蚊香蛙皇",
+    "number": 194,
+    "englishName": "politoed",
+    "spriteFile": "194-蚊香蛙皇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hoppip": {
+    "chineseName": "毽子草",
+    "number": 195,
+    "englishName": "hoppip",
+    "spriteFile": "195-毽子草.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/77/0187_cry.opus"
+  },
+  "skiploom": {
+    "chineseName": "毽子花",
+    "number": 196,
+    "englishName": "skiploom",
+    "spriteFile": "196-毽子花.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/ac/0188_cry.opus"
+  },
+  "jumpluff": {
+    "chineseName": "毽子棉",
+    "number": 197,
+    "englishName": "jumpluff",
+    "spriteFile": "197-毽子棉.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/da/0189_cry.opus"
+  },
+  "aipom": {
+    "chineseName": "长尾怪手",
+    "number": 198,
+    "englishName": "aipom",
+    "spriteFile": "198-长尾怪手.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sunkern": {
+    "chineseName": "向日种子",
+    "number": 199,
+    "englishName": "sunkern",
+    "spriteFile": "199-向日种子.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/18/0191_cry.opus"
+  },
+  "sunflora": {
+    "chineseName": "向日花怪",
+    "number": 200,
+    "englishName": "sunflora",
+    "spriteFile": "200-向日花怪.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/37/0192_cry.opus"
+  },
+  "yanma": {
+    "chineseName": "蜻蜻蜓",
+    "number": 201,
+    "englishName": "yanma",
+    "spriteFile": "201-蜻蜻蜓.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/33/0193_cry.opus"
+  },
+  "wooper": {
+    "chineseName": "乌波",
+    "number": 202,
+    "englishName": "wooper",
+    "spriteFile": "202-乌波.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "quagsire": {
+    "chineseName": "沼王",
+    "number": 203,
+    "englishName": "quagsire",
+    "spriteFile": "203-沼王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "espeon": {
+    "chineseName": "太阳伊布",
+    "number": 204,
+    "englishName": "espeon",
+    "spriteFile": "204-太阳伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "umbreon": {
+    "chineseName": "月亮伊布",
+    "number": 205,
+    "englishName": "umbreon",
+    "spriteFile": "205-月亮伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "murkrow": {
+    "chineseName": "黑暗鸦",
+    "number": 206,
+    "englishName": "murkrow",
+    "spriteFile": "206-黑暗鸦.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "slowking": {
+    "chineseName": "呆呆王",
+    "number": 207,
+    "englishName": "slowking",
+    "spriteFile": "207-呆呆王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "misdreavus": {
+    "chineseName": "梦妖",
+    "number": 208,
+    "englishName": "misdreavus",
+    "spriteFile": "208-梦妖.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/8e/0200_cry.opus"
+  },
+  "unown": {
+    "chineseName": "未知图腾",
+    "number": 209,
+    "englishName": "unown",
+    "spriteFile": "209-未知图腾.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d5/0201_cry.opus"
+  },
+  "wobbuffet": {
+    "chineseName": "果然翁",
+    "number": 210,
+    "englishName": "wobbuffet",
+    "spriteFile": "210-果然翁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "girafarig": {
+    "chineseName": "麒麟奇",
+    "number": 211,
+    "englishName": "girafarig",
+    "spriteFile": "211-麒麟奇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pineco": {
+    "chineseName": "榛果球",
+    "number": 212,
+    "englishName": "pineco",
+    "spriteFile": "212-榛果球.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d9/0204_cry.opus"
+  },
+  "forretress": {
+    "chineseName": "佛烈托斯",
+    "number": 213,
+    "englishName": "forretress",
+    "spriteFile": "213-佛烈托斯.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e5/0205_cry.opus"
+  },
+  "dunsparce": {
+    "chineseName": "土龙弟弟",
+    "number": 214,
+    "englishName": "dunsparce",
+    "spriteFile": "214-土龙弟弟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gligar": {
+    "chineseName": "天蝎",
+    "number": 215,
+    "englishName": "gligar",
+    "spriteFile": "215-天蝎.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "steelix": {
+    "chineseName": "大钢蛇",
+    "number": 216,
+    "englishName": "steelix",
+    "spriteFile": "216-大钢蛇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "snubbull": {
+    "chineseName": "布鲁",
+    "number": 217,
+    "englishName": "snubbull",
+    "spriteFile": "217-布鲁.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/72/0209_cry.opus"
+  },
+  "granbull": {
+    "chineseName": "布鲁皇",
+    "number": 218,
+    "englishName": "granbull",
+    "spriteFile": "218-布鲁皇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/5e/0210_cry.opus"
+  },
+  "qwilfish": {
+    "chineseName": "千针鱼",
+    "number": 219,
+    "englishName": "qwilfish",
+    "spriteFile": "219-千针鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "scizor": {
+    "chineseName": "巨钳螳螂",
+    "number": 220,
+    "englishName": "scizor",
+    "spriteFile": "220-巨钳螳螂.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shuckle": {
+    "chineseName": "壶壶",
+    "number": 221,
+    "englishName": "shuckle",
+    "spriteFile": "221-壶壶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "heracross": {
+    "chineseName": "赫拉克罗斯",
+    "number": 222,
+    "englishName": "heracross",
+    "spriteFile": "222-赫拉克罗斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sneasel": {
+    "chineseName": "狃拉",
+    "number": 224,
+    "englishName": "sneasel",
+    "spriteFile": "224-狃拉.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "teddiursa": {
+    "chineseName": "熊宝宝",
+    "number": 225,
+    "englishName": "teddiursa",
+    "spriteFile": "225-熊宝宝.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/12/0216_cry.opus"
+  },
+  "ursaring": {
+    "chineseName": "圈圈熊",
+    "number": 226,
+    "englishName": "ursaring",
+    "spriteFile": "226-圈圈熊.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "slugma": {
+    "chineseName": "熔岩虫",
+    "number": 227,
+    "englishName": "slugma",
+    "spriteFile": "227-熔岩虫.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e6/0218_cry.opus"
+  },
+  "magcargo": {
+    "chineseName": "熔岩蜗牛",
+    "number": 228,
+    "englishName": "magcargo",
+    "spriteFile": "228-熔岩蜗牛.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/fd/0219_cry.opus"
+  },
+  "swinub": {
+    "chineseName": "小山猪",
+    "number": 229,
+    "englishName": "swinub",
+    "spriteFile": "229-小山猪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "piloswine": {
+    "chineseName": "长毛猪",
+    "number": 230,
+    "englishName": "piloswine",
+    "spriteFile": "230-长毛猪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "corsola": {
+    "chineseName": "太阳珊瑚",
+    "number": 231,
+    "englishName": "corsola",
+    "spriteFile": "231-太阳珊瑚.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "remoraid": {
+    "chineseName": "铁炮鱼",
+    "number": 232,
+    "englishName": "remoraid",
+    "spriteFile": "232-铁炮鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "octillery": {
+    "chineseName": "章鱼桶",
+    "number": 233,
+    "englishName": "octillery",
+    "spriteFile": "233-章鱼桶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "delibird": {
+    "chineseName": "信使鸟",
+    "number": 234,
+    "englishName": "delibird",
+    "spriteFile": "234-信使鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mantine": {
+    "chineseName": "巨翅飞鱼",
+    "number": 235,
+    "englishName": "mantine",
+    "spriteFile": "235-巨翅飞鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "skarmory": {
+    "chineseName": "盔甲鸟",
+    "number": 236,
+    "englishName": "skarmory",
+    "spriteFile": "236-盔甲鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "houndour": {
+    "chineseName": "戴鲁比",
+    "number": 237,
+    "englishName": "houndour",
+    "spriteFile": "237-戴鲁比.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/09/0228_cry.opus"
+  },
+  "houndoom": {
+    "chineseName": "黑鲁加",
+    "number": 238,
+    "englishName": "houndoom",
+    "spriteFile": "238-黑鲁加.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kingdra": {
+    "chineseName": "刺龙王",
+    "number": 239,
+    "englishName": "kingdra",
+    "spriteFile": "239-刺龙王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "phanpy": {
+    "chineseName": "小小象",
+    "number": 240,
+    "englishName": "phanpy",
+    "spriteFile": "240-小小象.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/9/9c/0231_cry.opus"
+  },
+  "donphan": {
+    "chineseName": "顿甲",
+    "number": 241,
+    "englishName": "donphan",
+    "spriteFile": "241-顿甲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "porygon2": {
+    "chineseName": "多边兽Ⅱ",
+    "number": 242,
+    "englishName": "porygon2",
+    "spriteFile": "242-多边兽_.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "stantler": {
+    "chineseName": "惊角鹿",
+    "number": 243,
+    "englishName": "stantler",
+    "spriteFile": "243-惊角鹿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d2/0234_cry.opus"
+  },
+  "smeargle": {
+    "chineseName": "图图犬",
+    "number": 244,
+    "englishName": "smeargle",
+    "spriteFile": "244-图图犬.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a8/0235_cry.opus"
+  },
+  "tyrogue": {
+    "chineseName": "无畏小子",
+    "number": 245,
+    "englishName": "tyrogue",
+    "spriteFile": "245-无畏小子.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hitmontop": {
+    "chineseName": "战舞郎",
+    "number": 246,
+    "englishName": "hitmontop",
+    "spriteFile": "246-战舞郎.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "smoochum": {
+    "chineseName": "迷唇娃",
+    "number": 247,
+    "englishName": "smoochum",
+    "spriteFile": "247-迷唇娃.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "elekid": {
+    "chineseName": "电击怪",
+    "number": 248,
+    "englishName": "elekid",
+    "spriteFile": "248-电击怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magby": {
+    "chineseName": "鸭嘴宝宝",
+    "number": 249,
+    "englishName": "magby",
+    "spriteFile": "249-鸭嘴宝宝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "miltank": {
+    "chineseName": "大奶罐",
+    "number": 250,
+    "englishName": "miltank",
+    "spriteFile": "250-大奶罐.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "blissey": {
+    "chineseName": "幸福蛋",
+    "number": 251,
+    "englishName": "blissey",
+    "spriteFile": "251-幸福蛋.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "raikou": {
+    "chineseName": "雷公",
+    "number": 252,
+    "englishName": "raikou",
+    "spriteFile": "252-雷公.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "entei": {
+    "chineseName": "炎帝",
+    "number": 253,
+    "englishName": "entei",
+    "spriteFile": "253-炎帝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "suicune": {
+    "chineseName": "水君",
+    "number": 254,
+    "englishName": "suicune",
+    "spriteFile": "254-水君.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "larvitar": {
+    "chineseName": "幼基拉斯",
+    "number": 255,
+    "englishName": "larvitar",
+    "spriteFile": "255-幼基拉斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pupitar": {
+    "chineseName": "沙基拉斯",
+    "number": 256,
+    "englishName": "pupitar",
+    "spriteFile": "256-沙基拉斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tyranitar": {
+    "chineseName": "班基拉斯",
+    "number": 257,
+    "englishName": "tyranitar",
+    "spriteFile": "257-班基拉斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lugia": {
+    "chineseName": "洛奇亚",
+    "number": 258,
+    "englishName": "lugia",
+    "spriteFile": "258-洛奇亚.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "celebi": {
+    "chineseName": "時拉比",
+    "number": 260,
+    "englishName": "celebi",
+    "spriteFile": "260-時拉比.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "treecko": {
+    "chineseName": "木守宫",
+    "number": 261,
+    "englishName": "treecko",
+    "spriteFile": "261-木守宫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "grovyle": {
+    "chineseName": "森林蜥蜴",
+    "number": 262,
+    "englishName": "grovyle",
+    "spriteFile": "262-森林蜥蜴.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sceptile": {
+    "chineseName": "蜥蜴王",
+    "number": 263,
+    "englishName": "sceptile",
+    "spriteFile": "263-蜥蜴王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "torchic": {
+    "chineseName": "火稚鸡",
+    "number": 265,
+    "englishName": "torchic",
+    "spriteFile": "265-火稚鸡.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "combusken": {
+    "chineseName": "力壮鸡",
+    "number": 266,
+    "englishName": "combusken",
+    "spriteFile": "266-力壮鸡.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "blaziken": {
+    "chineseName": "火焰鸡",
+    "number": 267,
+    "englishName": "blaziken",
+    "spriteFile": "267-火焰鸡.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mudkip": {
+    "chineseName": "水跃鱼",
+    "number": 269,
+    "englishName": "mudkip",
+    "spriteFile": "269-水跃鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "marshtomp": {
+    "chineseName": "沼跃鱼",
+    "number": 270,
+    "englishName": "marshtomp",
+    "spriteFile": "270-沼跃鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "swampert": {
+    "chineseName": "巨沼怪",
+    "number": 271,
+    "englishName": "swampert",
+    "spriteFile": "271-巨沼怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "poochyena": {
+    "chineseName": "土狼犬",
+    "number": 273,
+    "englishName": "poochyena",
+    "spriteFile": "273-土狼犬.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c0/0261_cry.opus"
+  },
+  "mightyena": {
+    "chineseName": "大狼犬",
+    "number": 274,
+    "englishName": "mightyena",
+    "spriteFile": "274-大狼犬.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/74/0262_cry.opus"
+  },
+  "zigzagoon": {
+    "chineseName": "蛇纹熊",
+    "number": 275,
+    "englishName": "zigzagoon",
+    "spriteFile": "275-蛇纹熊.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "linoone": {
+    "chineseName": "直冲熊",
+    "number": 276,
+    "englishName": "linoone",
+    "spriteFile": "276-直冲熊.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "wurmple": {
+    "chineseName": "刺尾虫",
+    "number": 277,
+    "englishName": "wurmple",
+    "spriteFile": "277-刺尾虫.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/47/0265_cry.opus"
+  },
+  "silcoon": {
+    "chineseName": "甲壳茧",
+    "number": 278,
+    "englishName": "silcoon",
+    "spriteFile": "278-甲壳茧.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/fb/0266_cry.opus"
+  },
+  "beautifly": {
+    "chineseName": "狩猎凤蝶",
+    "number": 279,
+    "englishName": "beautifly",
+    "spriteFile": "279-狩猎凤蝶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cascoon": {
+    "chineseName": "盾甲茧",
+    "number": 280,
+    "englishName": "cascoon",
+    "spriteFile": "280-盾甲茧.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a4/0268_cry.opus"
+  },
+  "dustox": {
+    "chineseName": "毒粉蛾",
+    "number": 281,
+    "englishName": "dustox",
+    "spriteFile": "281-毒粉蛾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lotad": {
+    "chineseName": "莲叶童子",
+    "number": 282,
+    "englishName": "lotad",
+    "spriteFile": "282-莲叶童子.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lombre": {
+    "chineseName": "莲帽小童",
+    "number": 283,
+    "englishName": "lombre",
+    "spriteFile": "283-莲帽小童.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ludicolo": {
+    "chineseName": "乐天河童",
+    "number": 284,
+    "englishName": "ludicolo",
+    "spriteFile": "284-乐天河童.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "seedot": {
+    "chineseName": "橡实果",
+    "number": 285,
+    "englishName": "seedot",
+    "spriteFile": "285-橡实果.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "nuzleaf": {
+    "chineseName": "长鼻叶",
+    "number": 286,
+    "englishName": "nuzleaf",
+    "spriteFile": "286-长鼻叶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shiftry": {
+    "chineseName": "狡猾天狗",
+    "number": 287,
+    "englishName": "shiftry",
+    "spriteFile": "287-狡猾天狗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "taillow": {
+    "chineseName": "傲骨燕",
+    "number": 288,
+    "englishName": "taillow",
+    "spriteFile": "288-傲骨燕.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "swellow": {
+    "chineseName": "大王燕",
+    "number": 289,
+    "englishName": "swellow",
+    "spriteFile": "289-大王燕.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "wingull": {
+    "chineseName": "长翅鸥",
+    "number": 290,
+    "englishName": "wingull",
+    "spriteFile": "290-长翅鸥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pelipper": {
+    "chineseName": "大嘴鸥",
+    "number": 291,
+    "englishName": "pelipper",
+    "spriteFile": "291-大嘴鸥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ralts": {
+    "chineseName": "拉鲁拉丝",
+    "number": 292,
+    "englishName": "ralts",
+    "spriteFile": "292-拉鲁拉丝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kirlia": {
+    "chineseName": "奇鲁莉安",
+    "number": 293,
+    "englishName": "kirlia",
+    "spriteFile": "293-奇鲁莉安.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gardevoir": {
+    "chineseName": "沙奈朵",
+    "number": 294,
+    "englishName": "gardevoir",
+    "spriteFile": "294-沙奈朵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "surskit": {
+    "chineseName": "溜溜糖球",
+    "number": 296,
+    "englishName": "surskit",
+    "spriteFile": "296-溜溜糖球.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/8a/0283_cry.opus"
+  },
+  "masquerain": {
+    "chineseName": "雨翅蛾",
+    "number": 297,
+    "englishName": "masquerain",
+    "spriteFile": "297-雨翅蛾.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/31/0284_cry.opus"
+  },
+  "shroomish": {
+    "chineseName": "蘑蘑菇",
+    "number": 298,
+    "englishName": "shroomish",
+    "spriteFile": "298-蘑蘑菇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/73/0285_cry.opus"
+  },
+  "breloom": {
+    "chineseName": "斗笠菇",
+    "number": 299,
+    "englishName": "breloom",
+    "spriteFile": "299-斗笠菇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/9/90/0286_cry.opus"
+  },
+  "slakoth": {
+    "chineseName": "懒人獭",
+    "number": 300,
+    "englishName": "slakoth",
+    "spriteFile": "300-懒人獭.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a2/0287_cry.opus"
+  },
+  "vigoroth": {
+    "chineseName": "过动猿",
+    "number": 301,
+    "englishName": "vigoroth",
+    "spriteFile": "301-过动猿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/4f/0288_cry.opus"
+  },
+  "slaking": {
+    "chineseName": "请假王",
+    "number": 302,
+    "englishName": "slaking",
+    "spriteFile": "302-请假王.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c4/0289_cry.opus"
+  },
+  "nincada": {
+    "chineseName": "土居忍士",
+    "number": 303,
+    "englishName": "nincada",
+    "spriteFile": "303-土居忍士.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ninjask": {
+    "chineseName": "铁面忍者",
+    "number": 304,
+    "englishName": "ninjask",
+    "spriteFile": "304-铁面忍者.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shedinja": {
+    "chineseName": "脱壳忍者",
+    "number": 305,
+    "englishName": "shedinja",
+    "spriteFile": "305-脱壳忍者.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "whismur": {
+    "chineseName": "咕妞妞",
+    "number": 306,
+    "englishName": "whismur",
+    "spriteFile": "306-咕妞妞.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "loudred": {
+    "chineseName": "吼爆弹",
+    "number": 307,
+    "englishName": "loudred",
+    "spriteFile": "307-吼爆弹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "exploud": {
+    "chineseName": "爆音怪",
+    "number": 308,
+    "englishName": "exploud",
+    "spriteFile": "308-爆音怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "makuhita": {
+    "chineseName": "幕下力士",
+    "number": 309,
+    "englishName": "makuhita",
+    "spriteFile": "309-幕下力士.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/ac/0296_cry.opus"
+  },
+  "hariyama": {
+    "chineseName": "铁掌力士",
+    "number": 310,
+    "englishName": "hariyama",
+    "spriteFile": "310-铁掌力士.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/85/0297_cry.opus"
+  },
+  "azurill": {
+    "chineseName": "露力丽",
+    "number": 311,
+    "englishName": "azurill",
+    "spriteFile": "311-露力丽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "nosepass": {
+    "chineseName": "朝北鼻",
+    "number": 312,
+    "englishName": "nosepass",
+    "spriteFile": "312-朝北鼻.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f2/0299_cry.opus"
+  },
+  "skitty": {
+    "chineseName": "向尾喵",
+    "number": 313,
+    "englishName": "skitty",
+    "spriteFile": "313-向尾喵.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/15/0300_cry.opus"
+  },
+  "delcatty": {
+    "chineseName": "优雅猫",
+    "number": 314,
+    "englishName": "delcatty",
+    "spriteFile": "314-优雅猫.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/ee/0301_cry.opus"
+  },
+  "sableye": {
+    "chineseName": "勾魂眼",
+    "number": 315,
+    "englishName": "sableye",
+    "spriteFile": "315-勾魂眼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mawile": {
+    "chineseName": "大嘴娃",
+    "number": 316,
+    "englishName": "mawile",
+    "spriteFile": "316-大嘴娃.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "aron": {
+    "chineseName": "可可多拉",
+    "number": 317,
+    "englishName": "aron",
+    "spriteFile": "317-可可多拉.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lairon": {
+    "chineseName": "可多拉",
+    "number": 318,
+    "englishName": "lairon",
+    "spriteFile": "318-可多拉.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "aggron": {
+    "chineseName": "波士可多拉",
+    "number": 319,
+    "englishName": "aggron",
+    "spriteFile": "319-波士可多拉.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "meditite": {
+    "chineseName": "玛沙那",
+    "number": 320,
+    "englishName": "meditite",
+    "spriteFile": "320-玛沙那.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "medicham": {
+    "chineseName": "恰雷姆",
+    "number": 321,
+    "englishName": "medicham",
+    "spriteFile": "321-恰雷姆.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "electrike": {
+    "chineseName": "落雷兽",
+    "number": 323,
+    "englishName": "electrike",
+    "spriteFile": "323-落雷兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "manectric": {
+    "chineseName": "雷电兽",
+    "number": 324,
+    "englishName": "manectric",
+    "spriteFile": "324-雷电兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "plusle": {
+    "chineseName": "正电拍拍",
+    "number": 325,
+    "englishName": "plusle",
+    "spriteFile": "325-正电拍拍.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d2/0311_cry.opus"
+  },
+  "minun": {
+    "chineseName": "负电拍拍",
+    "number": 326,
+    "englishName": "minun",
+    "spriteFile": "326-负电拍拍.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/de/0312_cry.opus"
+  },
+  "volbeat": {
+    "chineseName": "电萤虫",
+    "number": 327,
+    "englishName": "volbeat",
+    "spriteFile": "327-电萤虫.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/ea/0313_cry.opus"
+  },
+  "illumise": {
+    "chineseName": "甜甜萤",
+    "number": 328,
+    "englishName": "illumise",
+    "spriteFile": "328-甜甜萤.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/6b/0314_cry.opus"
+  },
+  "roselia": {
+    "chineseName": "毒蔷薇",
+    "number": 329,
+    "englishName": "roselia",
+    "spriteFile": "329-毒蔷薇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gulpin": {
+    "chineseName": "溶食兽",
+    "number": 330,
+    "englishName": "gulpin",
+    "spriteFile": "330-溶食兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "swalot": {
+    "chineseName": "吞食兽",
+    "number": 331,
+    "englishName": "swalot",
+    "spriteFile": "331-吞食兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "carvanha": {
+    "chineseName": "利牙鱼",
+    "number": 332,
+    "englishName": "carvanha",
+    "spriteFile": "332-利牙鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sharpedo": {
+    "chineseName": "巨牙鲨",
+    "number": 333,
+    "englishName": "sharpedo",
+    "spriteFile": "333-巨牙鲨.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "wailmer": {
+    "chineseName": "吼吼鲸",
+    "number": 335,
+    "englishName": "wailmer",
+    "spriteFile": "335-吼吼鲸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "wailord": {
+    "chineseName": "吼鲸王",
+    "number": 336,
+    "englishName": "wailord",
+    "spriteFile": "336-吼鲸王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "numel": {
+    "chineseName": "呆火驼",
+    "number": 337,
+    "englishName": "numel",
+    "spriteFile": "337-呆火驼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "camerupt": {
+    "chineseName": "喷火驼",
+    "number": 338,
+    "englishName": "camerupt",
+    "spriteFile": "338-喷火驼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "torkoal": {
+    "chineseName": "煤炭龟",
+    "number": 340,
+    "englishName": "torkoal",
+    "spriteFile": "340-煤炭龟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "spoink": {
+    "chineseName": "跳跳猪",
+    "number": 341,
+    "englishName": "spoink",
+    "spriteFile": "341-跳跳猪.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d5/0325_cry.opus"
+  },
+  "grumpig": {
+    "chineseName": "噗噗猪",
+    "number": 342,
+    "englishName": "grumpig",
+    "spriteFile": "342-噗噗猪.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/04/0326_cry.opus"
+  },
+  "spinda": {
+    "chineseName": "晃晃斑",
+    "number": 343,
+    "englishName": "spinda",
+    "spriteFile": "343-晃晃斑.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "trapinch": {
+    "chineseName": "大颚蚁",
+    "number": 344,
+    "englishName": "trapinch",
+    "spriteFile": "344-大颚蚁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vibrava": {
+    "chineseName": "超音波幼虫",
+    "number": 345,
+    "englishName": "vibrava",
+    "spriteFile": "345-超音波幼虫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "flygon": {
+    "chineseName": "沙漠蜻蜓",
+    "number": 346,
+    "englishName": "flygon",
+    "spriteFile": "346-沙漠蜻蜓.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cacnea": {
+    "chineseName": "刺球仙人掌",
+    "number": 347,
+    "englishName": "cacnea",
+    "spriteFile": "347-刺球仙人掌.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d3/0331_cry.opus"
+  },
+  "cacturne": {
+    "chineseName": "梦歌仙人掌",
+    "number": 348,
+    "englishName": "cacturne",
+    "spriteFile": "348-梦歌仙人掌.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "swablu": {
+    "chineseName": "青绵鸟",
+    "number": 349,
+    "englishName": "swablu",
+    "spriteFile": "349-青绵鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "altaria": {
+    "chineseName": "七夕青鸟",
+    "number": 350,
+    "englishName": "altaria",
+    "spriteFile": "350-七夕青鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "zangoose": {
+    "chineseName": "猫鼬斩",
+    "number": 352,
+    "englishName": "zangoose",
+    "spriteFile": "352-猫鼬斩.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/40/0335_cry.opus"
+  },
+  "seviper": {
+    "chineseName": "饭匙蛇",
+    "number": 353,
+    "englishName": "seviper",
+    "spriteFile": "353-饭匙蛇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e5/0336_cry.opus"
+  },
+  "lunatone": {
+    "chineseName": "月石",
+    "number": 354,
+    "englishName": "lunatone",
+    "spriteFile": "354-月石.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "solrock": {
+    "chineseName": "太阳岩",
+    "number": 355,
+    "englishName": "solrock",
+    "spriteFile": "355-太阳岩.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "barboach": {
+    "chineseName": "泥泥鳅",
+    "number": 356,
+    "englishName": "barboach",
+    "spriteFile": "356-泥泥鳅.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "whiscash": {
+    "chineseName": "鲶鱼王",
+    "number": 357,
+    "englishName": "whiscash",
+    "spriteFile": "357-鲶鱼王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "corphish": {
+    "chineseName": "龙虾小兵",
+    "number": 358,
+    "englishName": "corphish",
+    "spriteFile": "358-龙虾小兵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "crawdaunt": {
+    "chineseName": "铁螯龙虾",
+    "number": 359,
+    "englishName": "crawdaunt",
+    "spriteFile": "359-铁螯龙虾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "baltoy": {
+    "chineseName": "天秤偶",
+    "number": 360,
+    "englishName": "baltoy",
+    "spriteFile": "360-天秤偶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "claydol": {
+    "chineseName": "念力土偶",
+    "number": 361,
+    "englishName": "claydol",
+    "spriteFile": "361-念力土偶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lileep": {
+    "chineseName": "触手百合",
+    "number": 362,
+    "englishName": "lileep",
+    "spriteFile": "362-触手百合.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cradily": {
+    "chineseName": "摇篮百合",
+    "number": 363,
+    "englishName": "cradily",
+    "spriteFile": "363-摇篮百合.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "anorith": {
+    "chineseName": "太古羽虫",
+    "number": 364,
+    "englishName": "anorith",
+    "spriteFile": "364-太古羽虫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "armaldo": {
+    "chineseName": "太古盔甲",
+    "number": 365,
+    "englishName": "armaldo",
+    "spriteFile": "365-太古盔甲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "feebas": {
+    "chineseName": "丑丑鱼",
+    "number": 366,
+    "englishName": "feebas",
+    "spriteFile": "366-丑丑鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "milotic": {
+    "chineseName": "美纳斯",
+    "number": 367,
+    "englishName": "milotic",
+    "spriteFile": "367-美纳斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "castform": {
+    "chineseName": "飘浮泡泡",
+    "number": 368,
+    "englishName": "castform",
+    "spriteFile": "368-飘浮泡泡.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d2/0351_cry.opus"
+  },
+  "kecleon": {
+    "chineseName": "变隐龙",
+    "number": 369,
+    "englishName": "kecleon",
+    "spriteFile": "369-变隐龙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/2/23/0352_cry.opus"
+  },
+  "shuppet": {
+    "chineseName": "怨影娃娃",
+    "number": 370,
+    "englishName": "shuppet",
+    "spriteFile": "370-怨影娃娃.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/37/0353_cry.opus"
+  },
+  "banette": {
+    "chineseName": "诅咒娃娃",
+    "number": 371,
+    "englishName": "banette",
+    "spriteFile": "371-诅咒娃娃.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "duskull": {
+    "chineseName": "夜巡灵",
+    "number": 372,
+    "englishName": "duskull",
+    "spriteFile": "372-夜巡灵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dusclops": {
+    "chineseName": "彷徨夜灵",
+    "number": 373,
+    "englishName": "dusclops",
+    "spriteFile": "373-彷徨夜灵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tropius": {
+    "chineseName": "热带龙",
+    "number": 374,
+    "englishName": "tropius",
+    "spriteFile": "374-热带龙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/5e/0357_cry.opus"
+  },
+  "chimecho": {
+    "chineseName": "风铃铃",
+    "number": 375,
+    "englishName": "chimecho",
+    "spriteFile": "375-风铃铃.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "absol": {
+    "chineseName": "阿勃梭鲁",
+    "number": 376,
+    "englishName": "absol",
+    "spriteFile": "376-阿勃梭鲁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "wynaut": {
+    "chineseName": "小果然",
+    "number": 377,
+    "englishName": "wynaut",
+    "spriteFile": "377-小果然.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "snorunt": {
+    "chineseName": "雪童子",
+    "number": 378,
+    "englishName": "snorunt",
+    "spriteFile": "378-雪童子.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "glalie": {
+    "chineseName": "冰鬼護",
+    "number": 379,
+    "englishName": "glalie",
+    "spriteFile": "379-冰鬼護.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "spheal": {
+    "chineseName": "海豹球",
+    "number": 380,
+    "englishName": "spheal",
+    "spriteFile": "380-海豹球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sealeo": {
+    "chineseName": "海魔狮",
+    "number": 381,
+    "englishName": "sealeo",
+    "spriteFile": "381-海魔狮.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "walrein": {
+    "chineseName": "帝牙海狮",
+    "number": 382,
+    "englishName": "walrein",
+    "spriteFile": "382-帝牙海狮.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "clamperl": {
+    "chineseName": "珍珠贝",
+    "number": 383,
+    "englishName": "clamperl",
+    "spriteFile": "383-珍珠贝.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/0e/0366_cry.opus"
+  },
+  "huntail": {
+    "chineseName": "猎斑鱼",
+    "number": 384,
+    "englishName": "huntail",
+    "spriteFile": "384-猎斑鱼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/ca/0367_cry.opus"
+  },
+  "gorebyss": {
+    "chineseName": "樱花鱼",
+    "number": 385,
+    "englishName": "gorebyss",
+    "spriteFile": "385-樱花鱼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c7/0368_cry.opus"
+  },
+  "relicanth": {
+    "chineseName": "古空棘鱼",
+    "number": 386,
+    "englishName": "relicanth",
+    "spriteFile": "386-古空棘鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "luvdisc": {
+    "chineseName": "爱心鱼",
+    "number": 387,
+    "englishName": "luvdisc",
+    "spriteFile": "387-爱心鱼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/74/0370_cry.opus"
+  },
+  "bagon": {
+    "chineseName": "宝贝龙",
+    "number": 388,
+    "englishName": "bagon",
+    "spriteFile": "388-宝贝龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shelgon": {
+    "chineseName": "甲壳龙",
+    "number": 389,
+    "englishName": "shelgon",
+    "spriteFile": "389-甲壳龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "salamence": {
+    "chineseName": "暴飞龙",
+    "number": 390,
+    "englishName": "salamence",
+    "spriteFile": "390-暴飞龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "beldum": {
+    "chineseName": "铁哑铃",
+    "number": 391,
+    "englishName": "beldum",
+    "spriteFile": "391-铁哑铃.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "metang": {
+    "chineseName": "金属怪",
+    "number": 392,
+    "englishName": "metang",
+    "spriteFile": "392-金属怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "metagross": {
+    "chineseName": "巨金怪",
+    "number": 393,
+    "englishName": "metagross",
+    "spriteFile": "393-巨金怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "regirock": {
+    "chineseName": "雷吉洛克",
+    "number": 394,
+    "englishName": "regirock",
+    "spriteFile": "394-雷吉洛克.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "regice": {
+    "chineseName": "雷吉艾斯",
+    "number": 395,
+    "englishName": "regice",
+    "spriteFile": "395-雷吉艾斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "registeel": {
+    "chineseName": "雷吉斯奇鲁",
+    "number": 396,
+    "englishName": "registeel",
+    "spriteFile": "396-雷吉斯奇鲁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "latias": {
+    "chineseName": "拉帝亚斯",
+    "number": 397,
+    "englishName": "latias",
+    "spriteFile": "397-拉帝亚斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "latios": {
+    "chineseName": "拉帝欧斯",
+    "number": 398,
+    "englishName": "latios",
+    "spriteFile": "398-拉帝欧斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kyogre": {
+    "chineseName": "盖欧卡",
+    "number": 399,
+    "englishName": "kyogre",
+    "spriteFile": "399-盖欧卡.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "groudon": {
+    "chineseName": "固拉多",
+    "number": 400,
+    "englishName": "groudon",
+    "spriteFile": "400-固拉多.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rayquaza": {
+    "chineseName": "烈空坐",
+    "number": 401,
+    "englishName": "rayquaza",
+    "spriteFile": "401-烈空坐.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "jirachi": {
+    "chineseName": "基拉祈",
+    "number": 403,
+    "englishName": "jirachi",
+    "spriteFile": "403-基拉祈.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "deoxys": {
+    "chineseName": "代欧奇希斯",
+    "number": 404,
+    "englishName": "deoxys",
+    "spriteFile": "404-代欧奇希斯.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/1c/0386_cry.opus"
+  },
+  "turtwig": {
+    "chineseName": "草苗龟",
+    "number": 405,
+    "englishName": "turtwig",
+    "spriteFile": "405-草苗龟.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/07/0387_cry.opus"
+  },
+  "grotle": {
+    "chineseName": "树林龟",
+    "number": 406,
+    "englishName": "grotle",
+    "spriteFile": "406-树林龟.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/58/0388_cry.opus"
+  },
+  "torterra": {
+    "chineseName": "土台龟",
+    "number": 407,
+    "englishName": "torterra",
+    "spriteFile": "407-土台龟.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/2/26/0389_cry.opus"
+  },
+  "chimchar": {
+    "chineseName": "小火焰猴",
+    "number": 408,
+    "englishName": "chimchar",
+    "spriteFile": "408-小火焰猴.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e8/0390_cry.opus"
+  },
+  "monferno": {
+    "chineseName": "猛火猴",
+    "number": 409,
+    "englishName": "monferno",
+    "spriteFile": "409-猛火猴.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/ca/0391_cry.opus"
+  },
+  "infernape": {
+    "chineseName": "烈焰猴",
+    "number": 410,
+    "englishName": "infernape",
+    "spriteFile": "410-烈焰猴.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/17/0392_cry.opus"
+  },
+  "piplup": {
+    "chineseName": "波加曼",
+    "number": 411,
+    "englishName": "piplup",
+    "spriteFile": "411-波加曼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/0d/0393_cry.opus"
+  },
+  "prinplup": {
+    "chineseName": "波皇子",
+    "number": 412,
+    "englishName": "prinplup",
+    "spriteFile": "412-波皇子.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/73/0394_cry.opus"
+  },
+  "empoleon": {
+    "chineseName": "帝王拿波",
+    "number": 413,
+    "englishName": "empoleon",
+    "spriteFile": "413-帝王拿波.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/ff/0395_cry.opus"
+  },
+  "starly": {
+    "chineseName": "姆克儿",
+    "number": 414,
+    "englishName": "starly",
+    "spriteFile": "414-姆克儿.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "staravia": {
+    "chineseName": "姆克鸟",
+    "number": 415,
+    "englishName": "staravia",
+    "spriteFile": "415-姆克鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "staraptor": {
+    "chineseName": "姆克鹰",
+    "number": 416,
+    "englishName": "staraptor",
+    "spriteFile": "416-姆克鹰.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bidoof": {
+    "chineseName": "大牙狸",
+    "number": 417,
+    "englishName": "bidoof",
+    "spriteFile": "417-大牙狸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bibarel": {
+    "chineseName": "大尾狸",
+    "number": 418,
+    "englishName": "bibarel",
+    "spriteFile": "418-大尾狸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kricketot": {
+    "chineseName": "圆法师",
+    "number": 419,
+    "englishName": "kricketot",
+    "spriteFile": "419-圆法师.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kricketune": {
+    "chineseName": "音箱蟀",
+    "number": 420,
+    "englishName": "kricketune",
+    "spriteFile": "420-音箱蟀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shinx": {
+    "chineseName": "小猫怪",
+    "number": 421,
+    "englishName": "shinx",
+    "spriteFile": "421-小猫怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "luxio": {
+    "chineseName": "勒克猫",
+    "number": 422,
+    "englishName": "luxio",
+    "spriteFile": "422-勒克猫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "luxray": {
+    "chineseName": "伦琴猫",
+    "number": 423,
+    "englishName": "luxray",
+    "spriteFile": "423-伦琴猫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "budew": {
+    "chineseName": "含羞苞",
+    "number": 424,
+    "englishName": "budew",
+    "spriteFile": "424-含羞苞.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "roserade": {
+    "chineseName": "罗丝雷朵",
+    "number": 425,
+    "englishName": "roserade",
+    "spriteFile": "425-罗丝雷朵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cranidos": {
+    "chineseName": "头盖龙",
+    "number": 426,
+    "englishName": "cranidos",
+    "spriteFile": "426-头盖龙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/b/bc/0408_cry.opus"
+  },
+  "rampardos": {
+    "chineseName": "战槌龙",
+    "number": 427,
+    "englishName": "rampardos",
+    "spriteFile": "427-战槌龙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d0/0409_cry.opus"
+  },
+  "shieldon": {
+    "chineseName": "盾甲龙",
+    "number": 428,
+    "englishName": "shieldon",
+    "spriteFile": "428-盾甲龙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/da/0410_cry.opus"
+  },
+  "bastiodon": {
+    "chineseName": "护城龙",
+    "number": 429,
+    "englishName": "bastiodon",
+    "spriteFile": "429-护城龙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e4/0411_cry.opus"
+  },
+  "burmy": {
+    "chineseName": "结草儿",
+    "number": 430,
+    "englishName": "burmy",
+    "spriteFile": "430-结草儿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/2/20/0412_cry.opus"
+  },
+  "wormadam": {
+    "chineseName": "结草贵妇",
+    "number": 431,
+    "englishName": "wormadam",
+    "spriteFile": "431-结草贵妇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e2/0413_cry.opus"
+  },
+  "mothim": {
+    "chineseName": "绅士蛾",
+    "number": 433,
+    "englishName": "mothim",
+    "spriteFile": "433-绅士蛾.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a3/0414_cry.opus"
+  },
+  "combee": {
+    "chineseName": "三蜜蜂",
+    "number": 434,
+    "englishName": "combee",
+    "spriteFile": "434-三蜜蜂.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vespiquen": {
+    "chineseName": "蜂女王",
+    "number": 435,
+    "englishName": "vespiquen",
+    "spriteFile": "435-蜂女王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pachirisu": {
+    "chineseName": "帕奇利兹",
+    "number": 436,
+    "englishName": "pachirisu",
+    "spriteFile": "436-帕奇利兹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "buizel": {
+    "chineseName": "泳圈鼬",
+    "number": 437,
+    "englishName": "buizel",
+    "spriteFile": "437-泳圈鼬.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "floatzel": {
+    "chineseName": "浮潜鼬",
+    "number": 438,
+    "englishName": "floatzel",
+    "spriteFile": "438-浮潜鼬.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cherubi": {
+    "chineseName": "樱花宝",
+    "number": 439,
+    "englishName": "cherubi",
+    "spriteFile": "439-樱花宝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cherrim": {
+    "chineseName": "樱花儿",
+    "number": 440,
+    "englishName": "cherrim",
+    "spriteFile": "440-樱花儿.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shellos": {
+    "chineseName": "无壳海兔",
+    "number": 441,
+    "englishName": "shellos",
+    "spriteFile": "441-无壳海兔.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gastrodon": {
+    "chineseName": "海兔兽",
+    "number": 442,
+    "englishName": "gastrodon",
+    "spriteFile": "442-海兔兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ambipom": {
+    "chineseName": "双尾怪手",
+    "number": 443,
+    "englishName": "ambipom",
+    "spriteFile": "443-双尾怪手.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "drifloon": {
+    "chineseName": "飘飘球",
+    "number": 444,
+    "englishName": "drifloon",
+    "spriteFile": "444-飘飘球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "drifblim": {
+    "chineseName": "随风球",
+    "number": 445,
+    "englishName": "drifblim",
+    "spriteFile": "445-随风球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "buneary": {
+    "chineseName": "卷卷耳",
+    "number": 446,
+    "englishName": "buneary",
+    "spriteFile": "446-卷卷耳.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lopunny": {
+    "chineseName": "长耳兔",
+    "number": 447,
+    "englishName": "lopunny",
+    "spriteFile": "447-长耳兔.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mismagius": {
+    "chineseName": "梦妖魔",
+    "number": 448,
+    "englishName": "mismagius",
+    "spriteFile": "448-梦妖魔.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/85/0429_cry.opus"
+  },
+  "honchkrow": {
+    "chineseName": "乌鸦头头",
+    "number": 449,
+    "englishName": "honchkrow",
+    "spriteFile": "449-乌鸦头头.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/0a/0430_cry.opus"
+  },
+  "glameow": {
+    "chineseName": "魅力喵",
+    "number": 450,
+    "englishName": "glameow",
+    "spriteFile": "450-魅力喵.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/b/b2/0431_cry.opus"
+  },
+  "purugly": {
+    "chineseName": "东施喵",
+    "number": 451,
+    "englishName": "purugly",
+    "spriteFile": "451-东施喵.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/b/b6/0432_cry.opus"
+  },
+  "chingling": {
+    "chineseName": "铃铛响",
+    "number": 452,
+    "englishName": "chingling",
+    "spriteFile": "452-铃铛响.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f7/0433_cry.opus"
+  },
+  "stunky": {
+    "chineseName": "臭鼬噗",
+    "number": 453,
+    "englishName": "stunky",
+    "spriteFile": "453-臭鼬噗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "skuntank": {
+    "chineseName": "坦克臭鼬",
+    "number": 454,
+    "englishName": "skuntank",
+    "spriteFile": "454-坦克臭鼬.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bronzor": {
+    "chineseName": "铜镜怪",
+    "number": 455,
+    "englishName": "bronzor",
+    "spriteFile": "455-铜镜怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bronzong": {
+    "chineseName": "青铜钟",
+    "number": 456,
+    "englishName": "bronzong",
+    "spriteFile": "456-青铜钟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bonsly": {
+    "chineseName": "盆才怪",
+    "number": 457,
+    "englishName": "bonsly",
+    "spriteFile": "457-盆才怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "happiny": {
+    "chineseName": "小福蛋",
+    "number": 459,
+    "englishName": "happiny",
+    "spriteFile": "459-小福蛋.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "chatot": {
+    "chineseName": "聒噪鸟",
+    "number": 460,
+    "englishName": "chatot",
+    "spriteFile": "460-聒噪鸟.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f8/0441_cry.opus"
+  },
+  "spiritomb": {
+    "chineseName": "花岩怪",
+    "number": 461,
+    "englishName": "spiritomb",
+    "spriteFile": "461-花岩怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gible": {
+    "chineseName": "圆陆鲨",
+    "number": 462,
+    "englishName": "gible",
+    "spriteFile": "462-圆陆鲨.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gabite": {
+    "chineseName": "尖牙陆鲨",
+    "number": 463,
+    "englishName": "gabite",
+    "spriteFile": "463-尖牙陆鲨.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "garchomp": {
+    "chineseName": "烈咬陆鲨",
+    "number": 464,
+    "englishName": "garchomp",
+    "spriteFile": "464-烈咬陆鲨.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "munchlax": {
+    "chineseName": "刚比",
+    "number": 465,
+    "englishName": "munchlax",
+    "spriteFile": "465-刚比.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "riolu": {
+    "chineseName": "利欧路",
+    "number": 466,
+    "englishName": "riolu",
+    "spriteFile": "466-利欧路.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hippopotas": {
+    "chineseName": "沙河马",
+    "number": 468,
+    "englishName": "hippopotas",
+    "spriteFile": "468-沙河马.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hippowdon": {
+    "chineseName": "河马兽",
+    "number": 469,
+    "englishName": "hippowdon",
+    "spriteFile": "469-河马兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "skorupi": {
+    "chineseName": "钳尾蝎",
+    "number": 470,
+    "englishName": "skorupi",
+    "spriteFile": "470-钳尾蝎.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "drapion": {
+    "chineseName": "龙王蝎",
+    "number": 471,
+    "englishName": "drapion",
+    "spriteFile": "471-龙王蝎.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "croagunk": {
+    "chineseName": "不良蛙",
+    "number": 472,
+    "englishName": "croagunk",
+    "spriteFile": "472-不良蛙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "toxicroak": {
+    "chineseName": "毒骷蛙",
+    "number": 473,
+    "englishName": "toxicroak",
+    "spriteFile": "473-毒骷蛙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "carnivine": {
+    "chineseName": "尖牙笼",
+    "number": 474,
+    "englishName": "carnivine",
+    "spriteFile": "474-尖牙笼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/40/0455_cry.opus"
+  },
+  "finneon": {
+    "chineseName": "荧光鱼",
+    "number": 475,
+    "englishName": "finneon",
+    "spriteFile": "475-荧光鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lumineon": {
+    "chineseName": "霓虹鱼",
+    "number": 476,
+    "englishName": "lumineon",
+    "spriteFile": "476-霓虹鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mantyke": {
+    "chineseName": "小球飞鱼",
+    "number": 477,
+    "englishName": "mantyke",
+    "spriteFile": "477-小球飞鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "snover": {
+    "chineseName": "雪笠怪",
+    "number": 478,
+    "englishName": "snover",
+    "spriteFile": "478-雪笠怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "abomasnow": {
+    "chineseName": "暴雪王",
+    "number": 479,
+    "englishName": "abomasnow",
+    "spriteFile": "479-暴雪王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "weavile": {
+    "chineseName": "玛狃拉",
+    "number": 480,
+    "englishName": "weavile",
+    "spriteFile": "480-玛狃拉.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magnezone": {
+    "chineseName": "自爆磁怪",
+    "number": 481,
+    "englishName": "magnezone",
+    "spriteFile": "481-自爆磁怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lickilicky": {
+    "chineseName": "大舌舔",
+    "number": 482,
+    "englishName": "lickilicky",
+    "spriteFile": "482-大舌舔.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rhyperior": {
+    "chineseName": "超甲狂犀",
+    "number": 483,
+    "englishName": "rhyperior",
+    "spriteFile": "483-超甲狂犀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tangrowth": {
+    "chineseName": "巨蔓藤",
+    "number": 484,
+    "englishName": "tangrowth",
+    "spriteFile": "484-巨蔓藤.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "electivire": {
+    "chineseName": "电击魔兽",
+    "number": 485,
+    "englishName": "electivire",
+    "spriteFile": "485-电击魔兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magmortar": {
+    "chineseName": "鸭嘴炎兽",
+    "number": 486,
+    "englishName": "magmortar",
+    "spriteFile": "486-鸭嘴炎兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "togekiss": {
+    "chineseName": "波克基斯",
+    "number": 487,
+    "englishName": "togekiss",
+    "spriteFile": "487-波克基斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "yanmega": {
+    "chineseName": "远古巨蜓",
+    "number": 488,
+    "englishName": "yanmega",
+    "spriteFile": "488-远古巨蜓.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/6d/0469_cry.opus"
+  },
+  "leafeon": {
+    "chineseName": "叶伊布",
+    "number": 489,
+    "englishName": "leafeon",
+    "spriteFile": "489-叶伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "glaceon": {
+    "chineseName": "冰伊布",
+    "number": 490,
+    "englishName": "glaceon",
+    "spriteFile": "490-冰伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gliscor": {
+    "chineseName": "天蝎王",
+    "number": 491,
+    "englishName": "gliscor",
+    "spriteFile": "491-天蝎王.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/ee/0472_cry.opus"
+  },
+  "mamoswine": {
+    "chineseName": "象牙猪",
+    "number": 492,
+    "englishName": "mamoswine",
+    "spriteFile": "492-象牙猪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gallade": {
+    "chineseName": "艾路雷朵",
+    "number": 494,
+    "englishName": "gallade",
+    "spriteFile": "494-艾路雷朵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "probopass": {
+    "chineseName": "大朝北鼻",
+    "number": 496,
+    "englishName": "probopass",
+    "spriteFile": "496-大朝北鼻.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/0c/0476_cry.opus"
+  },
+  "dusknoir": {
+    "chineseName": "黑夜魔灵",
+    "number": 497,
+    "englishName": "dusknoir",
+    "spriteFile": "497-黑夜魔灵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "froslass": {
+    "chineseName": "雪妖女",
+    "number": 498,
+    "englishName": "froslass",
+    "spriteFile": "498-雪妖女.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rotom": {
+    "chineseName": "洛托姆",
+    "number": 499,
+    "englishName": "rotom",
+    "spriteFile": "499-洛托姆.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "uxie": {
+    "chineseName": "由克希",
+    "number": 500,
+    "englishName": "uxie",
+    "spriteFile": "500-由克希.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mesprit": {
+    "chineseName": "艾姆利多",
+    "number": 501,
+    "englishName": "mesprit",
+    "spriteFile": "501-艾姆利多.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "azelf": {
+    "chineseName": "亚克诺姆",
+    "number": 502,
+    "englishName": "azelf",
+    "spriteFile": "502-亚克诺姆.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dialga": {
+    "chineseName": "帝牙卢卡",
+    "number": 503,
+    "englishName": "dialga",
+    "spriteFile": "503-帝牙卢卡.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "palkia": {
+    "chineseName": "帕路奇亚",
+    "number": 504,
+    "englishName": "palkia",
+    "spriteFile": "504-帕路奇亚.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "heatran": {
+    "chineseName": "席多蓝恩",
+    "number": 505,
+    "englishName": "heatran",
+    "spriteFile": "505-席多蓝恩.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "regigigas": {
+    "chineseName": "雷吉奇卡斯",
+    "number": 506,
+    "englishName": "regigigas",
+    "spriteFile": "506-雷吉奇卡斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "giratina": {
+    "chineseName": "骑拉帝纳",
+    "number": 507,
+    "englishName": "giratina",
+    "spriteFile": "507-骑拉帝纳.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cresselia": {
+    "chineseName": "克雷色利亚",
+    "number": 508,
+    "englishName": "cresselia",
+    "spriteFile": "508-克雷色利亚.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "phione": {
+    "chineseName": "霏欧纳",
+    "number": 509,
+    "englishName": "phione",
+    "spriteFile": "509-霏欧纳.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/6c/0489_cry.opus"
+  },
+  "manaphy": {
+    "chineseName": "玛纳霏",
+    "number": 510,
+    "englishName": "manaphy",
+    "spriteFile": "510-玛纳霏.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/db/0490_cry.opus"
+  },
+  "darkrai": {
+    "chineseName": "达克莱伊",
+    "number": 511,
+    "englishName": "darkrai",
+    "spriteFile": "511-达克莱伊.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c0/0491_cry.opus"
+  },
+  "shaymin": {
+    "chineseName": "谢米",
+    "number": 512,
+    "englishName": "shaymin",
+    "spriteFile": "512-谢米.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/3f/0492S_cry.opus"
+  },
+  "victini": {
+    "chineseName": "比克提尼",
+    "number": 514,
+    "englishName": "victini",
+    "spriteFile": "514-比克提尼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "snivy": {
+    "chineseName": "藤藤蛇",
+    "number": 515,
+    "englishName": "snivy",
+    "spriteFile": "515-藤藤蛇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/ec/0495_cry.opus"
+  },
+  "servine": {
+    "chineseName": "青藤蛇",
+    "number": 516,
+    "englishName": "servine",
+    "spriteFile": "516-青藤蛇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e8/0496_cry.opus"
+  },
+  "serperior": {
+    "chineseName": "君主蛇",
+    "number": 517,
+    "englishName": "serperior",
+    "spriteFile": "517-君主蛇.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f7/0497_cry.opus"
+  },
+  "tepig": {
+    "chineseName": "暖暖猪",
+    "number": 518,
+    "englishName": "tepig",
+    "spriteFile": "518-暖暖猪.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/9/93/0498_cry.opus"
+  },
+  "pignite": {
+    "chineseName": "炒炒豬",
+    "number": 519,
+    "englishName": "pignite",
+    "spriteFile": "519-炒炒豬.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/84/0499_cry.opus"
+  },
+  "emboar": {
+    "chineseName": "炎武王",
+    "number": 520,
+    "englishName": "emboar",
+    "spriteFile": "520-炎武王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "oshawott": {
+    "chineseName": "水水獭",
+    "number": 521,
+    "englishName": "oshawott",
+    "spriteFile": "521-水水獭.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/82/0501_cry.opus"
+  },
+  "dewott": {
+    "chineseName": "双刃丸",
+    "number": 522,
+    "englishName": "dewott",
+    "spriteFile": "522-双刃丸.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/51/0502_cry.opus"
+  },
+  "samurott": {
+    "chineseName": "大劍鬼",
+    "number": 523,
+    "englishName": "samurott",
+    "spriteFile": "523-大劍鬼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a6/0503_cry.opus"
+  },
+  "patrat": {
+    "chineseName": "探探鼠",
+    "number": 524,
+    "englishName": "patrat",
+    "spriteFile": "524-探探鼠.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/8b/0504_cry.opus"
+  },
+  "watchog": {
+    "chineseName": "步哨鼠",
+    "number": 525,
+    "englishName": "watchog",
+    "spriteFile": "525-步哨鼠.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/9/94/0505_cry.opus"
+  },
+  "lillipup": {
+    "chineseName": "小約克",
+    "number": 526,
+    "englishName": "lillipup",
+    "spriteFile": "526-小約克.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "herdier": {
+    "chineseName": "哈約克",
+    "number": 527,
+    "englishName": "herdier",
+    "spriteFile": "527-哈約克.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "stoutland": {
+    "chineseName": "長毛狗",
+    "number": 528,
+    "englishName": "stoutland",
+    "spriteFile": "528-長毛狗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "purrloin": {
+    "chineseName": "扒手貓",
+    "number": 529,
+    "englishName": "purrloin",
+    "spriteFile": "529-扒手貓.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "liepard": {
+    "chineseName": "酷豹",
+    "number": 530,
+    "englishName": "liepard",
+    "spriteFile": "530-酷豹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pansage": {
+    "chineseName": "花椰猴",
+    "number": 531,
+    "englishName": "pansage",
+    "spriteFile": "531-花椰猴.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/60/0511_cry.opus"
+  },
+  "simisage": {
+    "chineseName": "花椰猿",
+    "number": 532,
+    "englishName": "simisage",
+    "spriteFile": "532-花椰猿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/17/0512_cry.opus"
+  },
+  "pansear": {
+    "chineseName": "爆香猴",
+    "number": 533,
+    "englishName": "pansear",
+    "spriteFile": "533-爆香猴.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a6/0513_cry.opus"
+  },
+  "simisear": {
+    "chineseName": "爆香猿",
+    "number": 534,
+    "englishName": "simisear",
+    "spriteFile": "534-爆香猿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/5f/0514_cry.opus"
+  },
+  "panpour": {
+    "chineseName": "冷水猴",
+    "number": 535,
+    "englishName": "panpour",
+    "spriteFile": "535-冷水猴.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c6/0515_cry.opus"
+  },
+  "simipour": {
+    "chineseName": "冷水猿",
+    "number": 536,
+    "englishName": "simipour",
+    "spriteFile": "536-冷水猿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/cd/0516_cry.opus"
+  },
+  "munna": {
+    "chineseName": "食梦梦",
+    "number": 537,
+    "englishName": "munna",
+    "spriteFile": "537-食梦梦.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "musharna": {
+    "chineseName": "梦梦蚀",
+    "number": 538,
+    "englishName": "musharna",
+    "spriteFile": "538-梦梦蚀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pidove": {
+    "chineseName": "豆豆鸽",
+    "number": 539,
+    "englishName": "pidove",
+    "spriteFile": "539-豆豆鸽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tranquill": {
+    "chineseName": "咕咕鴿",
+    "number": 540,
+    "englishName": "tranquill",
+    "spriteFile": "540-咕咕鴿.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "unfezant": {
+    "chineseName": "高傲雉雞",
+    "number": 541,
+    "englishName": "unfezant",
+    "spriteFile": "541-高傲雉雞.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "blitzle": {
+    "chineseName": "斑斑馬",
+    "number": 542,
+    "englishName": "blitzle",
+    "spriteFile": "542-斑斑馬.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/04/0522_cry.opus"
+  },
+  "zebstrika": {
+    "chineseName": "雷電斑馬",
+    "number": 543,
+    "englishName": "zebstrika",
+    "spriteFile": "543-雷電斑馬.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c3/0523_cry.opus"
+  },
+  "roggenrola": {
+    "chineseName": "石丸子",
+    "number": 544,
+    "englishName": "roggenrola",
+    "spriteFile": "544-石丸子.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "boldore": {
+    "chineseName": "地幔岩",
+    "number": 545,
+    "englishName": "boldore",
+    "spriteFile": "545-地幔岩.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gigalith": {
+    "chineseName": "龐岩怪",
+    "number": 546,
+    "englishName": "gigalith",
+    "spriteFile": "546-龐岩怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "woobat": {
+    "chineseName": "滚滚蝙蝠",
+    "number": 547,
+    "englishName": "woobat",
+    "spriteFile": "547-滚滚蝙蝠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "swoobat": {
+    "chineseName": "心蝙蝠",
+    "number": 548,
+    "englishName": "swoobat",
+    "spriteFile": "548-心蝙蝠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "drilbur": {
+    "chineseName": "螺釘地鼠",
+    "number": 549,
+    "englishName": "drilbur",
+    "spriteFile": "549-螺釘地鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "excadrill": {
+    "chineseName": "龙头地鼠",
+    "number": 550,
+    "englishName": "excadrill",
+    "spriteFile": "550-龙头地鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "audino": {
+    "chineseName": "差不多娃娃",
+    "number": 551,
+    "englishName": "audino",
+    "spriteFile": "551-差不多娃娃.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "timburr": {
+    "chineseName": "搬運小匠",
+    "number": 552,
+    "englishName": "timburr",
+    "spriteFile": "552-搬運小匠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gurdurr": {
+    "chineseName": "鐵骨土人",
+    "number": 553,
+    "englishName": "gurdurr",
+    "spriteFile": "553-鐵骨土人.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "conkeldurr": {
+    "chineseName": "修建老匠",
+    "number": 554,
+    "englishName": "conkeldurr",
+    "spriteFile": "554-修建老匠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tympole": {
+    "chineseName": "圓蝌蚪",
+    "number": 555,
+    "englishName": "tympole",
+    "spriteFile": "555-圓蝌蚪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "palpitoad": {
+    "chineseName": "藍蟾蜍",
+    "number": 556,
+    "englishName": "palpitoad",
+    "spriteFile": "556-藍蟾蜍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "seismitoad": {
+    "chineseName": "蟾蜍王",
+    "number": 557,
+    "englishName": "seismitoad",
+    "spriteFile": "557-蟾蜍王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "throh": {
+    "chineseName": "投摔鬼",
+    "number": 558,
+    "englishName": "throh",
+    "spriteFile": "558-投摔鬼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sawk": {
+    "chineseName": "打擊鬼",
+    "number": 559,
+    "englishName": "sawk",
+    "spriteFile": "559-打擊鬼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sewaddle": {
+    "chineseName": "蟲寶包",
+    "number": 560,
+    "englishName": "sewaddle",
+    "spriteFile": "560-蟲寶包.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/fa/0540_cry.opus"
+  },
+  "swadloon": {
+    "chineseName": "寶包繭",
+    "number": 561,
+    "englishName": "swadloon",
+    "spriteFile": "561-寶包繭.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/71/0541_cry.opus"
+  },
+  "leavanny": {
+    "chineseName": "保母蟲",
+    "number": 562,
+    "englishName": "leavanny",
+    "spriteFile": "562-保母蟲.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/8c/0542_cry.opus"
+  },
+  "venipede": {
+    "chineseName": "百足蜈蚣",
+    "number": 563,
+    "englishName": "venipede",
+    "spriteFile": "563-百足蜈蚣.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "whirlipede": {
+    "chineseName": "車輪毬",
+    "number": 564,
+    "englishName": "whirlipede",
+    "spriteFile": "564-車輪毬.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "scolipede": {
+    "chineseName": "蜈蚣王",
+    "number": 565,
+    "englishName": "scolipede",
+    "spriteFile": "565-蜈蚣王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cottonee": {
+    "chineseName": "木棉球",
+    "number": 566,
+    "englishName": "cottonee",
+    "spriteFile": "566-木棉球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "whimsicott": {
+    "chineseName": "風妖精",
+    "number": 567,
+    "englishName": "whimsicott",
+    "spriteFile": "567-風妖精.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "petilil": {
+    "chineseName": "百合根娃娃",
+    "number": 568,
+    "englishName": "petilil",
+    "spriteFile": "568-百合根娃娃.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lilligant": {
+    "chineseName": "裙兒小姐",
+    "number": 569,
+    "englishName": "lilligant",
+    "spriteFile": "569-裙兒小姐.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "basculin": {
+    "chineseName": "野蠻鱸魚",
+    "number": 570,
+    "englishName": "basculin",
+    "spriteFile": "570-野蠻鱸魚.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sandile": {
+    "chineseName": "黑眼鳄",
+    "number": 571,
+    "englishName": "sandile",
+    "spriteFile": "571-黑眼鳄.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "krokorok": {
+    "chineseName": "混混鳄",
+    "number": 572,
+    "englishName": "krokorok",
+    "spriteFile": "572-混混鳄.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "krookodile": {
+    "chineseName": "流氓鱷",
+    "number": 573,
+    "englishName": "krookodile",
+    "spriteFile": "573-流氓鱷.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "darumaka": {
+    "chineseName": "火红不倒翁",
+    "number": 574,
+    "englishName": "darumaka",
+    "spriteFile": "574-火红不倒翁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "darmanitan": {
+    "chineseName": "达摩狒狒",
+    "number": 575,
+    "englishName": "darmanitan",
+    "spriteFile": "575-达摩狒狒.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "maractus": {
+    "chineseName": "沙铃仙人掌",
+    "number": 576,
+    "englishName": "maractus",
+    "spriteFile": "576-沙铃仙人掌.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dwebble": {
+    "chineseName": "石居蟹",
+    "number": 577,
+    "englishName": "dwebble",
+    "spriteFile": "577-石居蟹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "crustle": {
+    "chineseName": "岩殿居蟹",
+    "number": 578,
+    "englishName": "crustle",
+    "spriteFile": "578-岩殿居蟹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "scraggy": {
+    "chineseName": "滑滑小子",
+    "number": 579,
+    "englishName": "scraggy",
+    "spriteFile": "579-滑滑小子.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "scrafty": {
+    "chineseName": "頭巾混混",
+    "number": 580,
+    "englishName": "scrafty",
+    "spriteFile": "580-頭巾混混.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sigilyph": {
+    "chineseName": "象徵鳥",
+    "number": 581,
+    "englishName": "sigilyph",
+    "spriteFile": "581-象徵鳥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "yamask": {
+    "chineseName": "哭哭面具",
+    "number": 582,
+    "englishName": "yamask",
+    "spriteFile": "582-哭哭面具.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cofagrigus": {
+    "chineseName": "死神棺",
+    "number": 583,
+    "englishName": "cofagrigus",
+    "spriteFile": "583-死神棺.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tirtouga": {
+    "chineseName": "原蓋海龜",
+    "number": 584,
+    "englishName": "tirtouga",
+    "spriteFile": "584-原蓋海龜.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "carracosta": {
+    "chineseName": "肋骨海龜",
+    "number": 585,
+    "englishName": "carracosta",
+    "spriteFile": "585-肋骨海龜.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "archen": {
+    "chineseName": "始祖小鳥",
+    "number": 586,
+    "englishName": "archen",
+    "spriteFile": "586-始祖小鳥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "archeops": {
+    "chineseName": "始祖大鳥",
+    "number": 587,
+    "englishName": "archeops",
+    "spriteFile": "587-始祖大鳥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "trubbish": {
+    "chineseName": "破破袋",
+    "number": 588,
+    "englishName": "trubbish",
+    "spriteFile": "588-破破袋.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "garbodor": {
+    "chineseName": "灰塵山",
+    "number": 589,
+    "englishName": "garbodor",
+    "spriteFile": "589-灰塵山.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "zorua": {
+    "chineseName": "索罗亚",
+    "number": 590,
+    "englishName": "zorua",
+    "spriteFile": "590-索罗亚.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "zoroark": {
+    "chineseName": "索罗亚克",
+    "number": 591,
+    "englishName": "zoroark",
+    "spriteFile": "591-索罗亚克.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "minccino": {
+    "chineseName": "泡沫栗鼠",
+    "number": 592,
+    "englishName": "minccino",
+    "spriteFile": "592-泡沫栗鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cinccino": {
+    "chineseName": "奇諾栗鼠",
+    "number": 593,
+    "englishName": "cinccino",
+    "spriteFile": "593-奇諾栗鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gothita": {
+    "chineseName": "哥德寶寶",
+    "number": 594,
+    "englishName": "gothita",
+    "spriteFile": "594-哥德寶寶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gothorita": {
+    "chineseName": "哥德小童",
+    "number": 595,
+    "englishName": "gothorita",
+    "spriteFile": "595-哥德小童.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gothitelle": {
+    "chineseName": "哥德小姐",
+    "number": 596,
+    "englishName": "gothitelle",
+    "spriteFile": "596-哥德小姐.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "solosis": {
+    "chineseName": "單卵細胞球",
+    "number": 597,
+    "englishName": "solosis",
+    "spriteFile": "597-單卵細胞球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "duosion": {
+    "chineseName": "雙卵細胞球",
+    "number": 598,
+    "englishName": "duosion",
+    "spriteFile": "598-雙卵細胞球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "reuniclus": {
+    "chineseName": "人造细胞卵",
+    "number": 599,
+    "englishName": "reuniclus",
+    "spriteFile": "599-人造细胞卵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ducklett": {
+    "chineseName": "鴨寶寶",
+    "number": 600,
+    "englishName": "ducklett",
+    "spriteFile": "600-鴨寶寶.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/b/bd/0580_cry.opus"
+  },
+  "swanna": {
+    "chineseName": "舞天鵝",
+    "number": 601,
+    "englishName": "swanna",
+    "spriteFile": "601-舞天鵝.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/4c/0581_cry.opus"
+  },
+  "vanillite": {
+    "chineseName": "迷你冰",
+    "number": 602,
+    "englishName": "vanillite",
+    "spriteFile": "602-迷你冰.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vanillish": {
+    "chineseName": "多多冰",
+    "number": 603,
+    "englishName": "vanillish",
+    "spriteFile": "603-多多冰.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vanilluxe": {
+    "chineseName": "双倍多多冰",
+    "number": 604,
+    "englishName": "vanilluxe",
+    "spriteFile": "604-双倍多多冰.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "deerling": {
+    "chineseName": "四季鹿",
+    "number": 605,
+    "englishName": "deerling",
+    "spriteFile": "605-四季鹿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d3/0585_cry.opus"
+  },
+  "sawsbuck": {
+    "chineseName": "萌芽鹿",
+    "number": 606,
+    "englishName": "sawsbuck",
+    "spriteFile": "606-萌芽鹿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e0/0586_cry.opus"
+  },
+  "emolga": {
+    "chineseName": "電飛鼠",
+    "number": 607,
+    "englishName": "emolga",
+    "spriteFile": "607-電飛鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "karrablast": {
+    "chineseName": "蓋蓋蟲",
+    "number": 608,
+    "englishName": "karrablast",
+    "spriteFile": "608-蓋蓋蟲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "escavalier": {
+    "chineseName": "騎士蝸牛",
+    "number": 609,
+    "englishName": "escavalier",
+    "spriteFile": "609-騎士蝸牛.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "foongus": {
+    "chineseName": "哎呀球菇",
+    "number": 610,
+    "englishName": "foongus",
+    "spriteFile": "610-哎呀球菇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "amoonguss": {
+    "chineseName": "败露球菇",
+    "number": 611,
+    "englishName": "amoonguss",
+    "spriteFile": "611-败露球菇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "frillish": {
+    "chineseName": "轻飘飘",
+    "number": 612,
+    "englishName": "frillish",
+    "spriteFile": "612-轻飘飘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "jellicent": {
+    "chineseName": "胖嘟嘟",
+    "number": 613,
+    "englishName": "jellicent",
+    "spriteFile": "613-胖嘟嘟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "alomomola": {
+    "chineseName": "保母曼波",
+    "number": 614,
+    "englishName": "alomomola",
+    "spriteFile": "614-保母曼波.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/9/93/0594_cry.opus"
+  },
+  "joltik": {
+    "chineseName": "電電蟲",
+    "number": 615,
+    "englishName": "joltik",
+    "spriteFile": "615-電電蟲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "galvantula": {
+    "chineseName": "電蜘蛛",
+    "number": 616,
+    "englishName": "galvantula",
+    "spriteFile": "616-電蜘蛛.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ferroseed": {
+    "chineseName": "種子鐵球",
+    "number": 617,
+    "englishName": "ferroseed",
+    "spriteFile": "617-種子鐵球.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "ferrothorn": {
+    "chineseName": "堅果啞鈴",
+    "number": 618,
+    "englishName": "ferrothorn",
+    "spriteFile": "618-堅果啞鈴.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "klink": {
+    "chineseName": "齒輪兒",
+    "number": 619,
+    "englishName": "klink",
+    "spriteFile": "619-齒輪兒.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "klang": {
+    "chineseName": "齒輪組",
+    "number": 620,
+    "englishName": "klang",
+    "spriteFile": "620-齒輪組.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "klinklang": {
+    "chineseName": "齒輪怪",
+    "number": 621,
+    "englishName": "klinklang",
+    "spriteFile": "621-齒輪怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tynamo": {
+    "chineseName": "麻麻小魚",
+    "number": 622,
+    "englishName": "tynamo",
+    "spriteFile": "622-麻麻小魚.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a6/0602_cry.opus"
+  },
+  "eelektrik": {
+    "chineseName": "麻麻鰻",
+    "number": 623,
+    "englishName": "eelektrik",
+    "spriteFile": "623-麻麻鰻.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/38/0603_cry.opus"
+  },
+  "eelektross": {
+    "chineseName": "麻麻鳗鱼王",
+    "number": 624,
+    "englishName": "eelektross",
+    "spriteFile": "624-麻麻鳗鱼王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "elgyem": {
+    "chineseName": "小灰怪",
+    "number": 625,
+    "englishName": "elgyem",
+    "spriteFile": "625-小灰怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "beheeyem": {
+    "chineseName": "大宇怪",
+    "number": 626,
+    "englishName": "beheeyem",
+    "spriteFile": "626-大宇怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "litwick": {
+    "chineseName": "燭光靈",
+    "number": 627,
+    "englishName": "litwick",
+    "spriteFile": "627-燭光靈.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "lampent": {
+    "chineseName": "燈火幽靈",
+    "number": 628,
+    "englishName": "lampent",
+    "spriteFile": "628-燈火幽靈.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "chandelure": {
+    "chineseName": "水晶燈火靈",
+    "number": 629,
+    "englishName": "chandelure",
+    "spriteFile": "629-水晶燈火靈.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "axew": {
+    "chineseName": "牙牙",
+    "number": 630,
+    "englishName": "axew",
+    "spriteFile": "630-牙牙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "fraxure": {
+    "chineseName": "斧牙龙",
+    "number": 631,
+    "englishName": "fraxure",
+    "spriteFile": "631-斧牙龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "haxorus": {
+    "chineseName": "双斧战龙",
+    "number": 632,
+    "englishName": "haxorus",
+    "spriteFile": "632-双斧战龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cubchoo": {
+    "chineseName": "噴嚏熊",
+    "number": 633,
+    "englishName": "cubchoo",
+    "spriteFile": "633-噴嚏熊.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "beartic": {
+    "chineseName": "凍原熊",
+    "number": 634,
+    "englishName": "beartic",
+    "spriteFile": "634-凍原熊.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cryogonal": {
+    "chineseName": "幾何雪花",
+    "number": 635,
+    "englishName": "cryogonal",
+    "spriteFile": "635-幾何雪花.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shelmet": {
+    "chineseName": "小嘴蝸",
+    "number": 636,
+    "englishName": "shelmet",
+    "spriteFile": "636-小嘴蝸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "accelgor": {
+    "chineseName": "敏捷蟲",
+    "number": 637,
+    "englishName": "accelgor",
+    "spriteFile": "637-敏捷蟲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "stunfisk": {
+    "chineseName": "泥巴鱼",
+    "number": 638,
+    "englishName": "stunfisk",
+    "spriteFile": "638-泥巴鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mienfoo": {
+    "chineseName": "功夫鼬",
+    "number": 639,
+    "englishName": "mienfoo",
+    "spriteFile": "639-功夫鼬.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mienshao": {
+    "chineseName": "師父鼬",
+    "number": 640,
+    "englishName": "mienshao",
+    "spriteFile": "640-師父鼬.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "druddigon": {
+    "chineseName": "赤面龍",
+    "number": 641,
+    "englishName": "druddigon",
+    "spriteFile": "641-赤面龍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "golett": {
+    "chineseName": "泥偶小人",
+    "number": 642,
+    "englishName": "golett",
+    "spriteFile": "642-泥偶小人.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "golurk": {
+    "chineseName": "泥偶巨人",
+    "number": 643,
+    "englishName": "golurk",
+    "spriteFile": "643-泥偶巨人.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pawniard": {
+    "chineseName": "駒刀小兵",
+    "number": 644,
+    "englishName": "pawniard",
+    "spriteFile": "644-駒刀小兵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bisharp": {
+    "chineseName": "劈斬司令",
+    "number": 645,
+    "englishName": "bisharp",
+    "spriteFile": "645-劈斬司令.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bouffalant": {
+    "chineseName": "爆炸頭水牛",
+    "number": 646,
+    "englishName": "bouffalant",
+    "spriteFile": "646-爆炸頭水牛.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "rufflet": {
+    "chineseName": "毛頭小鷹",
+    "number": 647,
+    "englishName": "rufflet",
+    "spriteFile": "647-毛頭小鷹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "braviary": {
+    "chineseName": "勇士雄鷹",
+    "number": 648,
+    "englishName": "braviary",
+    "spriteFile": "648-勇士雄鷹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "vullaby": {
+    "chineseName": "禿鷹丫頭",
+    "number": 649,
+    "englishName": "vullaby",
+    "spriteFile": "649-禿鷹丫頭.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mandibuzz": {
+    "chineseName": "禿鷹娜",
+    "number": 650,
+    "englishName": "mandibuzz",
+    "spriteFile": "650-禿鷹娜.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "heatmor": {
+    "chineseName": "熔蚁兽",
+    "number": 651,
+    "englishName": "heatmor",
+    "spriteFile": "651-熔蚁兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "durant": {
+    "chineseName": "鐵蟻",
+    "number": 652,
+    "englishName": "durant",
+    "spriteFile": "652-鐵蟻.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "deino": {
+    "chineseName": "單首龍",
+    "number": 653,
+    "englishName": "deino",
+    "spriteFile": "653-單首龍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "zweilous": {
+    "chineseName": "双首暴龙",
+    "number": 654,
+    "englishName": "zweilous",
+    "spriteFile": "654-双首暴龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hydreigon": {
+    "chineseName": "三首恶龙",
+    "number": 655,
+    "englishName": "hydreigon",
+    "spriteFile": "655-三首恶龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "larvesta": {
+    "chineseName": "燃燒蟲",
+    "number": 656,
+    "englishName": "larvesta",
+    "spriteFile": "656-燃燒蟲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "volcarona": {
+    "chineseName": "火神蛾",
+    "number": 657,
+    "englishName": "volcarona",
+    "spriteFile": "657-火神蛾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cobalion": {
+    "chineseName": "勾帕路翁",
+    "number": 658,
+    "englishName": "cobalion",
+    "spriteFile": "658-勾帕路翁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "terrakion": {
+    "chineseName": "代拉基翁",
+    "number": 659,
+    "englishName": "terrakion",
+    "spriteFile": "659-代拉基翁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "virizion": {
+    "chineseName": "毕力吉翁",
+    "number": 660,
+    "englishName": "virizion",
+    "spriteFile": "660-毕力吉翁.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tornadus": {
+    "chineseName": "龍捲雲",
+    "number": 661,
+    "englishName": "tornadus",
+    "spriteFile": "661-龍捲雲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "thundurus": {
+    "chineseName": "雷電雲",
+    "number": 662,
+    "englishName": "thundurus",
+    "spriteFile": "662-雷電雲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "landorus": {
+    "chineseName": "土地云",
+    "number": 665,
+    "englishName": "landorus",
+    "spriteFile": "665-土地云.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kyurem": {
+    "chineseName": "酋雷姆",
+    "number": 666,
+    "englishName": "kyurem",
+    "spriteFile": "666-酋雷姆.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "keldeo": {
+    "chineseName": "凱路迪歐",
+    "number": 667,
+    "englishName": "keldeo",
+    "spriteFile": "667-凱路迪歐.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "meloetta": {
+    "chineseName": "美洛耶塔",
+    "number": 668,
+    "englishName": "meloetta",
+    "spriteFile": "668-美洛耶塔.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/30/0648_cry.opus"
+  },
+  "genesect": {
+    "chineseName": "蓋諾賽克特",
+    "number": 669,
+    "englishName": "genesect",
+    "spriteFile": "669-蓋諾賽克特.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "chespin": {
+    "chineseName": "哈力栗",
+    "number": 670,
+    "englishName": "chespin",
+    "spriteFile": "670-哈力栗.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/0e/0650_cry.opus"
+  },
+  "quilladin": {
+    "chineseName": "胖胖哈力",
+    "number": 671,
+    "englishName": "quilladin",
+    "spriteFile": "671-胖胖哈力.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/48/0651_cry.opus"
+  },
+  "chesnaught": {
+    "chineseName": "布里卡隆",
+    "number": 672,
+    "englishName": "chesnaught",
+    "spriteFile": "672-布里卡隆.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "fennekin": {
+    "chineseName": "火狐狸",
+    "number": 673,
+    "englishName": "fennekin",
+    "spriteFile": "673-火狐狸.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/4c/0653_cry.opus"
+  },
+  "braixen": {
+    "chineseName": "長尾火狐",
+    "number": 674,
+    "englishName": "braixen",
+    "spriteFile": "674-長尾火狐.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c4/0654_cry.opus"
+  },
+  "delphox": {
+    "chineseName": "妖火紅狐",
+    "number": 675,
+    "englishName": "delphox",
+    "spriteFile": "675-妖火紅狐.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "froakie": {
+    "chineseName": "呱呱泡蛙",
+    "number": 676,
+    "englishName": "froakie",
+    "spriteFile": "676-呱呱泡蛙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/1f/0656_cry.opus"
+  },
+  "frogadier": {
+    "chineseName": "呱頭蛙",
+    "number": 677,
+    "englishName": "frogadier",
+    "spriteFile": "677-呱頭蛙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/8c/0657_cry.opus"
+  },
+  "greninja": {
+    "chineseName": "甲賀忍蛙",
+    "number": 678,
+    "englishName": "greninja",
+    "spriteFile": "678-甲賀忍蛙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "bunnelby": {
+    "chineseName": "掘掘兔",
+    "number": 680,
+    "englishName": "bunnelby",
+    "spriteFile": "680-掘掘兔.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "diggersby": {
+    "chineseName": "掘地兔",
+    "number": 681,
+    "englishName": "diggersby",
+    "spriteFile": "681-掘地兔.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "fletchling": {
+    "chineseName": "小箭雀",
+    "number": 682,
+    "englishName": "fletchling",
+    "spriteFile": "682-小箭雀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "fletchinder": {
+    "chineseName": "火箭雀",
+    "number": 683,
+    "englishName": "fletchinder",
+    "spriteFile": "683-火箭雀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "talonflame": {
+    "chineseName": "烈箭鷹",
+    "number": 684,
+    "englishName": "talonflame",
+    "spriteFile": "684-烈箭鷹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "scatterbug": {
+    "chineseName": "粉蝶虫",
+    "number": 685,
+    "englishName": "scatterbug",
+    "spriteFile": "685-粉蝶虫.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/66/0664_cry.opus"
+  },
+  "spewpa": {
+    "chineseName": "粉红蝶蛹",
+    "number": 686,
+    "englishName": "spewpa",
+    "spriteFile": "686-粉红蝶蛹.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/09/0665_cry.opus"
+  },
+  "vivillon": {
+    "chineseName": "彩粉蝶",
+    "number": 687,
+    "englishName": "vivillon",
+    "spriteFile": "687-彩粉蝶.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/8/88/0666_cry.opus"
+  },
+  "pyroar": {
+    "chineseName": "火炎狮",
+    "number": 689,
+    "englishName": "pyroar",
+    "spriteFile": "689-火炎狮.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "floette": {
+    "chineseName": "花叶蒂",
+    "number": 690,
+    "englishName": "floette",
+    "spriteFile": "690-花叶蒂.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/75/026Raichu-Mega_X.png"
+  },
+  "florges": {
+    "chineseName": "花洁夫人",
+    "number": 691,
+    "englishName": "florges",
+    "spriteFile": "691-花洁夫人.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/3b/0671_cry.opus"
+  },
+  "skiddo": {
+    "chineseName": "坐骑小羊",
+    "number": 692,
+    "englishName": "skiddo",
+    "spriteFile": "692-坐骑小羊.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/6e/0672_cry.opus"
+  },
+  "gogoat": {
+    "chineseName": "坐骑山羊",
+    "number": 693,
+    "englishName": "gogoat",
+    "spriteFile": "693-坐骑山羊.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f0/0673_cry.opus"
+  },
+  "pancham": {
+    "chineseName": "顽皮熊猫",
+    "number": 694,
+    "englishName": "pancham",
+    "spriteFile": "694-顽皮熊猫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pangoro": {
+    "chineseName": "流氓熊猫",
+    "number": 695,
+    "englishName": "pangoro",
+    "spriteFile": "695-流氓熊猫.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "furfrou": {
+    "chineseName": "多麗米亞",
+    "number": 696,
+    "englishName": "furfrou",
+    "spriteFile": "696-多麗米亞.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/3/37/0676_cry.opus"
+  },
+  "espurr": {
+    "chineseName": "妙喵",
+    "number": 697,
+    "englishName": "espurr",
+    "spriteFile": "697-妙喵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "meowstic": {
+    "chineseName": "超能妙喵",
+    "number": 698,
+    "englishName": "meowstic",
+    "spriteFile": "698-超能妙喵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "honedge": {
+    "chineseName": "独剑鞘",
+    "number": 699,
+    "englishName": "honedge",
+    "spriteFile": "699-独剑鞘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "aegislash": {
+    "chineseName": "坚盾剑怪",
+    "number": 701,
+    "englishName": "aegislash",
+    "spriteFile": "701-坚盾剑怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "spritzee": {
+    "chineseName": "粉香香",
+    "number": 702,
+    "englishName": "spritzee",
+    "spriteFile": "702-粉香香.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "aromatisse": {
+    "chineseName": "芳香精",
+    "number": 703,
+    "englishName": "aromatisse",
+    "spriteFile": "703-芳香精.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "swirlix": {
+    "chineseName": "绵绵泡芙",
+    "number": 704,
+    "englishName": "swirlix",
+    "spriteFile": "704-绵绵泡芙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "inkay": {
+    "chineseName": "好啦鱿",
+    "number": 706,
+    "englishName": "inkay",
+    "spriteFile": "706-好啦鱿.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "malamar": {
+    "chineseName": "乌贼王",
+    "number": 707,
+    "englishName": "malamar",
+    "spriteFile": "707-乌贼王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "binacle": {
+    "chineseName": "龟脚脚",
+    "number": 708,
+    "englishName": "binacle",
+    "spriteFile": "708-龟脚脚.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "barbaracle": {
+    "chineseName": "龜足巨鎧",
+    "number": 709,
+    "englishName": "barbaracle",
+    "spriteFile": "709-龜足巨鎧.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "skrelp": {
+    "chineseName": "垃垃藻",
+    "number": 710,
+    "englishName": "skrelp",
+    "spriteFile": "710-垃垃藻.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "clauncher": {
+    "chineseName": "铁臂枪虾",
+    "number": 712,
+    "englishName": "clauncher",
+    "spriteFile": "712-铁臂枪虾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "helioptile": {
+    "chineseName": "伞电蜥",
+    "number": 714,
+    "englishName": "helioptile",
+    "spriteFile": "714-伞电蜥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "heliolisk": {
+    "chineseName": "光电伞蜥",
+    "number": 715,
+    "englishName": "heliolisk",
+    "spriteFile": "715-光电伞蜥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "tyrunt": {
+    "chineseName": "寶寶暴龍",
+    "number": 716,
+    "englishName": "tyrunt",
+    "spriteFile": "716-寶寶暴龍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "amaura": {
+    "chineseName": "冰雪龍",
+    "number": 718,
+    "englishName": "amaura",
+    "spriteFile": "718-冰雪龍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "sylveon": {
+    "chineseName": "仙子伊布",
+    "number": 720,
+    "englishName": "sylveon",
+    "spriteFile": "720-仙子伊布.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "hawlucha": {
+    "chineseName": "摔角鹰人",
+    "number": 721,
+    "englishName": "hawlucha",
+    "spriteFile": "721-摔角鹰人.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dedenne": {
+    "chineseName": "咚咚鼠",
+    "number": 722,
+    "englishName": "dedenne",
+    "spriteFile": "722-咚咚鼠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "carbink": {
+    "chineseName": "小碎鑽",
+    "number": 723,
+    "englishName": "carbink",
+    "spriteFile": "723-小碎鑽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "goomy": {
+    "chineseName": "黏黏宝",
+    "number": 724,
+    "englishName": "goomy",
+    "spriteFile": "724-黏黏宝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "goodra": {
+    "chineseName": "黏美龙",
+    "number": 726,
+    "englishName": "goodra",
+    "spriteFile": "726-黏美龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "klefki": {
+    "chineseName": "钥圈儿",
+    "number": 727,
+    "englishName": "klefki",
+    "spriteFile": "727-钥圈儿.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "phantump": {
+    "chineseName": "小木灵",
+    "number": 728,
+    "englishName": "phantump",
+    "spriteFile": "728-小木灵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "trevenant": {
+    "chineseName": "朽木妖",
+    "number": 729,
+    "englishName": "trevenant",
+    "spriteFile": "729-朽木妖.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pumpkaboo": {
+    "chineseName": "南瓜精",
+    "number": 730,
+    "englishName": "pumpkaboo",
+    "spriteFile": "730-南瓜精.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "gourgeist": {
+    "chineseName": "南瓜怪人",
+    "number": 731,
+    "englishName": "gourgeist",
+    "spriteFile": "731-南瓜怪人.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "bergmite": {
+    "chineseName": "冰宝",
+    "number": 732,
+    "englishName": "bergmite",
+    "spriteFile": "732-冰宝.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "avalugg": {
+    "chineseName": "冰岩怪",
+    "number": 733,
+    "englishName": "avalugg",
+    "spriteFile": "733-冰岩怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "noibat": {
+    "chineseName": "嗡蝠",
+    "number": 734,
+    "englishName": "noibat",
+    "spriteFile": "734-嗡蝠.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "noivern": {
+    "chineseName": "音波飛龍",
+    "number": 735,
+    "englishName": "noivern",
+    "spriteFile": "735-音波飛龍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "diancie": {
+    "chineseName": "蒂安希",
+    "number": 740,
+    "englishName": "diancie",
+    "spriteFile": "740-蒂安希.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dartrix": {
+    "chineseName": "投羽梟",
+    "number": 744,
+    "englishName": "dartrix",
+    "spriteFile": "744-投羽梟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "trumbeak": {
+    "chineseName": "喇叭啄鸟",
+    "number": 753,
+    "englishName": "trumbeak",
+    "spriteFile": "753-喇叭啄鸟.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a5/0732_cry.opus"
+  },
+  "toucannon": {
+    "chineseName": "铳嘴大鸟",
+    "number": 754,
+    "englishName": "toucannon",
+    "spriteFile": "754-铳嘴大鸟.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/fa/0733_cry.opus"
+  },
+  "crabrawler": {
+    "chineseName": "好勝蟹",
+    "number": 760,
+    "englishName": "crabrawler",
+    "spriteFile": "760-好勝蟹.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/5b/0739_cry.opus"
+  },
+  "crabominable": {
+    "chineseName": "好勝毛蟹",
+    "number": 761,
+    "englishName": "crabominable",
+    "spriteFile": "761-好勝毛蟹.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/a/ad/0740_cry.opus"
+  },
+  "wishiwashi": {
+    "chineseName": "弱丁鱼",
+    "number": 767,
+    "englishName": "wishiwashi",
+    "spriteFile": "767-弱丁鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "mareanie": {
+    "chineseName": "好壞星",
+    "number": 768,
+    "englishName": "mareanie",
+    "spriteFile": "768-好壞星.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "toxapex": {
+    "chineseName": "超壞星",
+    "number": 769,
+    "englishName": "toxapex",
+    "spriteFile": "769-超壞星.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "dewpider": {
+    "chineseName": "滴蛛",
+    "number": 772,
+    "englishName": "dewpider",
+    "spriteFile": "772-滴蛛.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "araquanid": {
+    "chineseName": "滴蛛霸",
+    "number": 773,
+    "englishName": "araquanid",
+    "spriteFile": "773-滴蛛霸.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "morelull": {
+    "chineseName": "睡睡菇",
+    "number": 776,
+    "englishName": "morelull",
+    "spriteFile": "776-睡睡菇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "shiinotic": {
+    "chineseName": "灯罩夜菇",
+    "number": 777,
+    "englishName": "shiinotic",
+    "spriteFile": "777-灯罩夜菇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "salazzle": {
+    "chineseName": "焰后蜥",
+    "number": 779,
+    "englishName": "salazzle",
+    "spriteFile": "779-焰后蜥.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "golisopod": {
+    "chineseName": "具甲武者",
+    "number": 789,
+    "englishName": "golisopod",
+    "spriteFile": "789-具甲武者.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pyukumuku": {
+    "chineseName": "拳海参",
+    "number": 792,
+    "englishName": "pyukumuku",
+    "spriteFile": "792-拳海参.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "turtonator": {
+    "chineseName": "爆焰龜獸",
+    "number": 797,
+    "englishName": "turtonator"
+  },
+  "drampa": {
+    "chineseName": "老翁龙进化石",
+    "number": 801,
+    "englishName": "drampa",
+    "spriteFile": "801-老翁龙进化石.png",
+    "spriteUrl": "https://media.52poke.com/wiki/6/6c/Bag_%E4%B8%83%E5%A4%95%E9%9D%92%E9%B8%9F%E8%BF%9B%E5%8C%96%E7%9F%B3_ZA_Sprite.png"
+  },
+  "dhelmise": {
+    "chineseName": "破破舵輪",
+    "number": 802,
+    "englishName": "dhelmise",
+    "spriteFile": "802-破破舵輪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "cosmoem": {
+    "chineseName": "科斯莫姆",
+    "number": 811,
+    "englishName": "cosmoem",
+    "spriteFile": "811-科斯莫姆.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "nihilego": {
+    "chineseName": "虛吾伊德",
+    "number": 814,
+    "englishName": "nihilego",
+    "spriteFile": "814-虛吾伊德.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "buzzwole": {
+    "chineseName": "爆肌蚊",
+    "number": 815,
+    "englishName": "buzzwole",
+    "spriteFile": "815-爆肌蚊.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pheromosa": {
+    "chineseName": "費洛美螂",
+    "number": 816,
+    "englishName": "pheromosa",
+    "spriteFile": "816-費洛美螂.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "xurkitree": {
+    "chineseName": "電束木",
+    "number": 817,
+    "englishName": "xurkitree",
+    "spriteFile": "817-電束木.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "celesteela": {
+    "chineseName": "鐵火輝夜",
+    "number": 818,
+    "englishName": "celesteela",
+    "spriteFile": "818-鐵火輝夜.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "kartana": {
+    "chineseName": "紙御劍",
+    "number": 819,
+    "englishName": "kartana",
+    "spriteFile": "819-紙御劍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "guzzlord": {
+    "chineseName": "惡食大王",
+    "number": 820,
+    "englishName": "guzzlord",
+    "spriteFile": "820-惡食大王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "necrozma": {
+    "chineseName": "奈克洛兹瑪",
+    "number": 821,
+    "englishName": "necrozma",
+    "spriteFile": "821-奈克洛兹瑪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "magearna": {
+    "chineseName": "瑪機雅娜",
+    "number": 823,
+    "englishName": "magearna",
+    "spriteFile": "823-瑪機雅娜.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "marshadow": {
+    "chineseName": "瑪夏多",
+    "number": 824,
+    "englishName": "marshadow",
+    "spriteFile": "824-瑪夏多.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "falinks": {
+    "chineseName": "列阵兵进化石",
+    "number": 893,
+    "englishName": "falinks",
+    "spriteFile": "893-列阵兵进化石.png",
+    "spriteUrl": "https://media.52poke.com/wiki/6/6c/Bag_%E4%B8%83%E5%A4%95%E9%9D%92%E9%B8%9F%E8%BF%9B%E5%8C%96%E7%9F%B3_ZA_Sprite.png"
+  },
+  "wyrdeer": {
+    "chineseName": "诡角鹿",
+    "number": 922,
+    "englishName": "wyrdeer",
+    "spriteFile": "922-诡角鹿.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c9/0899_cry.opus"
+  },
+  "kleavor": {
+    "chineseName": "劈斧螳螂",
+    "number": 923,
+    "englishName": "kleavor",
+    "spriteFile": "923-劈斧螳螂.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/b/ba/0900_cry.opus"
+  },
+  "basculegion": {
+    "chineseName": "幽尾玄鱼",
+    "number": 925,
+    "englishName": "basculegion",
+    "spriteFile": "925-幽尾玄鱼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/7/77/0902_cry.opus"
+  },
+  "sprigatito": {
+    "chineseName": "新葉喵",
+    "number": 929,
+    "englishName": "sprigatito",
+    "spriteFile": "929-新葉喵.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c3/0906_cry.opus"
+  },
+  "fuecoco": {
+    "chineseName": "呆火鱷",
+    "number": 932,
+    "englishName": "fuecoco",
+    "spriteFile": "932-呆火鱷.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/0/0c/0909_cry.opus"
+  },
+  "quaxly": {
+    "chineseName": "潤水鴨",
+    "number": 935,
+    "englishName": "quaxly",
+    "spriteFile": "935-潤水鴨.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/c/ca/0912_cry.opus"
+  },
+  "armarouge": {
+    "chineseName": "紅蓮鎧騎",
+    "number": 959,
+    "englishName": "armarouge",
+    "spriteFile": "959-紅蓮鎧騎.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/dd/0936_cry.opus"
+  },
+  "ceruledge": {
+    "chineseName": "蒼炎刃鬼",
+    "number": 960,
+    "englishName": "ceruledge",
+    "spriteFile": "960-蒼炎刃鬼.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/19/0937_cry.opus"
+  },
+  "bellibolt": {
+    "chineseName": "電肚蛙",
+    "number": 962,
+    "englishName": "bellibolt",
+    "spriteFile": "962-電肚蛙.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/9/93/0939_cry.opus"
+  },
+  "grafaiai": {
+    "chineseName": "塗標客",
+    "number": 968,
+    "englishName": "grafaiai",
+    "spriteFile": "968-塗標客.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/6a/0945_cry.opus"
+  },
+  "klawf": {
+    "chineseName": "毛崖蟹",
+    "number": 973,
+    "englishName": "klawf",
+    "spriteFile": "973-毛崖蟹.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/1/17/0950_cry.opus"
+  },
+  "wiglett": {
+    "chineseName": "海地鼠",
+    "number": 983,
+    "englishName": "wiglett",
+    "spriteFile": "983-海地鼠.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d1/0960_cry.opus"
+  },
+  "cyclizar": {
+    "chineseName": "摩托蜥",
+    "number": 990,
+    "englishName": "cyclizar",
+    "spriteFile": "990-摩托蜥.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/5/5f/0967_cry.opus"
+  },
+  "greavard": {
+    "chineseName": "墓仔狗",
+    "number": 994,
+    "englishName": "greavard",
+    "spriteFile": "994-墓仔狗.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/4/47/0971_cry.opus"
+  },
+  "farigiraf": {
+    "chineseName": "奇麒麟",
+    "number": 1004,
+    "englishName": "farigiraf",
+    "spriteFile": "1004-奇麒麟.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f6/0981_cry.opus"
+  },
+  "gimmighoul": {
+    "chineseName": "索財靈",
+    "number": 1022,
+    "englishName": "gimmighoul",
+    "spriteFile": "1022-索財靈.opus",
+    "spriteUrl": "https://media.52poke.com/wiki/6/63/0999R_cry.opus"
+  },
+  "dipplin": {
+    "chineseName": "裹蜜蟲",
+    "number": 1034,
+    "englishName": "dipplin",
+    "spriteFile": "1034-裹蜜蟲.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/74/1011Dipplin.png"
+  },
+  "sinistcha": {
+    "chineseName": "來悲粗茶",
+    "number": 1036,
+    "englishName": "sinistcha",
+    "spriteFile": "1036-來悲粗茶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "okidogi": {
+    "chineseName": "夠讚狗",
+    "number": 1037,
+    "englishName": "okidogi",
+    "spriteFile": "1037-夠讚狗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/73/1014Okidogi.png"
+  },
+  "munkidori": {
+    "chineseName": "願增猿",
+    "number": 1038,
+    "englishName": "munkidori",
+    "spriteFile": "1038-願增猿.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e1/1015Munkidori.png"
+  },
+  "fezandipiti": {
+    "chineseName": "吉雉雞",
+    "number": 1039,
+    "englishName": "fezandipiti",
+    "spriteFile": "1039-吉雉雞.png",
+    "spriteUrl": "https://media.52poke.com/wiki/c/cb/1016Fezandipiti.png"
+  },
+  "ogerpon": {
+    "chineseName": "厄鬼椪",
+    "number": 1040,
+    "englishName": "ogerpon",
+    "spriteFile": "1040-厄鬼椪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/4/4d/1017Ogerpon-Cornerstone_Mask.png"
+  },
+  "archaludon": {
+    "chineseName": "鋁鋼橋龍",
+    "number": 1041,
+    "englishName": "archaludon",
+    "spriteFile": "1041-鋁鋼橋龍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c4/1018Archaludon.png"
+  },
+  "hydrapple": {
+    "chineseName": "蜜集大蛇",
+    "number": 1042,
+    "englishName": "hydrapple",
+    "spriteFile": "1042-蜜集大蛇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/5/54/1011Dipplin_Dream.png"
+  },
+  "terapagos": {
+    "chineseName": "太樂巴戈斯",
+    "number": 1047,
+    "englishName": "terapagos",
+    "spriteFile": "1047-太樂巴戈斯.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pecharunt": {
+    "chineseName": "桃歹郎",
+    "number": 1048,
+    "englishName": "pecharunt",
+    "spriteFile": "1048-桃歹郎.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png"
+  },
+  "pikachucosplay": {
+    "spriteFile": "pikachucosplay-换装皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f0/025Pikachu-Belle.png",
+    "chineseName": "换装皮卡丘",
+    "englishName": "pikachucosplay",
+    "number": "?"
+  },
+  "pikachubelle": {
+    "spriteFile": "pikachubelle-换装皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f0/025Pikachu-Belle.png",
+    "chineseName": "换装皮卡丘",
+    "englishName": "pikachubelle",
+    "number": "?"
+  },
+  "pikachuphd": {
+    "spriteFile": "pikachuphd-换装皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f0/025Pikachu-Belle.png",
+    "chineseName": "换装皮卡丘",
+    "englishName": "pikachuphd",
+    "number": "?"
+  },
+  "pikachulibre": {
+    "spriteFile": "pikachulibre-换装皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f0/025Pikachu-Belle.png",
+    "chineseName": "换装皮卡丘",
+    "englishName": "pikachulibre",
+    "number": "?"
+  },
+  "pikachuoriginal": {
+    "spriteFile": "pikachuoriginal-戴着帽子的皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e3/025Pikachu-Alola.png",
+    "chineseName": "戴着帽子的皮卡丘",
+    "englishName": "pikachuoriginal",
+    "number": "?"
+  },
+  "pikachuhoenn": {
+    "spriteFile": "pikachuhoenn-戴着帽子的皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e3/025Pikachu-Alola.png",
+    "chineseName": "戴着帽子的皮卡丘",
+    "englishName": "pikachuhoenn",
+    "number": "?"
+  },
+  "pikachusinnoh": {
+    "spriteFile": "pikachusinnoh-戴着帽子的皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e3/025Pikachu-Alola.png",
+    "chineseName": "戴着帽子的皮卡丘",
+    "englishName": "pikachusinnoh",
+    "number": "?"
+  },
+  "pikachuunova": {
+    "spriteFile": "pikachuunova-戴着帽子的皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e3/025Pikachu-Alola.png",
+    "chineseName": "戴着帽子的皮卡丘",
+    "englishName": "pikachuunova",
+    "number": "?"
+  },
+  "pikachukalos": {
+    "spriteFile": "pikachukalos-戴着帽子的皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e3/025Pikachu-Alola.png",
+    "chineseName": "戴着帽子的皮卡丘",
+    "englishName": "pikachukalos",
+    "number": "?"
+  },
+  "pikachualola": {
+    "spriteFile": "pikachualola-戴着帽子的皮卡丘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e3/025Pikachu-Alola.png",
+    "chineseName": "戴着帽子的皮卡丘",
+    "englishName": "pikachualola",
+    "number": "?"
+  },
+  "meganiummega": {
+    "spriteFile": "meganiummega-大竺葵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "大竺葵",
+    "englishName": "meganiummega",
+    "number": "?"
+  },
+  "hooh": {
+    "spriteFile": "hooh-凤王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "凤王",
+    "englishName": "hooh",
+    "number": "?"
+  },
+  "sceptilemega": {
+    "spriteFile": "sceptilemega-蜥蜴王.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "蜥蜴王",
+    "englishName": "sceptilemega",
+    "number": "?"
+  },
+  "blazikenmega": {
+    "spriteFile": "blazikenmega-超级火焰鸡.png",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a2/B1-036-background.png",
+    "chineseName": "超级火焰鸡",
+    "englishName": "blazikenmega",
+    "number": "?"
+  },
+  "swampertmega": {
+    "spriteFile": "swampertmega-巨沼怪.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "巨沼怪",
+    "englishName": "swampertmega",
+    "number": "?"
+  },
+  "gardevoirmega": {
+    "spriteFile": "gardevoirmega-超级沙奈朵.jpg",
+    "spriteUrl": "https://media.52poke.com/wiki/3/3e/M1S042.jpg",
+    "chineseName": "超级沙奈朵",
+    "englishName": "gardevoirmega",
+    "number": "?"
+  },
+  "medichammega": {
+    "spriteFile": "medichammega-恰雷姆.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "恰雷姆",
+    "englishName": "medichammega",
+    "number": "?"
+  },
+  "sharpedomega": {
+    "spriteFile": "sharpedomega-巨牙鲨.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "巨牙鲨",
+    "englishName": "sharpedomega",
+    "number": "?"
+  },
+  "cameruptmega": {
+    "spriteFile": "cameruptmega-喷火驼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "喷火驼",
+    "englishName": "cameruptmega",
+    "number": "?"
+  },
+  "altariamega": {
+    "spriteFile": "altariamega-超级七夕青鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/8/85/B1-102.png",
+    "chineseName": "超级七夕青鸟",
+    "englishName": "altariamega",
+    "number": "?"
+  },
+  "wormadamsandy": {
+    "spriteFile": "wormadamsandy-结草贵妇_砂土蓑衣_DP3.jpg",
+    "spriteUrl": "https://media.52poke.com/wiki/7/77/DP-SW42.jpg",
+    "chineseName": "结草贵妇 砂土蓑衣（DP3）",
+    "englishName": "wormadamsandy",
+    "number": "?"
+  },
+  "mimejr": {
+    "spriteFile": "mimejr-魔尼尼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "魔尼尼",
+    "englishName": "mimejr",
+    "number": "?"
+  },
+  "porygonz": {
+    "spriteFile": "porygonz-多边兽.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "多边兽Ｚ",
+    "englishName": "porygonz",
+    "number": "?"
+  },
+  "gallademega": {
+    "spriteFile": "gallademega-艾路雷朵.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "艾路雷朵",
+    "englishName": "gallademega",
+    "number": "?"
+  },
+  "typenull": {
+    "spriteFile": "typenull-属性_空.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "属性：空",
+    "englishName": "typenull",
+    "number": "?"
+  },
+  "hakamoo": {
+    "spriteFile": "hakamoo-鳞甲龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "鳞甲龙",
+    "englishName": "hakamoo",
+    "number": "?"
+  },
+  "kommoo": {
+    "spriteFile": "kommoo-杖尾鳞甲龙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "杖尾鳞甲龙",
+    "englishName": "kommoo",
+    "number": "?"
+  },
+  "tapukoko": {
+    "spriteFile": "tapukoko-卡璞_鸣鸣.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "卡璞・鸣鸣",
+    "englishName": "tapukoko",
+    "number": "?"
+  },
+  "tapulele": {
+    "spriteFile": "tapulele-卡璞_蝶蝶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "卡璞・蝶蝶",
+    "englishName": "tapulele",
+    "number": "?"
+  },
+  "tapubulu": {
+    "spriteFile": "tapubulu-卡璞_哞哞.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "卡璞・哞哞",
+    "englishName": "tapubulu",
+    "number": "?"
+  },
+  "tapufini": {
+    "spriteFile": "tapufini-卡璞_鳍鳍.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "卡璞・鳍鳍",
+    "englishName": "tapufini",
+    "number": "?"
+  },
+  "necrozmaultra": {
+    "spriteFile": "necrozmaultra-传说的宇宙宝可梦.png",
+    "spriteUrl": "https://media.52poke.com/wiki/1/17/789Cosmog.png",
+    "chineseName": "传说的宇宙宝可梦",
+    "englishName": "necrozmaultra",
+    "number": "?"
+  },
+  "cramorantgulping": {
+    "spriteFile": "cramorantgulping-古月鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "古月鸟",
+    "englishName": "cramorantgulping",
+    "number": "?"
+  },
+  "cramorantgorging": {
+    "spriteFile": "cramorantgorging-古月鸟.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/2b/000.png",
+    "chineseName": "古月鸟",
+    "englishName": "cramorantgorging",
+    "number": "?"
+  },
+  "mrrime": {
+    "spriteFile": "mrrime-踏冰人偶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/3/3c/122Mr._Mime-Galar_Dream.png",
+    "chineseName": "踏冰人偶",
+    "englishName": "mrrime",
+    "number": "?"
+  },
+  "greattusk": {
+    "spriteFile": "greattusk-雄伟牙.png",
+    "spriteUrl": "https://media.52poke.com/wiki/5/50/984Great_Tusk.png",
+    "chineseName": "雄伟牙",
+    "englishName": "greattusk",
+    "number": "?"
+  },
+  "screamtail": {
+    "spriteFile": "screamtail-吼叫尾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/5/5c/985Scream_Tail.png",
+    "chineseName": "吼叫尾",
+    "englishName": "screamtail",
+    "number": "?"
+  },
+  "brutebonnet": {
+    "spriteFile": "brutebonnet-猛恶菇.png",
+    "spriteUrl": "https://media.52poke.com/wiki/e/e1/986Brute_Bonnet.png",
+    "chineseName": "猛恶菇",
+    "englishName": "brutebonnet",
+    "number": "?"
+  },
+  "fluttermane": {
+    "spriteFile": "fluttermane-振翼发.png",
+    "spriteUrl": "https://media.52poke.com/wiki/c/c5/987Flutter_Mane.png",
+    "chineseName": "振翼发",
+    "englishName": "fluttermane",
+    "number": "?"
+  },
+  "slitherwing": {
+    "spriteFile": "slitherwing-爬地翅.png",
+    "spriteUrl": "https://media.52poke.com/wiki/1/13/988Slither_Wing.png",
+    "chineseName": "爬地翅",
+    "englishName": "slitherwing",
+    "number": "?"
+  },
+  "sandyshocks": {
+    "spriteFile": "sandyshocks-沙铁皮.png",
+    "spriteUrl": "https://media.52poke.com/wiki/9/98/989Sandy_Shocks.png",
+    "chineseName": "沙铁皮",
+    "englishName": "sandyshocks",
+    "number": "?"
+  },
+  "irontreads": {
+    "spriteFile": "irontreads-铁辙迹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/a/a3/990Iron_Treads.png",
+    "chineseName": "铁辙迹",
+    "englishName": "irontreads",
+    "number": "?"
+  },
+  "ironbundle": {
+    "spriteFile": "ironbundle-铁包袱.png",
+    "spriteUrl": "https://media.52poke.com/wiki/d/dc/991Iron_Bundle.png",
+    "chineseName": "铁包袱",
+    "englishName": "ironbundle",
+    "number": "?"
+  },
+  "ironhands": {
+    "spriteFile": "ironhands-铁臂膀.png",
+    "spriteUrl": "https://media.52poke.com/wiki/3/3f/992Iron_Hands.png",
+    "chineseName": "铁臂膀",
+    "englishName": "ironhands",
+    "number": "?"
+  },
+  "ironjugulis": {
+    "spriteFile": "ironjugulis-铁脖颈.png",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f0/993Iron_Jugulis.png",
+    "chineseName": "铁脖颈",
+    "englishName": "ironjugulis",
+    "number": "?"
+  },
+  "ironmoth": {
+    "spriteFile": "ironmoth-铁毒蛾.png",
+    "spriteUrl": "https://media.52poke.com/wiki/9/95/994Iron_Moth.png",
+    "chineseName": "铁毒蛾",
+    "englishName": "ironmoth",
+    "number": "?"
+  },
+  "ironthorns": {
+    "spriteFile": "ironthorns-铁荆棘.png",
+    "spriteUrl": "https://media.52poke.com/wiki/3/3a/995Iron_Thorns.png",
+    "chineseName": "铁荆棘",
+    "englishName": "ironthorns",
+    "number": "?"
+  },
+  "wochien": {
+    "spriteFile": "wochien-古简蜗.png",
+    "spriteUrl": "https://media.52poke.com/wiki/d/d4/1001Wo-Chien.png",
+    "chineseName": "古简蜗",
+    "englishName": "wochien",
+    "number": "?"
+  },
+  "chienpao": {
+    "spriteFile": "chienpao-古剑豹.png",
+    "spriteUrl": "https://media.52poke.com/wiki/1/17/1002Chien-Pao.png",
+    "chineseName": "古剑豹",
+    "englishName": "chienpao",
+    "number": "?"
+  },
+  "tinglu": {
+    "spriteFile": "tinglu-古鼎鹿.png",
+    "spriteUrl": "https://media.52poke.com/wiki/1/12/1003Ting-Lu.png",
+    "chineseName": "古鼎鹿",
+    "englishName": "tinglu",
+    "number": "?"
+  },
+  "chiyu": {
+    "spriteFile": "chiyu-古玉鱼.png",
+    "spriteUrl": "https://media.52poke.com/wiki/7/71/1004Chi-Yu.png",
+    "chineseName": "古玉鱼",
+    "englishName": "chiyu",
+    "number": "?"
+  },
+  "roaringmoon": {
+    "spriteFile": "roaringmoon-轰鸣月.png",
+    "spriteUrl": "https://media.52poke.com/wiki/6/69/1005Roaring_Moon.png",
+    "chineseName": "轰鸣月",
+    "englishName": "roaringmoon",
+    "number": "?"
+  },
+  "ironvaliant": {
+    "spriteFile": "ironvaliant-铁武者.png",
+    "spriteUrl": "https://media.52poke.com/wiki/2/25/1006Iron_Valiant.png",
+    "chineseName": "铁武者",
+    "englishName": "ironvaliant",
+    "number": "?"
+  },
+  "koraidon": {
+    "spriteFile": "1007-故勒顿.webp",
+    "spriteUrl": "",
+    "chineseName": "故勒顿",
+    "englishName": "koraidon",
+    "number": 1007
+  },
+  "miraidon": {
+    "spriteFile": "1008-密勒顿.webp",
+    "spriteUrl": "",
+    "chineseName": "密勒顿",
+    "englishName": "miraidon",
+    "number": 1008
+  },
+  "walkingwake": {
+    "spriteFile": "1009-波荡水.png",
+    "spriteUrl": "",
+    "chineseName": "波荡水",
+    "englishName": "walkingwake",
+    "number": 1009
+  },
+  "ironleaves": {
+    "spriteFile": "ironleaves-铁斑叶.png",
+    "spriteUrl": "https://media.52poke.com/wiki/8/80/1010Iron_Leaves.png",
+    "chineseName": ":铁斑叶",
+    "englishName": "ironleaves",
+    "number": "?"
+  },
+  "gougingfire": {
+    "spriteFile": "gougingfire-破空焰.png",
+    "spriteUrl": "https://media.52poke.com/wiki/4/4e/1020Gouging_Fire.png",
+    "chineseName": "破空焰",
+    "englishName": "gougingfire",
+    "number": "?"
+  },
+  "ragingbolt": {
+    "spriteFile": "ragingbolt-猛雷鼓.png",
+    "spriteUrl": "https://media.52poke.com/wiki/f/f5/1021Raging_Bolt.png",
+    "chineseName": ":猛雷鼓",
+    "englishName": "ragingbolt",
+    "number": "?"
+  },
+  "missingno": {
+    "spriteFile": "missingno-老人_漏洞.png",
+    "spriteUrl": "https://media.52poke.com/wiki/1/1f/AniMS_Missingno_I.png",
+    "chineseName": "老人（漏洞）",
+    "englishName": "missingno",
+    "number": "?"
+  }
+}

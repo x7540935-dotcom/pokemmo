@@ -1,0 +1,35 @@
+# RAG系统依赖
+# LangChain核心库
+langchain-core>=0.1.0
+langchain-huggingface>=0.0.1
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
+langchain-text-splitters>=0.0.1
+langchain-chroma>=0.1.0
+
+# 向量数据库
+# 与 langchain-chroma 保持一致，使用新的 1.x 版本
+chromadb>=1.0.24,<2.0.0
+
+# 文档处理
+unstructured>=0.10.0
+unstructured[pdf]>=0.10.0
+unstructured[docx]>=0.10.0
+
+# LLM API (用于阿里云DashScope等兼容OpenAI的API)
+openai==1.40.6
+dashscope>=1.14.0
+
+# 嵌入模型支持
+sentence-transformers>=2.2.0
+transformers>=4.30.0
+torch>=2.0.0
+
+# Web 抓取依赖
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# 其他工具
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>真人对战大厅 - 宝可梦对战平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e53935 0%, #e35d5b 100%);
+      color: #333;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #3d7dca;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    .section h2 {
+      color: #3d7dca;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+      font-weight: bold;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: #3d7dca;
+    }
+
+    .btn {
+      background: #3d7dca;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #2a6cb8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .room-status {
+      margin-top: 20px;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      border: 2px solid #3d7dca;
+    }
+
+    .room-status h3 {
+      color: #3d7dca;
+      margin-bottom: 10px;
+    }
+
+    .room-id-display {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3d7dca;
+      text-align: center;
+      padding: 10px;
+      background: #e3f2fd;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    .player-status {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      margin: 5px 0;
+      background: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .status-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .status-indicator.connected {
+      background: #4caf50;
+    }
+
+    .status-indicator.disconnected {
+      background: #f44336;
+    }
+
+    .status-indicator.ready {
+      background: #2196f3;
+    }
+
+    .error-message {
+      background: #ffebee;
+      color: #c62828;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .back-btn {
+      background: #f5f5f5;
+      color: #333;
+      border: 2px solid #ddd;
+      margin-top: 20px;
+    }
+
+    .back-btn:hover {
+      background: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 真人对战大厅</h1>
+
+    <!-- 创建房间 -->
+    <div class="section" id="create-room-section">
+      <h2>创建房间</h2>
+      <p style="margin-bottom: 15px; color: #666;">创建一个新房间，等待其他玩家加入</p>
+      <button class="btn" onclick="createRoom()">创建房间</button>
+      <div id="room-id-display" style="display: none;">
+        <div class="room-id-display" id="room-id-text"></div>
+        <p style="text-align: center; color: #666; margin-top: 10px;">等待玩家加入...</p>
+      </div>
+    </div>
+
+    <!-- 加入房间 -->
+    <div class="section" id="join-room-section">
+      <h2>加入房间</h2>
+      <p style="margin-bottom: 15px; color: #666;">输入房间ID加入其他玩家的房间</p>
+      <div class="input-group">
+        <label for="room-id-input">房间ID</label>
+        <input type="text" id="room-id-input" placeholder="输入6位房间ID" maxlength="6" style="text-transform: uppercase;">
+      </div>
+      <button class="btn" onclick="joinRoom()">加入房间</button>
+    </div>
+
+    <!-- 房间状态 -->
+    <div class="section" id="room-status-section" style="display: none;">
+      <h2>房间状态</h2>
+      <div class="room-status">
+        <h3>房间ID: <span id="current-room-id"></span></h3>
+        <div class="player-status">
+          <span>
+            <span class="status-indicator disconnected" id="p1-indicator"></span>
+            <strong>玩家1</strong>
+          </span>
+          <span id="p1-status">未连接</span>
+        </div>
+        <div class="player-status">
+          <span>
+            <span class="status-indicator disconnected" id="p2-indicator"></span>
+            <strong>玩家2</strong>
+          </span>
+          <span id="p2-status">未连接</span>
+        </div>
+        <button class="btn" id="start-battle-btn" onclick="startBattle()" disabled style="margin-top: 20px;">开始对战</button>
+      </div>
+    </div>
+
+    <!-- 错误消息 -->
+    <div id="error-message" class="error-message" style="display: none;"></div>
+
+    <!-- 返回按钮 -->
+    <button class="btn back-btn" onclick="window.location.href='pokemmo.html'">返回主页</button>
+  </div>
+
+  <script type="module">
+    import './packages/battle-engine/src/legacy-shim.js';
+    
+    let engine = null;
+    let currentRoomId = null;
+    let myTeam = null;
+    let mySide = null; // 保存玩家身份（p1或p2）
+
+    // 加载队伍
+    function loadTeam() {
+      try {
+        // 使用与主页一致的key名称
+        const teamStr = localStorage.getItem('pokemonTeam');
+        if (teamStr) {
+          myTeam = JSON.parse(teamStr);
+          // 过滤掉空值
+          if (Array.isArray(myTeam)) {
+            myTeam = myTeam.filter(p => p !== null && p !== undefined);
+          }
+          console.log('[PVP Lobby] 队伍加载成功，数量:', myTeam ? myTeam.length : 0);
+          
+          // 检查队伍是否完整（至少1只宝可梦）
+          if (!myTeam || myTeam.length === 0) {
+            console.warn('[PVP Lobby] 队伍为空');
+            showError('请先在主页组建队伍');
+            myTeam = null;
+          } else {
+            console.log('[PVP Lobby] ✅ 队伍加载成功，包含', myTeam.length, '只宝可梦');
+          }
+        } else {
+          console.warn('[PVP Lobby] 未找到队伍（localStorage中没有pokemonTeam）');
+          showError('请先在主页组建队伍');
+          myTeam = null;
+        }
+      } catch (e) {
+        console.error('[PVP Lobby] 加载队伍失败:', e);
+        showError('加载队伍失败: ' + e.message);
+        myTeam = null;
+      }
+    }
+
+    // 显示错误
+    function showError(message) {
+      const errorDiv = document.getElementById('error-message');
+      errorDiv.textContent = message;
+      errorDiv.style.display = 'block';
+      setTimeout(() => {
+        errorDiv.style.display = 'none';
+      }, 5000);
+    }
+
+    // 创建房间
+    async function createRoom() {
+      // 重新加载队伍（确保获取最新数据）
+      loadTeam();
+      
+      if (!myTeam || myTeam.length === 0) {
+        showError('请先在主页组建完整的队伍（至少1只宝可梦）');
+        return;
+      }
+
+      try {
+        engine = new BattleEngine();
+        await engine.connect();
+
+        // 监听消息（使用onMessage方法）
+        engine.onMessage(handleMessage);
+
+        // 发送创建房间消息
+        engine.send({
+          type: 'create-room',
+          payload: {}
+        });
+
+        console.log('[PVP Lobby] 发送创建房间请求');
+      } catch (e) {
+        console.error('[PVP Lobby] 创建房间失败:', e);
+        showError('连接服务器失败: ' + e.message);
+      }
+    }
+
+    // 加入房间
+    async function joinRoom() {
+      const roomId = document.getElementById('room-id-input').value.trim().toUpperCase();
+      if (!roomId || roomId.length !== 6) {
+        showError('请输入有效的6位房间ID');
+        return;
+      }
+
+      // 重新加载队伍（确保获取最新数据）
+      loadTeam();
+      
+      if (!myTeam || myTeam.length === 0) {
+        showError('请先在主页组建完整的队伍（至少1只宝可梦）');
+        return;
+      }
+
+      try {
+        engine = new BattleEngine();
+        await engine.connect();
+
+        // 监听消息（使用onMessage方法）
+        engine.onMessage(handleMessage);
+
+        // 发送加入房间消息
+        engine.send({
+          type: 'join-room',
+          payload: { roomId }
+        });
+
+        console.log('[PVP Lobby] 发送加入房间请求:', roomId);
+      } catch (e) {
+        console.error('[PVP Lobby] 加入房间失败:', e);
+        showError('连接服务器失败: ' + e.message);
+      }
+    }
+
+    // 处理消息
+    function handleMessage(data) {
+      try {
+        // BattleEngine传递的是字符串，可能是JSON格式或协议格式
+        let message;
+        
+        // 尝试解析为JSON（如果是JSON格式）
+        if (typeof data === 'string' && (data.trim().startsWith('{') || data.trim().startsWith('['))) {
+          try {
+            message = JSON.parse(data);
+            console.log('[PVP Lobby] 收到JSON消息:', message);
+          } catch (e) {
+            // 不是JSON，可能是协议格式
+            console.log('[PVP Lobby] 收到协议消息（非JSON）:', data.substring(0, 100));
+            // 协议消息不需要在这里处理，直接返回
+            return;
+          }
+        } else {
+          // 不是字符串或不是JSON格式
+          console.log('[PVP Lobby] 收到非JSON消息:', typeof data, data);
+          return;
+        }
+        
+        if (!message || !message.type) {
+          console.warn('[PVP Lobby] 消息格式不正确:', message);
+          return;
+        }
+
+        switch (message.type) {
+          case 'room-created':
+            currentRoomId = message.payload.roomId;
+            mySide = message.payload.side || 'p1'; // 创建者是p1
+            // 保存到localStorage，以便battle.html使用
+            localStorage.setItem('pvpRoomId', currentRoomId);
+            localStorage.setItem('pvpSide', mySide);
+            document.getElementById('room-id-text').textContent = currentRoomId;
+            document.getElementById('room-id-display').style.display = 'block';
+            // room-created 消息不包含完整的房间状态，等待 room-update 消息
+            // updateRoomStatus(message.payload); // 注释掉，等待 room-update
+            break;
+
+          case 'room-joined':
+            currentRoomId = message.payload.roomId;
+            mySide = message.payload.side || 'p2'; // 加入者是p2
+            // 保存到localStorage，以便battle.html使用
+            localStorage.setItem('pvpRoomId', currentRoomId);
+            localStorage.setItem('pvpSide', mySide);
+            // room-joined 消息不包含完整的房间状态，等待 room-update 消息
+            // updateRoomStatus(message.payload); // 注释掉，等待 room-update
+            break;
+
+          case 'room-update':
+            currentRoomId = message.payload.roomId;
+            // 从房间状态中确定自己的side
+            // 如果p1已连接且是我，我是p1；如果p2已连接且是我，我是p2
+            if (message.payload.players) {
+              // 通过检查哪个玩家是我来确定side
+              // 由于我们无法直接判断，我们会在加入房间时从服务器获取
+              // 暂时不设置，等服务器返回
+            }
+            // 如果状态从 waiting 变为 ready，且我还没发送过 start，重置标志（可能是之前手动点击被阻止了）
+            if (message.payload.status === 'ready' && !hasSentStart) {
+              console.log('[PVP Lobby] 状态变为ready，且我还没发送过start，确保可以发送');
+              // 不需要重置，因为 hasSentStart 已经是 false
+            }
+            updateRoomStatus(message.payload);
+            break;
+
+          case 'battle-started':
+            // 重置发送标志（对战已开始，可以重置）
+            console.log('[PVP Lobby] 收到 battle-started 消息，重置发送标志');
+            isSendingStart = false;
+            hasSentStart = false;
+            
+            // 确保保存了房间ID和side（用于兼容性，但主要使用URL参数）
+            if (currentRoomId) {
+              localStorage.setItem('pvpRoomId', currentRoomId);
+            }
+            if (mySide) {
+              localStorage.setItem('pvpSide', mySide);
+            }
+            
+            // 关键修复：通过URL参数传递side，避免localStorage冲突
+            const side = mySide || localStorage.getItem('pvpSide') || 'p1';
+            console.log('[PVP Lobby] 跳转到对战页面，side:', side);
+            
+            // 在跳转前关闭WebSocket连接，确保旧连接被清理
+            if (engine && engine.ws) {
+              console.log('[PVP Lobby] 跳转前关闭WebSocket连接');
+              const ws = engine.ws;
+              const roomId = currentRoomId;
+              
+              // 监听关闭事件，确保连接关闭后再跳转
+              const closeHandler = () => {
+                console.log('[PVP Lobby] WebSocket连接已关闭，准备跳转');
+                setTimeout(() => {
+                  // 关键修复：通过URL参数传递side，避免localStorage冲突
+                  window.location.href = `battle.html?mode=pvp&roomId=${roomId}&side=${side}`;
+                }, 50); // 再等待50ms确保服务器端已处理关闭事件
+              };
+              
+              // 如果连接已经关闭或正在关闭，直接跳转
+              if (ws.readyState === WebSocket.CLOSED || ws.readyState === WebSocket.CLOSING) {
+                console.log('[PVP Lobby] WebSocket连接状态:', ws.readyState, '，直接跳转');
+                setTimeout(() => {
+                  // 关键修复：通过URL参数传递side，避免localStorage冲突
+                  window.location.href = `battle.html?mode=pvp&roomId=${roomId}&side=${side}`;
+                }, 200);
+              } else {
+                // 连接还在OPEN状态，监听关闭事件
+                ws.addEventListener('close', closeHandler, { once: true });
+                try {
+                  ws.close();
+                } catch (e) {
+                  console.warn('[PVP Lobby] 关闭连接时出错:', e);
+                  // 如果关闭失败，延迟后直接跳转
+                  setTimeout(() => {
+                    // 关键修复：通过URL参数传递side，避免localStorage冲突
+                    window.location.href = `battle.html?mode=pvp&roomId=${roomId}&side=${side}`;
+                  }, 500);
+                }
+                
+                // 设置超时，如果5秒内连接还没关闭，强制跳转
+                setTimeout(() => {
+                  if (ws.readyState !== WebSocket.CLOSED) {
+                    console.warn('[PVP Lobby] WebSocket连接关闭超时，强制跳转');
+                    ws.removeEventListener('close', closeHandler);
+                    // 关键修复：通过URL参数传递side，避免localStorage冲突
+                    window.location.href = `battle.html?mode=pvp&roomId=${roomId}&side=${side}`;
+                  }
+                }, 5000);
+              }
+            } else {
+              // 没有engine或ws，直接跳转
+              // 关键修复：通过URL参数传递side，避免localStorage冲突
+              const fallbackSide = mySide || localStorage.getItem('pvpSide') || 'p1';
+              window.location.href = `battle.html?mode=pvp&roomId=${currentRoomId}&side=${fallbackSide}`;
+            }
+            break;
+
+          case 'error':
+            showError(message.payload.message);
+            break;
+
+          case 'opponent-disconnected':
+            showError('对手已断开连接');
+            updateRoomStatus({ status: 'waiting', players: { p1: { connected: false }, p2: { connected: false } } });
+            break;
+
+          case 'room-closed':
+            showError('房间已关闭');
+            resetUI();
+            break;
+        }
+      } catch (e) {
+        console.error('[PVP Lobby] 解析消息失败:', e);
+      }
+    }
+
+    // 更新房间状态
+    function updateRoomStatus(status) {
+      document.getElementById('room-status-section').style.display = 'block';
+      document.getElementById('current-room-id').textContent = status.roomId || currentRoomId;
+
+      // 安全检查：如果 status.players 不存在，使用默认值
+      const players = status.players || {};
+      const p1Info = players.p1 || { connected: false, teamReady: false };
+      const p2Info = players.p2 || { connected: false, teamReady: false };
+
+      // 更新玩家1状态
+      const p1Connected = p1Info.connected || false;
+      const p1Ready = p1Info.teamReady || false;
+      document.getElementById('p1-indicator').className = `status-indicator ${p1Connected ? (p1Ready ? 'ready' : 'connected') : 'disconnected'}`;
+      document.getElementById('p1-status').textContent = p1Connected ? (p1Ready ? '已准备' : '已连接') : '未连接';
+
+      // 更新玩家2状态
+      const p2Connected = p2Info.connected || false;
+      const p2Ready = p2Info.teamReady || false;
+      document.getElementById('p2-indicator').className = `status-indicator ${p2Connected ? (p2Ready ? 'ready' : 'connected') : 'disconnected'}`;
+      document.getElementById('p2-status').textContent = p2Connected ? (p2Ready ? '已准备' : '已连接') : '未连接';
+
+      // 如果两个玩家都准备好了，自动发送start消息（两个玩家都需要发送）
+      // 注意：只有在状态是 'ready' 时才自动发送（表示第一个玩家已经发送了start）
+      // 如果状态是 'waiting'，需要手动点击按钮
+      console.log(`[PVP Lobby] 房间状态检查: p1Ready=${p1Ready}, p2Ready=${p2Ready}, status=${status.status}`);
+      console.log(`[PVP Lobby] 发送状态检查: isSendingStart=${isSendingStart}, hasSentStart=${hasSentStart}`);
+      console.log(`[PVP Lobby] 我的side: ${mySide}`);
+      
+      if (p1Ready && p2Ready && status.status === 'ready') {
+        // 两个玩家都准备好了，且状态是ready（第一个玩家已发送start），自动发送start消息
+        // 但只有在自己还没发送过start的情况下才发送
+        // 重要：如果状态是 ready，说明第一个玩家已经发送了，第二个玩家必须发送才能开始对战
+        if (!hasSentStart && !isSendingStart) {
+          console.log('[PVP Lobby] 检测到两个玩家都准备好且状态是ready，自动发送start消息');
+          startBattle();
+        } else {
+          console.log('[PVP Lobby] 已经发送过start或正在发送，跳过自动发送');
+          console.log(`[PVP Lobby] 原因: hasSentStart=${hasSentStart}, isSendingStart=${isSendingStart}`);
+          // 如果状态是 ready 但 hasSentStart=true，可能是之前发送失败或被阻止了
+          // 强制重置标志，允许重新发送（但只重置一次，避免无限循环）
+          if (hasSentStart && status.status === 'ready') {
+            console.warn('[PVP Lobby] ⚠️ 状态是ready但hasSentStart=true，可能是之前发送失败，强制重置标志');
+            hasSentStart = false;
+            isSendingStart = false;
+            // 延迟一下再发送，避免立即触发
+            setTimeout(() => {
+              if (!hasSentStart && !isSendingStart) {
+                console.log('[PVP Lobby] 重置后重新尝试发送start消息');
+                startBattle();
+              }
+            }, 100);
+          }
+        }
+      } else if (p1Ready && p2Ready && status.status === 'waiting') {
+        // 两个玩家都准备好了，但状态还是waiting（第一个玩家还没发送start），显示按钮
+        console.log('[PVP Lobby] 两个玩家都准备好，但状态是waiting，显示准备按钮');
+        const startBtn = document.getElementById('start-battle-btn');
+        startBtn.disabled = false;
+        startBtn.textContent = '准备对战';
+      } else {
+        // 显示开始按钮（如果两个玩家都连接但未准备）
+        const startBtn = document.getElementById('start-battle-btn');
+        if (p1Connected && p2Connected) {
+          startBtn.disabled = false;
+          startBtn.textContent = '准备对战';
+        } else {
+          startBtn.disabled = true;
+          startBtn.textContent = '等待玩家';
+        }
+      }
+    }
+
+    // 防止重复发送 start 消息的标志
+    let isSendingStart = false;
+    let hasSentStart = false;
+
+    // 开始对战
+    function startBattle() {
+      // 防止重复发送
+      if (hasSentStart) {
+        console.log('[PVP Lobby] ⚠️ 已经发送过start消息，忽略重复请求');
+        return;
+      }
+      
+      if (isSendingStart) {
+        console.log('[PVP Lobby] ⚠️ 正在发送start消息，忽略重复请求');
+        return;
+      }
+      
+      // 检查engine是否存在
+      if (!engine) {
+        console.error('[PVP Lobby] engine不存在，无法发送start消息');
+        showError('连接未建立，请重新创建或加入房间');
+        return;
+      }
+      
+      // 检查engine是否已连接
+      if (!engine.isConnected) {
+        console.error('[PVP Lobby] engine未连接');
+        showError('连接已断开，请重新创建或加入房间');
+        return;
+      }
+      
+      // 重新加载队伍（确保获取最新数据）
+      loadTeam();
+      
+      if (!currentRoomId) {
+        showError('缺少房间ID');
+        return;
+      }
+      
+      if (!myTeam || myTeam.length === 0) {
+        showError('请先在主页组建完整的队伍');
+        return;
+      }
+      
+      // 设置标志
+      isSendingStart = true;
+      
+      console.log('[PVP Lobby] 准备发送开始对战请求');
+      console.log('[PVP Lobby] 房间ID:', currentRoomId);
+      console.log('[PVP Lobby] 队伍数量:', myTeam.length);
+      console.log('[PVP Lobby] engine状态:', engine.isConnected);
+
+      // 发送开始对战消息
+      // 重要：包含side信息，用于重连时识别玩家身份
+      // 优先使用 mySide（从服务器消息中获取），这是最可靠的
+      const side = mySide || localStorage.getItem('pvpSide') || 'p1';
+      console.log('[PVP Lobby] 发送start消息，包含side:', side);
+      console.log('[PVP Lobby] side来源: mySide=' + (mySide || '无') + ', localStorage=' + (localStorage.getItem('pvpSide') || '无'));
+      const success = engine.startBattle({
+        mode: 'pvp',
+        formatid: 'gen9ou',
+        team: myTeam,
+        roomId: currentRoomId,
+        side: side  // 重要：包含side信息
+      });
+
+      if (success) {
+        console.log('[PVP Lobby] ✅ 开始对战请求已发送');
+        hasSentStart = true;
+        // 立即重置 isSendingStart（发送是同步的，不需要等待）
+        isSendingStart = false;
+        console.log('[PVP Lobby] isSendingStart 已重置');
+      } else {
+        console.error('[PVP Lobby] ❌ 发送开始对战请求失败');
+        showError('发送请求失败，请检查连接');
+        isSendingStart = false;
+      }
+    }
+
+    // 重置UI
+    function resetUI() {
+      currentRoomId = null;
+      document.getElementById('room-status-section').style.display = 'none';
+      document.getElementById('room-id-display').style.display = 'none';
+    }
+
+    // 页面加载时加载队伍
+    window.addEventListener('load', () => {
+      loadTeam();
+      // 不显示错误，只是静默加载
+      // 如果队伍不存在，会在用户尝试创建/加入房间时提示
+    });
+    
+    // 页面可见性改变时重新加载队伍（用户可能从其他标签页修改了队伍）
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        console.log('[PVP Lobby] 页面重新可见，重新加载队伍');
+        loadTeam();
+      }
+    });
+  </script>
+</body>
+</html>
+

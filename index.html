@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宝可梦对战平台 - 首页</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Microsoft YaHei", "Arial Rounded MT Bold", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: #fff;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      }
+
+      .header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .status-panel {
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 20px 40px rgba(15, 76, 129, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .status-panel h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+
+      .status-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        margin-bottom: 15px;
+      }
+
+      .status-item span:last-child {
+        font-weight: bold;
+      }
+
+      .status-online {
+        color: #9effa6;
+      }
+
+      .status-offline {
+        color: #ffd1d1;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.18);
+        border-radius: 20px;
+        padding: 30px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        box-shadow: 0 15px 35px rgba(15, 76, 129, 0.25);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        backdrop-filter: blur(8px);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 25px 45px rgba(15, 76, 129, 0.35);
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        font-size: 0.95rem;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      .actions {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .actions button {
+        background: #fff;
+        color: #3c78d8;
+        border: none;
+        border-radius: 999px;
+        padding: 12px 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 0 10px;
+        box-shadow: 0 10px 20px rgba(60, 120, 216, 0.25);
+        transition: transform 0.2s ease;
+      }
+
+      .actions button:hover {
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .status-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>⚡ 宝可梦对战平台</h1>
+        <p>基于 Pokemon Showdown 的实时对战系统</p>
+      </div>
+
+      <div class="status-panel">
+        <h2>服务器状态</h2>
+        <div class="status-item">
+          <span>对战服务器 (ws://localhost:3071)</span>
+          <span id="battle-status" class="status-offline">检测中...</span>
+        </div>
+        <div class="status-item">
+          <span>前端服务器 (http://localhost:8080)</span>
+          <span id="frontend-status" class="status-offline">检测中...</span>
+        </div>
+        <div class="actions">
+          <button onclick="checkServerStatus()">刷新状态</button>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <a class="feature-card" href="pokemmo.html">
+          <h3>🤖 AI 对战</h3>
+          <p>挑战 5 种不同难度的 AI，对战策略不断升级。</p>
+        </a>
+
+        <a class="feature-card" href="pvp-lobby.html">
+          <h3>👥 真人对战</h3>
+          <p>创建或加入房间，与好友进行实时 PvP 对战。</p>
+        </a>
+
+        <a class="feature-card" href="team.html">
+          <h3>📦 队伍管理</h3>
+          <p>本地编辑、保存和导出你的宝可梦队伍，随时准备开战。</p>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      async function checkServerStatus() {
+        const battleStatus = document.getElementById("battle-status");
+        const frontendStatus = document.getElementById("frontend-status");
+
+        // 检测对战服务器
+        try {
+          const ws = new WebSocket("ws://localhost:3071/battle");
+          ws.onopen = () => {
+            battleStatus.textContent = "✓ 在线";
+            battleStatus.className = "status-online";
+            ws.close();
+          };
+          ws.onerror = () => {
+            battleStatus.textContent = "✗ 离线";
+            battleStatus.className = "status-offline";
+          };
+        } catch (e) {
+          battleStatus.textContent = "✗ 离线";
+          battleStatus.className = "status-offline";
+        }
+
+        // 检测前端服务器（尝试获取主页）
+        try {
+          const response = await fetch("./pokemmo.html", { cache: "no-store" });
+          if (response.ok) {
+            frontendStatus.textContent = "✓ 在线";
+            frontendStatus.className = "status-online";
+          } else {
+            frontendStatus.textContent = "✗ 离线";
+            frontendStatus.className = "status-offline";
+          }
+        } catch (e) {
+          frontendStatus.textContent = "✗ 离线";
+          frontendStatus.className = "status-offline";
+        }
+      }
+
+      window.addEventListener("load", () => {
+        checkServerStatus();
+        setInterval(checkServerStatus, 30000);
+      });
+    </script>
+  </body>
+</html>
+

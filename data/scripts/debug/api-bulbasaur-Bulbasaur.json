@@ -1,0 +1,23 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "68260": {
+        "pageid": 68260,
+        "ns": 0,
+        "title": "Bulbasaur",
+        "revisions": [
+          {
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "#REDIRECT [[妙蛙种子]]"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

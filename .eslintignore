@@ -1,0 +1,33 @@
+# 依赖
+node_modules/
+**/node_modules/
+
+# 构建产物
+dist/
+build/
+coverage/
+*.min.js
+
+# 外部库
+pokemon-showdown/
+pokemon-showdown-client-master/
+external/
+
+# 缓存和资源
+cache/
+*.log
+*.json
+
+# 配置文件
+package-lock.json
+
+# 工具和脚本（可选，如果需要检查可以移除）
+# tools/
+
+# 文档
+*.md
+
+# 其他
+.env
+.env.local
+

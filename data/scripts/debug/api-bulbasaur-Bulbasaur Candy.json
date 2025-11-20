@@ -1,0 +1,23 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "158628": {
+        "pageid": 158628,
+        "ns": 0,
+        "title": "Bulbasaur Candy",
+        "revisions": [
+          {
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "#重定向 [[妙蛙种子的糖果（道具）]]"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@pokemmo/battle-engine",
+  "version": "0.1.0",
+  "description": "Modular battle engine extracted from Pokemmo Myself",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}
+
+

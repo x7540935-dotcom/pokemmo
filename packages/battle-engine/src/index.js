@@ -1,0 +1,20 @@
+export { default as BattleEngine } from './core/BattleEngine.js';
+export { default as ProtocolParser } from './core/ProtocolParser.js';
+export { default as StateManager } from './core/StateManager.js';
+export { default as Localization } from './utils/Localization.js';
+export { default as Logger } from './utils/Logger.js';
+export { default as MoveDataHelper } from './utils/MoveDataHelper.js';
+export { default as PokemonUtils } from './utils/PokemonUtils.js';
+export { default as SpriteLoader } from './utils/SpriteLoader.js';
+export { default as AnimationManager } from './animations/AnimationManager.js';
+export { default as BattleStateMachine } from './state-machine/BattleStateMachine.js';
+export { default as PhaseBase } from './phases/PhaseBase.js';
+export { default as TeamLoadingPhase } from './phases/TeamLoadingPhase.js';
+export { default as TeamPreviewPhase } from './phases/TeamPreviewPhase.js';
+export { default as PokemonDataPhase } from './phases/PokemonDataPhase.js';
+export { default as BattlePhase } from './phases/BattlePhase.js';
+export { default as BattleUI } from './ui/BattleUI.js';
+export { default as PerformanceMonitor, getGlobalMonitor } from './utils/PerformanceMonitor.js';
+export { default as PerformanceReporter, getGlobalReporter } from './utils/PerformanceReporter.js';
+export { default as WebVitalsReporter, getGlobalVitalsReporter } from './utils/WebVitalsReporter.js';
+

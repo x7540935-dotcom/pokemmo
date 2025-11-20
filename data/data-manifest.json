@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2025-11-19T02:24:22.634Z",
+  "files": {
+    "pokedex-cn.json": {
+      "size": 168731,
+      "mtime": "2025-11-18T07:30:31.619Z",
+      "md5": "3de234519697cc5eba3c71906d69e1fc",
+      "exists": true,
+      "pokemonCount": 812
+    },
+    "pokedex.json": {
+      "size": 29244,
+      "mtime": "2025-11-12T11:01:16.158Z",
+      "md5": "34a29ff24090a38f9fbf36ab729a883f",
+      "exists": true,
+      "pokemonCount": 1049
+    },
+    "moves.json": {
+      "size": 38097,
+      "mtime": "2025-11-12T13:37:57.593Z",
+      "md5": "002303c04cb0c428089c9351ba1dfb9e",
+      "exists": true,
+      "moveCount": 933
+    },
+    "items.json": {
+      "size": 12113,
+      "mtime": "2025-11-12T14:06:56.418Z",
+      "md5": "f8dddab7e28ad4cfdfa393999ebc832e",
+      "exists": true,
+      "itemCount": 271
+    },
+    "abilities.json": {
+      "size": 9003,
+      "mtime": "2025-11-16T03:29:13.047Z",
+      "md5": "3ad732067771c4837a9b5fee6ec1cc82",
+      "exists": true,
+      "abilityCount": 303
+    }
+  },
+  "statistics": {
+    "totalPokemon": 1049,
+    "totalMoves": 933,
+    "totalItems": 271,
+    "totalAbilities": 303
+  }
+}
