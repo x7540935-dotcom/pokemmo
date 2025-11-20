@@ -1,0 +1,1935 @@
+{
+  "total": 1049,
+  "hasSprites": 808,
+  "missingSprites": 241,
+  "missing": [
+    {
+      "key": "turtonator",
+      "englishName": "turtonator",
+      "chineseName": "爆焰龜獸",
+      "number": 797,
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "koraidon",
+      "englishName": "koraidon",
+      "chineseName": "故勒顿",
+      "number": 1007,
+      "spriteFile": "1007-故勒顿.webp",
+      "spriteUrl": null
+    },
+    {
+      "key": "miraidon",
+      "englishName": "miraidon",
+      "chineseName": "密勒顿",
+      "number": 1008,
+      "spriteFile": "1008-密勒顿.webp",
+      "spriteUrl": null
+    },
+    {
+      "key": "walkingwake",
+      "englishName": "walkingwake",
+      "chineseName": "波荡水",
+      "number": 1009,
+      "spriteFile": "1009-波荡水.png",
+      "spriteUrl": null
+    },
+    {
+      "key": "mrmime",
+      "englishName": "mrmime",
+      "chineseName": "魔墙人偶",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "heracrossmega",
+      "englishName": "heracrossmega",
+      "chineseName": "超级赫拉克罗斯",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rayquazamega",
+      "englishName": "rayquazamega",
+      "chineseName": "超级烈空坐",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "lucario",
+      "englishName": "lucario",
+      "chineseName": "路卡利欧",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "arceus",
+      "englishName": "arceus",
+      "chineseName": "阿尔宙斯",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "reshiram",
+      "englishName": "reshiram",
+      "chineseName": "莱希拉姆",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "zekrom",
+      "englishName": "zekrom",
+      "chineseName": "捷克罗姆",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "greninjaash",
+      "englishName": "greninjaash",
+      "chineseName": "小智的甲贺忍蛙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "litleo",
+      "englishName": "litleo",
+      "chineseName": "小狮狮",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "doublade",
+      "englishName": "doublade",
+      "chineseName": "双剑鞘",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "slurpuff",
+      "englishName": "slurpuff",
+      "chineseName": "胖甜妮",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dragalge",
+      "englishName": "dragalge",
+      "chineseName": "毒藻龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "clawitzer",
+      "englishName": "clawitzer",
+      "chineseName": "钢炮臂虾",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tyrantrum",
+      "englishName": "tyrantrum",
+      "chineseName": "怪颚龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "aurorus",
+      "englishName": "aurorus",
+      "chineseName": "冰雪巨龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "sliggoo",
+      "englishName": "sliggoo",
+      "chineseName": "黏美儿",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "xerneas",
+      "englishName": "xerneas",
+      "chineseName": "哲尔尼亚斯",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "yveltal",
+      "englishName": "yveltal",
+      "chineseName": "伊裴尔塔尔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "zygarde",
+      "englishName": "zygarde",
+      "chineseName": "基格尔德",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "zygarde10",
+      "englishName": "zygarde10",
+      "chineseName": "基格尔德",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "hoopa",
+      "englishName": "hoopa",
+      "chineseName": "胡帕",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "volcanion",
+      "englishName": "volcanion",
+      "chineseName": "波尔凯尼恩",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rowlet",
+      "englishName": "rowlet",
+      "chineseName": "木木枭",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "decidueye",
+      "englishName": "decidueye",
+      "chineseName": "狙射树枭",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "litten",
+      "englishName": "litten",
+      "chineseName": "火斑喵",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "torracat",
+      "englishName": "torracat",
+      "chineseName": "炎热喵",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "incineroar",
+      "englishName": "incineroar",
+      "chineseName": "炽焰咆哮虎",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "popplio",
+      "englishName": "popplio",
+      "chineseName": "球球海狮",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "brionne",
+      "englishName": "brionne",
+      "chineseName": "花漾海狮",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "primarina",
+      "englishName": "primarina",
+      "chineseName": "西狮海壬",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "pikipek",
+      "englishName": "pikipek",
+      "chineseName": "小笃儿",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "yungoos",
+      "englishName": "yungoos",
+      "chineseName": "猫鼬少",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "gumshoos",
+      "englishName": "gumshoos",
+      "chineseName": "猫鼬探长",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "grubbin",
+      "englishName": "grubbin",
+      "chineseName": "强颚鸡母虫",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "charjabug",
+      "englishName": "charjabug",
+      "chineseName": "虫电宝",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "vikavolt",
+      "englishName": "vikavolt",
+      "chineseName": "锹农炮虫",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "oricorio",
+      "englishName": "oricorio",
+      "chineseName": "花舞鸟",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cutiefly",
+      "englishName": "cutiefly",
+      "chineseName": "萌虻",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "ribombee",
+      "englishName": "ribombee",
+      "chineseName": "蝶结萌虻",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rockruff",
+      "englishName": "rockruff",
+      "chineseName": "岩狗狗",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "lycanroc",
+      "englishName": "lycanroc",
+      "chineseName": "鬃岩狼人",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "mudbray",
+      "englishName": "mudbray",
+      "chineseName": "泥驴仔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "mudsdale",
+      "englishName": "mudsdale",
+      "chineseName": "重泥挽马",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "fomantis",
+      "englishName": "fomantis",
+      "chineseName": "伪螳草",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "lurantis",
+      "englishName": "lurantis",
+      "chineseName": "兰螳花",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "salandit",
+      "englishName": "salandit",
+      "chineseName": "夜盗火蜥",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "stufful",
+      "englishName": "stufful",
+      "chineseName": "童偶熊",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "bewear",
+      "englishName": "bewear",
+      "chineseName": "穿着熊",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "bounsweet",
+      "englishName": "bounsweet",
+      "chineseName": "甜竹竹",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "steenee",
+      "englishName": "steenee",
+      "chineseName": "甜舞妮",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tsareena",
+      "englishName": "tsareena",
+      "chineseName": "甜冷美后",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "comfey",
+      "englishName": "comfey",
+      "chineseName": "花疗环环",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "oranguru",
+      "englishName": "oranguru",
+      "chineseName": "智挥猩",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "passimian",
+      "englishName": "passimian",
+      "chineseName": "投掷猴",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "wimpod",
+      "englishName": "wimpod",
+      "chineseName": "胆小虫",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "sandygast",
+      "englishName": "sandygast",
+      "chineseName": "沙丘娃",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "palossand",
+      "englishName": "palossand",
+      "chineseName": "噬沙堡爷",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "silvally",
+      "englishName": "silvally",
+      "chineseName": "银伴战兽",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "minior",
+      "englishName": "minior",
+      "chineseName": "小陨星",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "komala",
+      "englishName": "komala",
+      "chineseName": "树枕尾熊",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "togedemaru",
+      "englishName": "togedemaru",
+      "chineseName": "托戈德玛尔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "mimikyu",
+      "englishName": "mimikyu",
+      "chineseName": "谜拟Ｑ",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "bruxish",
+      "englishName": "bruxish",
+      "chineseName": "磨牙彩皮鱼",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "jangmoo",
+      "englishName": "jangmoo",
+      "chineseName": "心鳞宝",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cosmog",
+      "englishName": "cosmog",
+      "chineseName": "科斯莫古",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "solgaleo",
+      "englishName": "solgaleo",
+      "chineseName": "索尔迦雷欧",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "lunala",
+      "englishName": "lunala",
+      "chineseName": "露奈雅拉",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "poipole",
+      "englishName": "poipole",
+      "chineseName": "毒贝比",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "naganadel",
+      "englishName": "naganadel",
+      "chineseName": "四颚针龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "stakataka",
+      "englishName": "stakataka",
+      "chineseName": "垒磊石",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "blacephalon",
+      "englishName": "blacephalon",
+      "chineseName": "砰头小丑",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "zeraora",
+      "englishName": "zeraora",
+      "chineseName": "捷拉奥拉",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "meltan",
+      "englishName": "meltan",
+      "chineseName": "美录坦",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "melmetal",
+      "englishName": "melmetal",
+      "chineseName": "美录梅塔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "grookey",
+      "englishName": "grookey",
+      "chineseName": "敲音猴",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "thwackey",
+      "englishName": "thwackey",
+      "chineseName": "啪咚猴",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rillaboom",
+      "englishName": "rillaboom",
+      "chineseName": "轰擂金刚猩",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "scorbunny",
+      "englishName": "scorbunny",
+      "chineseName": "炎兔儿",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "raboot",
+      "englishName": "raboot",
+      "chineseName": "腾蹴小将",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cinderace",
+      "englishName": "cinderace",
+      "chineseName": "闪焰王牌",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "sobble",
+      "englishName": "sobble",
+      "chineseName": "泪眼蜥",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "drizzile",
+      "englishName": "drizzile",
+      "chineseName": "变涩蜥",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "inteleon",
+      "englishName": "inteleon",
+      "chineseName": "千面避役",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "skwovet",
+      "englishName": "skwovet",
+      "chineseName": "贪心栗鼠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "greedent",
+      "englishName": "greedent",
+      "chineseName": "藏饱栗鼠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rookidee",
+      "englishName": "rookidee",
+      "chineseName": "稚山雀",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "corvisquire",
+      "englishName": "corvisquire",
+      "chineseName": "蓝鸦",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "corviknight",
+      "englishName": "corviknight",
+      "chineseName": "钢铠鸦",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "blipbug",
+      "englishName": "blipbug",
+      "chineseName": "索侦虫",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dottler",
+      "englishName": "dottler",
+      "chineseName": "天罩虫",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "orbeetle",
+      "englishName": "orbeetle",
+      "chineseName": "以欧路普",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "nickit",
+      "englishName": "nickit",
+      "chineseName": "偷儿狐",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "thievul",
+      "englishName": "thievul",
+      "chineseName": "狐大盗",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "gossifleur",
+      "englishName": "gossifleur",
+      "chineseName": "幼棉棉",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "eldegoss",
+      "englishName": "eldegoss",
+      "chineseName": "白蓬蓬",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "wooloo",
+      "englishName": "wooloo",
+      "chineseName": "毛辫羊",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dubwool",
+      "englishName": "dubwool",
+      "chineseName": "毛毛角羊",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "chewtle",
+      "englishName": "chewtle",
+      "chineseName": "咬咬龟",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "drednaw",
+      "englishName": "drednaw",
+      "chineseName": "暴噬龟",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "yamper",
+      "englishName": "yamper",
+      "chineseName": "来电汪",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "boltund",
+      "englishName": "boltund",
+      "chineseName": "逐电犬",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rolycoly",
+      "englishName": "rolycoly",
+      "chineseName": "小炭仔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "carkol",
+      "englishName": "carkol",
+      "chineseName": "大炭车",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "coalossal",
+      "englishName": "coalossal",
+      "chineseName": "巨炭山",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "applin",
+      "englishName": "applin",
+      "chineseName": "啃果虫",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "flapple",
+      "englishName": "flapple",
+      "chineseName": "苹裹龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "appletun",
+      "englishName": "appletun",
+      "chineseName": "丰蜜龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "silicobra",
+      "englishName": "silicobra",
+      "chineseName": "沙包蛇",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "sandaconda",
+      "englishName": "sandaconda",
+      "chineseName": "沙螺蟒",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cramorant",
+      "englishName": "cramorant",
+      "chineseName": "古月鸟",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "arrokuda",
+      "englishName": "arrokuda",
+      "chineseName": "刺梭鱼",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "barraskewda",
+      "englishName": "barraskewda",
+      "chineseName": "戽斗尖梭",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "toxel",
+      "englishName": "toxel",
+      "chineseName": "毒电婴",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "toxtricity",
+      "englishName": "toxtricity",
+      "chineseName": "颤弦蝾螈",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "sizzlipede",
+      "englishName": "sizzlipede",
+      "chineseName": "烧火蚣",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "centiskorch",
+      "englishName": "centiskorch",
+      "chineseName": "焚焰蚣",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "clobbopus",
+      "englishName": "clobbopus",
+      "chineseName": "拳拳蛸",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "grapploct",
+      "englishName": "grapploct",
+      "chineseName": "八爪武师",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "sinistea",
+      "englishName": "sinistea",
+      "chineseName": "来悲茶",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "polteageist",
+      "englishName": "polteageist",
+      "chineseName": "怖思壶",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "hatenna",
+      "englishName": "hatenna",
+      "chineseName": "迷布莉姆",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "hattrem",
+      "englishName": "hattrem",
+      "chineseName": "提布莉姆",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "hatterene",
+      "englishName": "hatterene",
+      "chineseName": "布莉姆温",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "impidimp",
+      "englishName": "impidimp",
+      "chineseName": "捣蛋小妖",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "morgrem",
+      "englishName": "morgrem",
+      "chineseName": "诈唬魔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "grimmsnarl",
+      "englishName": "grimmsnarl",
+      "chineseName": "长毛巨魔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "obstagoon",
+      "englishName": "obstagoon",
+      "chineseName": "堵拦熊",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "perrserker",
+      "englishName": "perrserker",
+      "chineseName": "喵头目",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cursola",
+      "englishName": "cursola",
+      "chineseName": "魔灵珊瑚",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "runerigus",
+      "englishName": "runerigus",
+      "chineseName": "死神板",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "milcery",
+      "englishName": "milcery",
+      "chineseName": "小仙奶",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "alcremie",
+      "englishName": "alcremie",
+      "chineseName": "霜奶仙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "pincurchin",
+      "englishName": "pincurchin",
+      "chineseName": "啪嚓海胆",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "snom",
+      "englishName": "snom",
+      "chineseName": "雪吞虫",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "frosmoth",
+      "englishName": "frosmoth",
+      "chineseName": "雪绒蛾",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "stonjourner",
+      "englishName": "stonjourner",
+      "chineseName": "巨石丁",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "eiscue",
+      "englishName": "eiscue",
+      "chineseName": "冰砌鹅",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "indeedee",
+      "englishName": "indeedee",
+      "chineseName": "爱管侍",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "morpeko",
+      "englishName": "morpeko",
+      "chineseName": "莫鲁贝可",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cufant",
+      "englishName": "cufant",
+      "chineseName": "铜象",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "copperajah",
+      "englishName": "copperajah",
+      "chineseName": "大王铜象",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dracozolt",
+      "englishName": "dracozolt",
+      "chineseName": "雷鸟龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "arctozolt",
+      "englishName": "arctozolt",
+      "chineseName": "雷鸟海兽",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dracovish",
+      "englishName": "dracovish",
+      "chineseName": "鳃鱼龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "arctovish",
+      "englishName": "arctovish",
+      "chineseName": "鳃鱼海兽",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "duraludon",
+      "englishName": "duraludon",
+      "chineseName": "铝钢龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dreepy",
+      "englishName": "dreepy",
+      "chineseName": "多龙梅西亚",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "drakloak",
+      "englishName": "drakloak",
+      "chineseName": "多龙奇",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dragapult",
+      "englishName": "dragapult",
+      "chineseName": "多龙巴鲁托",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "zacian",
+      "englishName": "zacian",
+      "chineseName": "苍响",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "zamazenta",
+      "englishName": "zamazenta",
+      "chineseName": "藏玛然特",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "eternatus",
+      "englishName": "eternatus",
+      "chineseName": "无极汰那",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "kubfu",
+      "englishName": "kubfu",
+      "chineseName": "熊徒弟",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "urshifu",
+      "englishName": "urshifu",
+      "chineseName": "武道熊师",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "zarude",
+      "englishName": "zarude",
+      "chineseName": "萨戮德",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "regieleki",
+      "englishName": "regieleki",
+      "chineseName": "雷吉艾勒奇",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "regidrago",
+      "englishName": "regidrago",
+      "chineseName": "雷吉铎拉戈",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "glastrier",
+      "englishName": "glastrier",
+      "chineseName": "雪暴马",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "spectrier",
+      "englishName": "spectrier",
+      "chineseName": "灵幽马",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "calyrex",
+      "englishName": "calyrex",
+      "chineseName": "蕾冠王",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "ursaluna",
+      "englishName": "ursaluna",
+      "chineseName": "月月熊",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "sneasler",
+      "englishName": "sneasler",
+      "chineseName": "大狃拉",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "overqwil",
+      "englishName": "overqwil",
+      "chineseName": "万针鱼",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "enamorus",
+      "englishName": "enamorus",
+      "chineseName": "眷恋云",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "floragato",
+      "englishName": "floragato",
+      "chineseName": "蒂蕾喵",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "meowscarada",
+      "englishName": "meowscarada",
+      "chineseName": "魔幻假面喵",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "crocalor",
+      "englishName": "crocalor",
+      "chineseName": "炙烫鳄",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "skeledirge",
+      "englishName": "skeledirge",
+      "chineseName": "骨纹巨声鳄",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "quaxwell",
+      "englishName": "quaxwell",
+      "chineseName": "涌跃鸭",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "quaquaval",
+      "englishName": "quaquaval",
+      "chineseName": "狂欢浪舞鸭",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "lechonk",
+      "englishName": "lechonk",
+      "chineseName": "爱吃豚",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "oinkologne",
+      "englishName": "oinkologne",
+      "chineseName": "飘香豚",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tarountula",
+      "englishName": "tarountula",
+      "chineseName": "团珠蛛",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "spidops",
+      "englishName": "spidops",
+      "chineseName": "操陷蛛",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "nymble",
+      "englishName": "nymble",
+      "chineseName": "豆蟋蟀",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "lokix",
+      "englishName": "lokix",
+      "chineseName": "烈腿蝗",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "pawmi",
+      "englishName": "pawmi",
+      "chineseName": "布拨",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "pawmo",
+      "englishName": "pawmo",
+      "chineseName": "布土拨",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "pawmot",
+      "englishName": "pawmot",
+      "chineseName": "巴布土拨",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tandemaus",
+      "englishName": "tandemaus",
+      "chineseName": "一对鼠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "maushold",
+      "englishName": "maushold",
+      "chineseName": "一家鼠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "fidough",
+      "englishName": "fidough",
+      "chineseName": "狗仔包",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dachsbun",
+      "englishName": "dachsbun",
+      "chineseName": "麻花犬",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "smoliv",
+      "englishName": "smoliv",
+      "chineseName": "迷你芙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dolliv",
+      "englishName": "dolliv",
+      "chineseName": "奥利纽",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "arboliva",
+      "englishName": "arboliva",
+      "chineseName": "奥利瓦",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "squawkabilly",
+      "englishName": "squawkabilly",
+      "chineseName": "怒鹦哥",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "nacli",
+      "englishName": "nacli",
+      "chineseName": "盐石宝",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "naclstack",
+      "englishName": "naclstack",
+      "chineseName": "盐石垒",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "garganacl",
+      "englishName": "garganacl",
+      "chineseName": "盐石巨灵",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "charcadet",
+      "englishName": "charcadet",
+      "chineseName": "炭小侍",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tadbulb",
+      "englishName": "tadbulb",
+      "chineseName": "光蚪仔",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "wattrel",
+      "englishName": "wattrel",
+      "chineseName": "电海燕",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "kilowattrel",
+      "englishName": "kilowattrel",
+      "chineseName": "大电海燕",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "maschiff",
+      "englishName": "maschiff",
+      "chineseName": "偶叫獒",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "mabosstiff",
+      "englishName": "mabosstiff",
+      "chineseName": "獒教父",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "shroodle",
+      "englishName": "shroodle",
+      "chineseName": "滋汁鼹",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "bramblin",
+      "englishName": "bramblin",
+      "chineseName": "纳噬草",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "brambleghast",
+      "englishName": "brambleghast",
+      "chineseName": "怖纳噬草",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "toedscool",
+      "englishName": "toedscool",
+      "chineseName": "原野水母",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "toedscruel",
+      "englishName": "toedscruel",
+      "chineseName": "陆地水母",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "capsakid",
+      "englishName": "capsakid",
+      "chineseName": "热辣娃",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "scovillain",
+      "englishName": "scovillain",
+      "chineseName": "狠辣椒",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rellor",
+      "englishName": "rellor",
+      "chineseName": "虫滚泥",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "rabsca",
+      "englishName": "rabsca",
+      "chineseName": "虫甲圣",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "flittle",
+      "englishName": "flittle",
+      "chineseName": "飘飘雏",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "espathra",
+      "englishName": "espathra",
+      "chineseName": "超能艳鸵",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tinkatink",
+      "englishName": "tinkatink",
+      "chineseName": "小锻匠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tinkatuff",
+      "englishName": "tinkatuff",
+      "chineseName": "巧锻匠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tinkaton",
+      "englishName": "tinkaton",
+      "chineseName": "巨锻匠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "wugtrio",
+      "englishName": "wugtrio",
+      "chineseName": "三海地鼠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "bombirdier",
+      "englishName": "bombirdier",
+      "chineseName": "下石鸟",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "finizen",
+      "englishName": "finizen",
+      "chineseName": "波普海豚",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "palafin",
+      "englishName": "palafin",
+      "chineseName": "海豚侠",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "varoom",
+      "englishName": "varoom",
+      "chineseName": "噗隆隆",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "revavroom",
+      "englishName": "revavroom",
+      "chineseName": "普隆隆姆",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "orthworm",
+      "englishName": "orthworm",
+      "chineseName": "拖拖蚓",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "glimmet",
+      "englishName": "glimmet",
+      "chineseName": "晶光芽",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "glimmora",
+      "englishName": "glimmora",
+      "chineseName": "晶光花",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "houndstone",
+      "englishName": "houndstone",
+      "chineseName": "墓扬犬",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "flamigo",
+      "englishName": "flamigo",
+      "chineseName": "缠红鹤",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cetoddle",
+      "englishName": "cetoddle",
+      "chineseName": "走鲸",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "cetitan",
+      "englishName": "cetitan",
+      "chineseName": "浩大鲸",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "veluza",
+      "englishName": "veluza",
+      "chineseName": "轻身鳕",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dondozo",
+      "englishName": "dondozo",
+      "chineseName": "吃吼霸",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "tatsugiri",
+      "englishName": "tatsugiri",
+      "chineseName": "米立龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "annihilape",
+      "englishName": "annihilape",
+      "chineseName": "弃世猴",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "clodsire",
+      "englishName": "clodsire",
+      "chineseName": "土王",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "dudunsparce",
+      "englishName": "dudunsparce",
+      "chineseName": "土龙节节",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "kingambit",
+      "englishName": "kingambit",
+      "chineseName": "仆斩将军",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "frigibax",
+      "englishName": "frigibax",
+      "chineseName": "凉脊龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "arctibax",
+      "englishName": "arctibax",
+      "chineseName": "冻脊龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "baxcalibur",
+      "englishName": "baxcalibur",
+      "chineseName": "戟脊龙",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "gholdengo",
+      "englishName": "gholdengo",
+      "chineseName": "赛富豪",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "poltchageist",
+      "englishName": "poltchageist",
+      "chineseName": "斯魔茶",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "ironboulder",
+      "englishName": "ironboulder",
+      "chineseName": "铁磐岩",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    },
+    {
+      "key": "ironcrown",
+      "englishName": "ironcrown",
+      "chineseName": ":铁头壳",
+      "number": "?",
+      "spriteFile": null,
+      "spriteUrl": null
+    }
+  ]
+}

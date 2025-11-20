@@ -1,0 +1,69 @@
+{
+  "name": "pokemmo-showdown-min",
+  "version": "1.0.0",
+  "description": "A minimal Pokémon Showdown implementation with team building and battle features",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "proxy": "node tools/resource-proxy.js",
+    "battle": "node poke-proxy-server/battle-server.js",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "npm run test:engine",
+    "test:engine": "node packages/battle-engine/scripts/smoke-test.mjs",
+    "manifest:sprites": "node tools/generate-sprites-manifest.mjs",
+    "manifest:data": "node tools/generate-data-manifest.mjs",
+    "manifest:all": "npm run manifest:sprites && npm run manifest:data",
+    "validate:resources": "node tools/validate-resources.mjs",
+    "validate:sprites": "node tools/validate-resources.mjs --type=sprites",
+    "validate:data": "node tools/validate-resources.mjs --type=data",
+    "lint": "eslint . --ext .js,.mjs",
+    "lint:fix": "eslint . --ext .js,.mjs --fix",
+    "check:bundle-size": "node tools/check-bundle-size.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fs-extra": "^11.1.1",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.3.1",
+    "socket.io": "^4.7.2",
+    "web-vitals": "^5.1.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/compression": "^1.7.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.3",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^20.4.2",
+    "@types/ws": "^8.5.5",
+    "eslint": "^8.57.1",
+    "jest": "^29.6.1",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  },
+  "keywords": [
+    "pokemon",
+    "showdown",
+    "battle",
+    "team-builder",
+    "gaming"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/pokemmo-showdown-min.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

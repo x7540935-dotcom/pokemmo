@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-11-19T02:37:08.344Z",
+  "threshold": 10,
+  "growthLimit": 20,
+  "current": {
+    "totalSize": 0,
+    "totalSizeMB": 0,
+    "files": {},
+    "directories": {}
+  },
+  "previous": {
+    "totalSize": 0,
+    "totalSizeMB": 0,
+    "timestamp": "2025-11-19T02:36:48.416Z"
+  },
+  "comparison": {
+    "sizeDiff": 0,
+    "sizeDiffMB": 0,
+    "growthPercent": 0
+  },
+  "status": "passed",
+  "errors": [],
+  "warnings": []
+}

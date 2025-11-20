@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝可梦对战平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e53935 0%, #e35d5b 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 250px 1fr 350px;
+            grid-template-rows: 80px 1fr;
+            grid-gap: 20px;
+            height: calc(100vh - 40px);
+        }
+
+        .header {
+            grid-column: 1 / 4;
+            background: #ffcb05;
+            border: 5px solid #3d7dca;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            color: #3d7dca;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 0 #ffcb05, 4px 4px 0 rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="40" fill="%233d7dca" opacity="0.1"/></svg>');
+            z-index: 1;
+        }
+
+        .menu {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu-btn {
+            background: #3d7dca;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 3px 0 #1c5ca6;
+        }
+
+        .menu-btn:hover {
+            background: #2a6cb8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 #1c5ca6;
+        }
+
+        .menu-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 0 #1c5ca6;
+        }
+
+        .menu-btn i {
+            font-size: 1.3rem;
+        }
+
+        /* 队伍预览区域 */
+        .team-preview {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .team-preview h3 {
+            color: #3d7dca;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .team-preview-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .team-preview-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px;
+            background: white;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        .team-preview-item img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .team-status {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .team-status.full {
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .team-status.empty {
+            color: #f44336;
+        }
+
+        .main-content {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><path d="M45,50 C65,30 85,30 105,50 C125,70 145,70 165,50 C185,30 175,10 155,10 C135,10 115,30 95,30 C75,30 55,10 35,10 C15,10 25,30 45,50 Z" fill="%23ffcb05" opacity="0.1"/></svg>');
+            z-index: 0;
+        }
+
+        .placeholder-text {
+            text-align: center;
+            color: #666;
+            z-index: 1;
+        }
+
+        .placeholder-text h2 {
+            color: #3d7dca;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .placeholder-text p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+
+        .chat-container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .chat-header {
+            background: #3d7dca;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chat-header h3 {
+            font-size: 1.3rem;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .message {
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 85%;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .message.system {
+            background: #f0f0f0;
+            align-self: center;
+            color: #666;
+            font-style: italic;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .message.user {
+            background: #e1f5fe;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+
+        .message.other {
+            background: #ffecb3;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+
+        .message-sender {
+            font-weight: bold;
+            margin-bottom: 3px;
+            font-size: 0.85rem;
+        }
+
+        .chat-input {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .chat-input button {
+            background: #3d7dca;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .chat-input button:hover {
+            background: #2a6cb8;
+        }
+
+        .pokeball {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(#e53935 0%, #e53935 45%, #333 45%, #333 55%, white 55%, white 100%);
+            border-radius: 50%;
+            border: 2px solid #333;
+            position: relative;
+        }
+
+        .pokeball::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: #333;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+                height: auto;
+            }
+
+            .header {
+                grid-column: 1;
+            }
+
+            .menu {
+                grid-row: 2;
+            }
+
+            .main-content {
+                grid-row: 3;
+                min-height: 400px;
+            }
+
+            .chat-container {
+                grid-row: 4;
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>宝可梦对战平台</h1>
+        </header>
+
+        <aside class="menu">
+            <button class="menu-btn" onclick="window.location.href='team.html'">
+                <span class="pokeball"></span>
+                队伍搭建
+            </button>
+            <button class="menu-btn" id="ai-battle-btn">
+                <span class="pokeball"></span>
+                开始战斗 - AI
+            </button>
+            <button class="menu-btn" id="pvp-battle-btn">
+                <span class="pokeball"></span>
+                开始战斗 - 真人对战
+            </button>
+
+            <!-- 队伍预览区域 -->
+            <div class="team-preview">
+                <h3>当前队伍</h3>
+                <div class="team-preview-list" id="team-preview-list">
+                    <!-- 动态生成队伍预览 -->
+                </div>
+                <div class="team-status" id="team-status">队伍状态: 空</div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="placeholder-text">
+                <h2>欢迎来到宝可梦对战平台</h2>
+                <p>这是一个基于 Pokémon Showdown 的自定义宝可梦对战网站。</p>
+                <p>请从左侧菜单中选择功能开始使用。</p>
+                <div id="battle-ready" style="margin-top: 20px; display: none;">
+                    <p style="color: #4caf50; font-weight: bold;">✓ 队伍已就绪，可以开始对战！</p>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">当前版本：基础界面 v1.0</p>
+            </div>
+        </main>
+
+        <aside class="chat-container">
+            <div class="chat-header">
+                <span class="pokeball"></span>
+                <h3>对战聊天室</h3>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message system">
+                    欢迎来到宝可梦对战聊天室！在这里你可以与其他训练师交流。
+                </div>
+                <div class="message user">
+                    <div class="message-sender">小智</div>
+                    有人要和我对战吗？
+                </div>
+                <div class="message other">
+                    <div class="message-sender">小茂</div>
+                    我来做你的对手！
+                </div>
+                <div class="message system">
+                    系统消息：真新镇的小智和真新镇的小茂开始了宝可梦对战！
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="输入消息..." id="chat-input">
+                <button id="send-chat-btn">发送</button>
+            </div>
+        </aside>
+    </div>
+
+    <script type="module">
+        import { Localization } from './packages/battle-engine/src/index.js';
+        
+        // 工具函数：获取宝可梦图片URL
+        function getPokemonSpriteUrl(nameId) {
+            return `https://play.pokemonshowdown.com/sprites/xyani/${nameId.toLowerCase()}.gif`;
+        }
+
+        // 队伍管理类
+        class TeamManager {
+            constructor() {
+                this.currentTeam = Array(6).fill(null);
+                this.loadTeamFromStorage();
+            }
+
+            loadTeamFromStorage() {
+                try {
+                    const saved = localStorage.getItem('pokemonTeam');
+                    if (saved) {
+                        this.currentTeam = JSON.parse(saved);
+                        this.updateTeamDisplay();
+                    }
+                } catch (e) {
+                    console.error('加载队伍失败', e);
+                }
+            }
+
+            updateTeamDisplay() {
+                const teamPreviewList = document.getElementById('team-preview-list');
+                const teamStatus = document.getElementById('team-status');
+                const battleReady = document.getElementById('battle-ready');
+
+                teamPreviewList.innerHTML = '';
+
+                let filledSlots = 0;
+
+                this.currentTeam.forEach((pokemon, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'team-preview-item';
+
+                    if (pokemon) {
+                        filledSlots++;
+                        // 使用Localization翻译精灵名字
+                        const pokemonName = pokemon.nameId || pokemon.name || '';
+                        const translatedName = window.Localization?.translatePokemon(pokemonName) || pokemon.name || pokemonName;
+                        
+                        item.innerHTML = `
+                            <img src="${getPokemonSpriteUrl(pokemon.nameId)}" alt="${translatedName}"
+                                 onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2230%22 height=%2230%22><rect width=%2230%22 height=%2230%22 fill=%22%23f0f0f0%22/><text x=%2215%22 y=%2217%22 text-anchor=%22middle%22>?</text></svg>'">
+                            <span>${translatedName}</span>
+                        `;
+                    } else {
+                        item.innerHTML = `
+                            <div style="width: 30px; height: 30px; background: #f0f0f0; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: #999; font-size: 0.7rem;">${index + 1}</span>
+                            </div>
+                            <span style="color: #999;">空位</span>
+                        `;
+                    }
+
+                    teamPreviewList.appendChild(item);
+                });
+
+                // 更新队伍状态
+                if (filledSlots === 6) {
+                    teamStatus.textContent = '队伍状态: 完整';
+                    teamStatus.className = 'team-status full';
+                    battleReady.style.display = 'block';
+                } else if (filledSlots > 0) {
+                    teamStatus.textContent = `队伍状态: ${filledSlots}/6`;
+                    teamStatus.className = 'team-status';
+                    battleReady.style.display = 'none';
+                } else {
+                    teamStatus.textContent = '队伍状态: 空';
+                    teamStatus.className = 'team-status empty';
+                    battleReady.style.display = 'none';
+                }
+            }
+
+            getTeamCount() {
+                return this.currentTeam.filter(p => p !== null).length;
+            }
+
+            isTeamReady() {
+                return this.getTeamCount() === 6;
+            }
+        }
+
+        // 聊天室类
+        class ChatManager {
+            constructor() {
+                this.messagesContainer = document.getElementById('chat-messages');
+                this.chatInput = document.getElementById('chat-input');
+                this.sendButton = document.getElementById('send-chat-btn');
+
+                this.bindEvents();
+            }
+
+            bindEvents() {
+                this.sendButton.addEventListener('click', () => this.sendMessage());
+                this.chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.sendMessage();
+                });
+            }
+
+            sendMessage() {
+                const message = this.chatInput.value.trim();
+                if (message) {
+                    this.addMessage('你', message, 'user');
+                    this.chatInput.value = '';
+
+                    // 模拟回复
+                    setTimeout(() => {
+                        this.simulateReply();
+                    }, 1000);
+                }
+            }
+
+            addMessage(sender, content, type) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${type}`;
+                messageDiv.innerHTML = `
+                    <div class="message-sender">${sender}</div>
+                    ${content}
+                `;
+
+                this.messagesContainer.appendChild(messageDiv);
+                this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+            }
+
+            addSystemMessage(content) {
+                this.addMessage('系统', content, 'system');
+            }
+
+            simulateReply() {
+                const replies = [
+                    "听起来很有趣！",
+                    "你的宝可梦队伍怎么样？",
+                    "想对战吗？",
+                    "我喜欢这个平台！",
+                    "皮卡丘是最棒的！",
+                    "我刚组建了一支新队伍！",
+                    "有人要交换宝可梦吗？"
+                ];
+                const senders = ['小霞', '小刚', '莉佳', '马志士', '娜姿', '阿渡'];
+                const randomSender = senders[Math.floor(Math.random() * senders.length)];
+                const randomReply = replies[Math.floor(Math.random() * replies.length)];
+
+                this.addMessage(randomSender, randomReply, 'other');
+            }
+
+            // 添加队伍相关的系统消息
+            addTeamUpdateMessage(teamCount) {
+                if (teamCount === 6) {
+                    this.addSystemMessage('你的队伍已经完整，可以开始对战了！');
+                } else if (teamCount > 0) {
+                    this.addSystemMessage(`你的队伍目前有 ${teamCount} 只宝可梦，还需要 ${6 - teamCount} 只才能开始对战。`);
+                }
+            }
+        }
+
+        // 初始化
+        const teamManager = new TeamManager();
+        const chatManager = new ChatManager();
+
+        // 为战斗按钮添加点击事件
+        document.getElementById('ai-battle-btn').addEventListener('click', function() {
+            if (teamManager.isTeamReady()) {
+                window.location.href = 'ai-difficulty.html';
+            } else {
+                alert('队伍不完整！请先组建完整的6只宝可梦队伍。');
+                chatManager.addSystemMessage('队伍不完整，无法开始AI对战。请先组建完整的队伍。');
+            }
+        });
+
+        document.getElementById('pvp-battle-btn').addEventListener('click', function() {
+            if (teamManager.isTeamReady()) {
+                window.location.href = 'pvp-lobby.html';
+            } else {
+                alert('队伍不完整！请先组建完整的6只宝可梦队伍。');
+                chatManager.addSystemMessage('队伍不完整，无法开始真人对战。请先组建完整的队伍。');
+            }
+        });
+
+        // 监听页面可见性变化，当从队伍页面返回时刷新队伍显示
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                // 页面变为可见时（比如从队伍页面返回）
+                teamManager.loadTeamFromStorage();
+            }
+        });
+
+        // 加载Localization（用于翻译精灵名字和特性）
+        Localization.init().then(() => {
+            console.log('[主页] Localization初始化完成');
+            teamManager.updateTeamDisplay();
+        });
+
+        // 页面加载时也检查一次
+        window.addEventListener('load', function() {
+            teamManager.loadTeamFromStorage();
+
+            // 如果Localization已初始化，更新队伍显示（使用中文名字）
+            if (Localization?.isReady?.()) {
+                teamManager.updateTeamDisplay();
+            }
+
+            // 如果队伍有宝可梦，在聊天室显示提示
+            const teamCount = teamManager.getTeamCount();
+            if (teamCount > 0) {
+                chatManager.addTeamUpdateMessage(teamCount);
+            }
+        });
+
+        // 添加一个定期检查队伍变化的函数（用于处理跨标签页的情况）
+        setInterval(() => {
+            teamManager.loadTeamFromStorage();
+        }, 2000);
+    </script>
+</body>
+</html>
