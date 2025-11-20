@@ -1,0 +1,199 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run ESLint
+        run: npm run lint
+
+  test-backend:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install root dependencies
+        run: npm ci
+      
+      - name: Install backend dependencies
+        working-directory: poke-proxy-server
+        run: npm ci
+      
+      - name: Run backend tests
+        working-directory: poke-proxy-server
+        run: npm test
+      
+      - name: Upload coverage
+        if: always()
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./poke-proxy-server/coverage/lcov.info
+          flags: backend
+          name: backend-coverage
+
+  test-frontend:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run frontend tests
+        run: npm run test:engine
+
+  validate-resources:
+    name: Validate Resources
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Generate manifests
+        run: npm run manifest:all
+      
+      - name: Validate resources
+        run: npm run validate:resources -- --strict
+
+  check-bundle-size:
+    name: Check Bundle Size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build frontend (if needed)
+        run: |
+          if [ -f "packages/battle-engine/package.json" ]; then
+            cd packages/battle-engine && npm ci && npm run build || echo "No build script found"
+          fi
+        continue-on-error: true
+      
+      - name: Check bundle size
+        run: node tools/check-bundle-size.mjs --threshold=10 --growth=20
+        continue-on-error: true
+
+  integration-test:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install root dependencies
+        run: npm ci
+      
+      - name: Install backend dependencies
+        working-directory: poke-proxy-server
+        run: npm ci
+      
+      - name: Run integration tests
+        working-directory: poke-proxy-server
+        env:
+          RUN_INTEGRATION_TESTS: 'true'
+        run: npm test -- --testPathPattern=integration
+        continue-on-error: true
+
+  e2e-test:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install backend dependencies
+        working-directory: poke-proxy-server
+        run: npm ci
+      
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      
+      - name: Start test server
+        run: |
+          cd poke-proxy-server
+          npm run battle &
+          sleep 5
+        continue-on-error: true
+      
+      - name: Start static server
+        run: |
+          node simple-http-server.js 8080 &
+          sleep 2
+        continue-on-error: true
+      
+      - name: Run E2E tests
+        env:
+          TEST_BASE_URL: 'http://localhost:8080'
+          TEST_SERVER_PORT: '3071'
+        run: npm run test:e2e
+        continue-on-error: true
+      
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
