@@ -684,6 +684,7 @@
     
     const SHOWDOWN_CACHE_KEY = 'team_builder_showdown_cache_v1';
     const SHOWDOWN_CACHE_TTL = 1000 * 60 * 60 * 24; // 24h
+    const REQUIRED_DATASETS = ['moves', 'pokedex', 'items', 'abilities', 'learnsets'];
     let showdownDataPromise = null;
 
     function readShowdownCache() {
@@ -701,7 +702,20 @@
       }
     }
 
+    function isDatasetPopulated(obj) {
+      return obj && typeof obj === 'object' && Object.keys(obj).length > 0;
+    }
+
+    function isValidShowdownData(data) {
+      if (!data || typeof data !== 'object') return false;
+      return REQUIRED_DATASETS.every(key => isDatasetPopulated(data[key]));
+    }
+
     function writeShowdownCache(data) {
+      if (!isValidShowdownData(data)) {
+        console.warn('[TeamBuilder] 跳过缓存：Showdown 数据不完整');
+        return;
+      }
       try {
         if (typeof localStorage === 'undefined') return;
         localStorage.setItem(SHOWDOWN_CACHE_KEY, JSON.stringify({
@@ -710,6 +724,19 @@
         }));
       } catch (error) {
         console.warn('[TeamBuilder] 写入 Showdown 数据缓存失败', error);
+      }
+    }
+
+    function parseShowdownModule(text, exportName) {
+      try {
+        const sanitized = text
+          .replace(/export\s+const\s+/g, 'var ')
+          .replace(/export\s+default/g, 'var __default');
+        const fn = new Function(`"use strict"; ${sanitized}; return typeof ${exportName} !== 'undefined' ? ${exportName} : (typeof __default !== 'undefined' ? __default : {});`);
+        return fn();
+      } catch (error) {
+        console.warn(`[TeamBuilder] 解析 ${exportName} 模块失败`, error);
+        return {};
       }
     }
 
@@ -730,17 +757,7 @@
           return {};
         }
         const text = await localRes.text();
-        const prefix = `export const ${exportName} = `;
-        const startIndex = text.indexOf(prefix);
-        if (startIndex === -1) {
-          console.warn(`[TeamBuilder] 未在 ${local} 中找到 ${exportName}`);
-          return {};
-        }
-        let jsonString = text.slice(startIndex + prefix.length).trim();
-        if (jsonString.endsWith(';')) {
-          jsonString = jsonString.slice(0, -1);
-        }
-        return JSON.parse(jsonString);
+        return parseShowdownModule(text, exportName);
       } catch (error) {
         console.warn(`[TeamBuilder] 解析本地数据 ${local} 失败`, error);
         return {};
@@ -771,7 +788,7 @@
 
     async function ensureShowdownData(options = {}) {
       const forceRefresh = !!options.forceRefresh;
-      if (!forceRefresh && window.ShowdownData && Object.keys(window.ShowdownData.moves || {}).length) {
+      if (!forceRefresh && window.ShowdownData && isValidShowdownData(window.ShowdownData)) {
         return window.ShowdownData;
       }
       if (showdownDataPromise && !forceRefresh) {
@@ -779,12 +796,22 @@
       }
       if (!forceRefresh) {
         const cached = readShowdownCache();
-        if (cached) {
+        if (cached && isValidShowdownData(cached)) {
           window.ShowdownData = cached;
           return cached;
         }
+        if (cached) {
+          console.warn('[TeamBuilder] 缓存的 Showdown 数据不完整（可能是旧版本），将重新获取');
+        }
       }
       showdownDataPromise = fetchShowdownData()
+        .then(data => {
+          if (!isValidShowdownData(data)) {
+            console.warn('[TeamBuilder] 获取到的 Showdown 数据不完整，将继续使用内存中已有数据');
+            return window.ShowdownData || data;
+          }
+          return data;
+        })
         .catch(error => {
           console.warn('[TeamBuilder] 获取 Showdown 数据失败，使用空数据', error);
           return window.ShowdownData || { moves: {}, pokedex: {}, items: {}, abilities: {}, learnsets: {} };
