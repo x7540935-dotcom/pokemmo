@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>攻略编辑器 - 宝可梦对战平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Rounded MT Bold', 'Arial', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            grid-template-rows: 80px 1fr;
+            grid-gap: 20px;
+            height: calc(100vh - 40px);
+        }
+
+        .header {
+            grid-column: 1 / 3;
+            background: #ffcb05;
+            border: 5px solid #3d7dca;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            color: #3d7dca;
+            font-size: 2rem;
+            text-shadow: 2px 2px 0 #ffcb05, 4px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            background: #3d7dca;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 0 #1c5ca6;
+        }
+
+        .back-btn:hover {
+            background: #2a6cb8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 #1c5ca6;
+        }
+
+        .sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: #3d7dca;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .mode-selector {
+            margin-bottom: 20px;
+        }
+
+        .mode-btn {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #f0f0f0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .mode-btn:hover {
+            background: #e0e0e0;
+            border-color: #3d7dca;
+        }
+
+        .mode-btn.active {
+            background: #3d7dca;
+            color: white;
+            border-color: #3d7dca;
+        }
+
+        .pokemon-selector {
+            margin-top: 20px;
+        }
+
+        .pokemon-selector input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .pokemon-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .pokemon-item {
+            padding: 8px;
+            margin-bottom: 5px;
+            background: #f8f8f8;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .pokemon-item:hover {
+            background: #e8e8e8;
+        }
+
+        .pokemon-item.selected {
+            background: #3d7dca;
+            color: white;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .editor-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .editor-header h2 {
+            color: #3d7dca;
+            margin-bottom: 10px;
+        }
+
+        .editor-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #3d7dca;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 400px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3d7dca;
+            outline: none;
+        }
+
+        .file-upload {
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .file-upload:hover {
+            border-color: #3d7dca;
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        .file-upload-label {
+            cursor: pointer;
+            color: #3d7dca;
+            font-weight: bold;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background: #3d7dca;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .message {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .api-config {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .api-config label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .api-config input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 攻略编辑器</h1>
+            <button class="back-btn" onclick="window.location.href='index.html'">← 返回首页</button>
+        </div>
+
+        <div class="sidebar">
+            <h2>编写模式</h2>
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="global">全局战术攻略</button>
+                <button class="mode-btn" data-mode="pokemon">指定精灵攻略</button>
+                <button class="mode-btn" data-mode="import">导入文档</button>
+            </div>
+
+            <div class="pokemon-selector" id="pokemon-selector" style="display: none;">
+                <input type="text" id="pokemon-search" placeholder="搜索精灵...">
+                <div class="pokemon-list" id="pokemon-list">
+                    <!-- 精灵列表将通过JS动态加载 -->
+                </div>
+            </div>
+
+            <div class="api-config">
+                <label>API服务器地址：</label>
+                <input type="text" id="api-server" placeholder="http://localhost:3071" value="http://localhost:3071">
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="editor-header">
+                <h2 id="editor-title">全局战术攻略</h2>
+                <div class="message" id="message"></div>
+            </div>
+
+            <form class="editor-form" id="strategy-form">
+                <div class="form-group">
+                    <label>攻略标题：</label>
+                    <input type="text" id="strategy-title" placeholder="输入攻略标题..." required>
+                </div>
+
+                <div class="form-group" id="pokemon-name-group" style="display: none;">
+                    <label>精灵名称：</label>
+                    <input type="text" id="pokemon-name" placeholder="选择的精灵..." readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>对战格式：</label>
+                    <select id="strategy-format">
+                        <option value="gen9ou">Gen 9 OU</option>
+                        <option value="gen8ou">Gen 8 OU</option>
+                        <option value="gen7ou">Gen 7 OU</option>
+                        <option value="gen9uu">Gen 9 UU</option>
+                        <option value="gen9uu">Gen 9 Ubers</option>
+                        <option value="doubles">Doubles</option>
+                        <option value="vgc2024">VGC 2024</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="content-group">
+                    <label>攻略内容：</label>
+                    <textarea id="strategy-content" placeholder="在这里编写你的攻略内容...
+
+你可以包含：
+- 精灵定位与队伍角色
+- 推荐配置（特性、道具、技能）
+- 对线策略
+- 常见对手应对
+- 队伍搭配建议
+..." required></textarea>
+                </div>
+
+                <div class="form-group" id="file-upload-group" style="display: none;">
+                    <label>选择文档：</label>
+                    <div class="file-upload" onclick="document.getElementById('file-input').click()">
+                        <input type="file" id="file-input" accept=".txt,.md,.json">
+                        <div class="file-upload-label">📄 点击选择文件或拖拽文件到这里</div>
+                        <div id="file-name" style="margin-top: 10px; color: #666;"></div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary" onclick="clearForm()">清空</button>
+                    <button type="button" class="btn btn-primary" onclick="previewStrategy()">预览</button>
+                    <button type="submit" class="btn btn-success">保存攻略</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        const API_BASE = 'http://localhost:3071';
+        
+        // 初始化
+        let currentMode = 'global';
+        let selectedPokemon = null; // 存储英文名称（用于后端）
+        let pokemonList = []; // 存储英文名称列表
+        let chineseNameMap = {}; // 英文名称 -> 中文名称的映射
+
+        // 加载中文名称映射
+        async function loadChineseNames() {
+            try {
+                const response = await fetch('data/chinese/pokedex-cn.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    // 构建映射表：英文名称（小写） -> 中文名称
+                    chineseNameMap = {};
+                    for (const key in data) {
+                        const entry = data[key];
+                        if (entry.chineseName && entry.englishName) {
+                            // 支持多种英文名称格式
+                            const englishName = entry.englishName.toLowerCase();
+                            chineseNameMap[englishName] = entry.chineseName;
+                            // 也支持使用 key 作为映射
+                            chineseNameMap[key.toLowerCase()] = entry.chineseName;
+                        }
+                    }
+                    console.log(`[攻略编辑器] 已加载 ${Object.keys(chineseNameMap).length} 个中文名称映射`);
+                } else {
+                    console.warn('[攻略编辑器] 无法加载中文名称映射文件');
+                }
+            } catch (error) {
+                console.warn('[攻略编辑器] 加载中文名称映射失败:', error);
+            }
+        }
+
+        // 获取中文名称（如果没有映射则返回英文名称）
+        function getChineseName(englishName) {
+            if (!englishName) return englishName;
+            const normalized = englishName.toLowerCase();
+            return chineseNameMap[normalized] || englishName;
+        }
+
+        // 获取API服务器地址
+        function getApiBase() {
+            const apiInput = document.getElementById('api-server');
+            return apiInput.value || API_BASE;
+        }
+
+        // 初始化时加载中文映射
+        await loadChineseNames();
+
+        // 模式切换
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentMode = btn.dataset.mode;
+                updateEditorMode();
+            });
+        });
+
+        // 更新编辑器模式
+        function updateEditorMode() {
+            const pokemonSelector = document.getElementById('pokemon-selector');
+            const pokemonNameGroup = document.getElementById('pokemon-name-group');
+            const contentGroup = document.getElementById('content-group');
+            const fileUploadGroup = document.getElementById('file-upload-group');
+            const title = document.getElementById('editor-title');
+
+            if (currentMode === 'global') {
+                pokemonSelector.style.display = 'none';
+                pokemonNameGroup.style.display = 'none';
+                contentGroup.style.display = 'block';
+                fileUploadGroup.style.display = 'none';
+                title.textContent = '全局战术攻略';
+                selectedPokemon = null;
+            } else if (currentMode === 'pokemon') {
+                pokemonSelector.style.display = 'block';
+                pokemonNameGroup.style.display = 'block';
+                contentGroup.style.display = 'block';
+                fileUploadGroup.style.display = 'none';
+                title.textContent = '指定精灵攻略';
+                loadPokemonList();
+            } else if (currentMode === 'import') {
+                pokemonSelector.style.display = 'none';
+                pokemonNameGroup.style.display = 'none';
+                contentGroup.style.display = 'none';
+                fileUploadGroup.style.display = 'block';
+                title.textContent = '导入文档攻略';
+            }
+        }
+
+        // 加载精灵列表
+        async function loadPokemonList() {
+            try {
+                // 首先尝试从本地数据加载完整列表
+                try {
+                    const { BattlePokedex } = await import('./data/pokedex.js');
+                    if (BattlePokedex) {
+                        // 使用 BattlePokedex 中的 name 字段，并去重
+                        const allNames = Object.values(BattlePokedex)
+                            .map(p => p.name)
+                            .filter(name => name && name !== '')
+                            .filter((name, index, self) => self.indexOf(name) === index);
+                        pokemonList = allNames.sort();
+                        console.log(`[攻略编辑器] 已加载 ${pokemonList.length} 个精灵`);
+                        renderPokemonList();
+                        return;
+                    }
+                } catch (e) {
+                    console.warn('[攻略编辑器] 无法加载完整精灵列表，使用默认列表:', e);
+                }
+
+                // 如果加载失败，使用默认列表
+                const commonPokemon = [
+                    'Pikachu', 'Charizard', 'Blastoise', 'Venusaur', 'Lucario',
+                    'Garchomp', 'Gengar', 'Dragonite', 'Salamence', 'Tyranitar',
+                    'Greninja', 'Mimikyu', 'Landorus-Therian', 'Clefable', 'Heatran',
+                    'Tapu Koko', 'Tapu Lele', 'Corviknight', 'Dragapult', 'Zamazenta'
+                ];
+                
+                pokemonList = commonPokemon;
+                renderPokemonList();
+
+            } catch (error) {
+                console.error('[攻略编辑器] 加载精灵列表失败', error);
+            }
+        }
+
+        // 渲染精灵列表（显示中文名称，但保存英文名称）
+        function renderPokemonList() {
+            const searchTerm = document.getElementById('pokemon-search').value.toLowerCase();
+            
+            // 支持同时搜索中文和英文名称
+            const filtered = pokemonList.filter(p => {
+                const englishLower = p.toLowerCase();
+                const chineseName = getChineseName(p);
+                const chineseLower = chineseName.toLowerCase();
+                const searchLower = searchTerm.toLowerCase();
+                
+                // 匹配英文名称或中文名称
+                return englishLower.includes(searchLower) || chineseLower.includes(searchLower);
+            });
+            
+            const list = document.getElementById('pokemon-list');
+            list.innerHTML = filtered.map(pokemon => {
+                const chineseName = getChineseName(pokemon);
+                const displayName = chineseName !== pokemon ? `${chineseName} (${pokemon})` : pokemon;
+                const isSelected = selectedPokemon === pokemon;
+                
+                return `
+                <div class="pokemon-item ${isSelected ? 'selected' : ''}" 
+                     onclick="selectPokemon('${pokemon.replace(/'/g, "\\'")}')"
+                     title="${pokemon}">
+                    ${displayName}
+                </div>
+            `;
+            }).join('');
+        }
+
+        // 搜索精灵
+        document.getElementById('pokemon-search').addEventListener('input', renderPokemonList);
+
+        // 选择精灵（pokemon 参数是英文名称）
+        window.selectPokemon = function(pokemon) {
+            selectedPokemon = pokemon; // 保存英文名称用于后端
+            const chineseName = getChineseName(pokemon);
+            // 在输入框中显示中文名称（如果有），否则显示英文
+            const displayValue = chineseName !== pokemon ? `${chineseName} (${pokemon})` : pokemon;
+            document.getElementById('pokemon-name').value = displayValue;
+            renderPokemonList();
+        };
+
+        // 文件上传处理
+        document.getElementById('file-input').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            document.getElementById('file-name').textContent = `已选择: ${file.name}`;
+
+            try {
+                const text = await file.text();
+                document.getElementById('strategy-content').value = text;
+                showMessage('文件内容已加载到编辑器', 'success');
+            } catch (error) {
+                showMessage('读取文件失败: ' + error.message, 'error');
+            }
+        });
+
+        // 拖拽上传
+        const fileUpload = document.querySelector('.file-upload');
+        fileUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUpload.style.borderColor = '#3d7dca';
+        });
+
+        fileUpload.addEventListener('dragleave', () => {
+            fileUpload.style.borderColor = '#ddd';
+        });
+
+        fileUpload.addEventListener('drop', async (e) => {
+            e.preventDefault();
+            fileUpload.style.borderColor = '#ddd';
+
+            const file = e.dataTransfer.files[0];
+            if (!file) return;
+
+            document.getElementById('file-input').files = e.dataTransfer.files;
+            document.getElementById('file-name').textContent = `已选择: ${file.name}`;
+
+            try {
+                const text = await file.text();
+                document.getElementById('strategy-content').value = text;
+                showMessage('文件内容已加载到编辑器', 'success');
+            } catch (error) {
+                showMessage('读取文件失败: ' + error.message, 'error');
+            }
+        });
+
+        // 表单提交
+        document.getElementById('strategy-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const title = document.getElementById('strategy-title').value.trim();
+            const content = document.getElementById('strategy-content').value.trim();
+            const format = document.getElementById('strategy-format').value;
+            const pokemon = currentMode === 'pokemon' ? selectedPokemon : null;
+
+            if (!title || !content) {
+                showMessage('请填写标题和内容', 'error');
+                return;
+            }
+
+            if (currentMode === 'pokemon' && !pokemon) {
+                showMessage('请选择精灵', 'error');
+                return;
+            }
+
+            try {
+                const apiBase = getApiBase();
+                const response = await fetch(`${apiBase}/api/strategies`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        pokemon: pokemon,
+                        title: title,
+                        content: content,
+                        format: format,
+                        metadata: {
+                            mode: currentMode,
+                            imported: currentMode === 'import'
+                        }
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showMessage('攻略保存成功！RAG系统将在下次更新时读取。', 'success');
+                    // 可选：清空表单
+                    // clearForm();
+                } else {
+                    showMessage('保存失败: ' + (result.error || '未知错误'), 'error');
+                }
+
+            } catch (error) {
+                showMessage('保存失败: ' + error.message, 'error');
+                console.error('保存攻略失败', error);
+            }
+        });
+
+        // 清空表单
+        window.clearForm = function() {
+            if (confirm('确定要清空表单吗？')) {
+                document.getElementById('strategy-form').reset();
+                document.getElementById('pokemon-name').value = '';
+                selectedPokemon = null;
+                document.getElementById('file-name').textContent = '';
+                if (currentMode === 'pokemon') {
+                    renderPokemonList();
+                }
+            }
+        };
+
+        // 预览攻略
+        window.previewStrategy = function() {
+            const title = document.getElementById('strategy-title').value;
+            const content = document.getElementById('strategy-content').value;
+            const pokemon = document.getElementById('pokemon-name').value;
+            
+            if (!title || !content) {
+                showMessage('请先填写标题和内容', 'error');
+                return;
+            }
+
+            const preview = `
+标题: ${title}
+${pokemon ? `精灵: ${pokemon}` : '类型: 全局攻略'}
+内容:
+${content}
+            `.trim();
+
+            alert(preview);
+        };
+
+        // 显示消息
+        function showMessage(message, type) {
+            const messageEl = document.getElementById('message');
+            messageEl.textContent = message;
+            messageEl.className = `message ${type} show`;
+            
+            setTimeout(() => {
+                messageEl.classList.remove('show');
+            }, 5000);
+        }
+
+        // 初始化
+        updateEditorMode();
+    </script>
+</body>
+</html>
+
+

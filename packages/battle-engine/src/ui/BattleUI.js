@@ -208,8 +208,17 @@ class BattleUI {
    */
   updatePokemonDisplay(side, pokemonData) {
     const renderStartTime = performance.now();
-    const activeDom = side === 'p1' ? this.dom.playerActive : this.dom.opponentActive;
-    if (!activeDom) return;
+    
+    // 关键修复：根据玩家实际身份（playerSide）来判断显示位置
+    // - 如果玩家是 p1，p1 显示在左边（playerActive），p2 显示在右边（opponentActive）
+    // - 如果玩家是 p2，p2 显示在左边（playerActive），p1 显示在右边（opponentActive）
+    const isMyPokemon = side === this.playerSide;
+    const activeDom = isMyPokemon ? this.dom.playerActive : this.dom.opponentActive;
+    
+    if (!activeDom) {
+      console.warn(`[BattleUI] 无法找到 DOM 元素: side=${side}, playerSide=${this.playerSide}, isMyPokemon=${isMyPokemon}`);
+      return;
+    }
     const species = pokemonData.species || SpriteLoader.extractSpeciesFromDetails(pokemonData.details);
     const stableIdent = this.normalizeBattleIdent(pokemonData.ident || pokemonData.details || species);
     if (stableIdent) {
@@ -227,10 +236,12 @@ class BattleUI {
         activeDom.sprite.src = fallbackUrl;
       }
       activeDom.sprite.style.display = 'block';
+      // 关键修复：根据显示位置调整贴图方向
+      // 左边的宝可梦（playerActive）需要镜像翻转，右边的宝可梦（opponentActive）不需要
       if (typeof activeDom.sprite.style.setProperty === 'function') {
-        activeDom.sprite.style.setProperty('--sprite-scale', side === 'p1' ? '-1' : '1');
+        activeDom.sprite.style.setProperty('--sprite-scale', isMyPokemon ? '-1' : '1');
       } else {
-        activeDom.sprite.style.transform = `scaleX(${side === 'p1' ? -1 : 1})`;
+        activeDom.sprite.style.transform = `scaleX(${isMyPokemon ? -1 : 1})`;
       }
     }
 
@@ -241,11 +252,12 @@ class BattleUI {
     this.updateHPBarElement(activeDom.hp, conditionInfo.percent);
     this.renderStatusChips(activeDom.statuses, conditionInfo.statuses);
 
-    if (side === 'p1') {
+    // 关键修复：只有显示在左边（我方）的宝可梦才显示道具信息
+    if (isMyPokemon && activeDom.item) {
       const itemName = pokemonData.item || conditionInfo.item;
       if (itemName) {
         this.setItemDisplay(activeDom.item, activeDom.itemIcon, itemName);
-      } else if (activeDom.item) {
+      } else {
         activeDom.item.textContent = '无道具';
         if (activeDom.itemIcon) {
           activeDom.itemIcon.style.display = 'none';
@@ -271,20 +283,59 @@ class BattleUI {
   }
 
   /**
-   * 更新HP条
+   * 更新HP条（带滑动动画）
    */
   updateHPBarElement(bar, percent) {
     if (!bar) return;
     const value = Math.max(0, Math.min(100, percent ?? 0));
+    const currentWidth = parseFloat(bar.style.width) || 100;
+    
+    // 确保有 transition 样式
+    if (!bar.style.transition) {
+      bar.style.transition = 'width 0.6s ease-out, background 0.3s ease';
+    }
+    
+    // 更新宽度（触发动画）
     bar.style.width = `${value}%`;
-    bar.style.background = value > 50 ? '#4caf50' : value > 25 ? '#ff9800' : '#f44336';
+    
+    // 根据 HP 百分比设置颜色（带渐变）
+    if (value > 50) {
+      bar.style.background = 'linear-gradient(90deg, #4caf50, #52c234)';
+    } else if (value > 25) {
+      bar.style.background = 'linear-gradient(90deg, #ff9800, #ff6f00)';
+    } else {
+      bar.style.background = 'linear-gradient(90deg, #f44336, #d32f2f)';
+    }
+    
+    // 如果 HP 减少，添加震动效果
+    if (value < currentWidth) {
+      this.addHPShakeEffect(bar);
+    }
+  }
+
+  /**
+   * 添加 HP 条震动效果（当受到伤害时）
+   */
+  addHPShakeEffect(bar) {
+    const parent = bar.parentElement;
+    if (!parent) return;
+    
+    // 添加震动类
+    parent.classList.add('hp-shake');
+    
+    // 500ms 后移除震动类
+    setTimeout(() => {
+      parent.classList.remove('hp-shake');
+    }, 500);
   }
 
   /**
    * 更新宝可梦HP
    */
   updatePokemonHP(side, condition, ident) {
-    const activeDom = side === 'p1' ? this.dom.playerActive : this.dom.opponentActive;
+    // 关键修复：根据玩家实际身份来判断显示位置
+    const isMyPokemon = side === this.playerSide;
+    const activeDom = isMyPokemon ? this.dom.playerActive : this.dom.opponentActive;
     if (activeDom?.hp) {
       const info = this.parseCondition(condition);
       this.updateHPBarElement(activeDom.hp, info.percent);
@@ -408,7 +459,9 @@ class BattleUI {
     if (this.dom.switchSelect) {
       this.dom.switchSelect.disabled = true;
     }
-    if (this.dom.turnStatus) {
+    // 关键修复：不要立即修改状态文本，保留当前的等待状态提示
+    // 这样用户可以看到是"等待对手"还是"等待服务器响应"
+    if (this.dom.turnStatus && !this.dom.turnStatus.textContent.includes('等待')) {
       this.dom.turnStatus.textContent = '等待服务器响应...';
     }
   }
@@ -759,8 +812,11 @@ class BattleUI {
   }
 
   renderTeamPanel(sideId) {
-    const listEl = sideId === 'p1' ? this.dom.playerTeamList : this.dom.opponentTeamList;
-    const countEl = sideId === 'p1' ? this.dom.playerTeamCount : this.dom.opponentTeamCount;
+    // 关键修复：根据玩家实际身份来判断显示位置
+    // 如果 sideId 是玩家的 side，显示在左边的玩家队伍面板，否则显示在右边的对手队伍面板
+    const isMyTeam = sideId === this.playerSide;
+    const listEl = isMyTeam ? this.dom.playerTeamList : this.dom.opponentTeamList;
+    const countEl = isMyTeam ? this.dom.playerTeamCount : this.dom.opponentTeamCount;
     if (!listEl) return;
     listEl.innerHTML = '';
     const team = this.teamData[sideId] || [];
@@ -887,7 +943,9 @@ class BattleUI {
 
     const isActive = target.active;
     if (isActive) {
-      const dom = side === 'p1' ? this.dom.playerActive : this.dom.opponentActive;
+      // 关键修复：根据玩家实际身份来判断显示位置
+      const isMyPokemon = side === this.playerSide;
+      const dom = isMyPokemon ? this.dom.playerActive : this.dom.opponentActive;
       if (dom?.statuses) {
         this.renderStatusChips(dom.statuses, target.statuses);
       }

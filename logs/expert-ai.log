@@ -358,3 +358,75 @@
   "llmEnabled": false,
   "ragEnabled": true
 }
+[2025-11-23T02:46:50.550Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:46:50.553Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:46:50.556Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:48:00.773Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:48:00.774Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:48:00.774Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:49:03.051Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:49:03.052Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:49:03.054Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:49:09.784Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:49:09.785Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:49:09.787Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:49:12.774Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:49:12.774Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:49:12.775Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:49:14.805Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:49:14.806Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:49:14.807Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:49:19.129Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:49:19.128Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:49:19.133Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:49:23.394Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:49:23.395Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:49:23.397Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:53:03.467Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:53:03.467Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:53:03.468Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:53:17.909Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:53:17.910Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:53:17.912Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:53:21.996Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:53:21.996Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:53:21.998Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}
+[2025-11-23T02:53:25.240Z] [WARN] LLM客户端未配置API密钥，LLM功能将不可用
+[2025-11-23T02:53:25.240Z] [ExpertAI] [WARN] LLM未启用，将使用AdvancedAI作为降级方案
+[2025-11-23T02:53:25.242Z] [ExpertAI] [INFO] ExpertAI初始化完成 {
+  "llmEnabled": false,
+  "ragEnabled": true
+}

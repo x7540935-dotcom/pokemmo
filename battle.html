@@ -164,12 +164,22 @@
       background: #e9edf5;
       border-radius: 999px;
       overflow: hidden;
+      transition: transform 0.1s ease;
     }
     .pokemon-card__hp > div {
       height: 100%;
       width: 100%;
       background: linear-gradient(90deg, #52c234, #061700);
-      transition: width 0.3s ease;
+      transition: width 0.6s ease-out, background 0.3s ease;
+    }
+    /* HP 震动动画（受到伤害时） */
+    .hp-shake {
+      animation: hpShake 0.5s ease-in-out;
+    }
+    @keyframes hpShake {
+      0%, 100% { transform: translateX(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+      20%, 40%, 60%, 80% { transform: translateX(2px); }
     }
     .pokemon-card--fainted {
       filter: grayscale(1);
@@ -800,6 +810,31 @@
       const stateManager = new StateManager();
       const battleUI = new BattleUI(domElements);
       window.__battleUI__ = battleUI;
+      
+      // 关键修复：根据 URL 参数设置玩家身份（p1 或 p2）
+      // 这样 PvP 模式下，p2 玩家的视角才会正确显示
+      const urlParams = new URLSearchParams(window.location.search);
+      const mode = urlParams.get('mode') || 'ai';
+      if (mode === 'pvp') {
+        const urlSide = urlParams.get('side');
+        if (urlSide && (urlSide === 'p1' || urlSide === 'p2')) {
+          battleUI.playerSide = urlSide;
+          console.log(`[Main] ✅ 设置玩家身份: ${urlSide}`);
+        } else {
+          // 回退到 localStorage
+          const savedSide = localStorage.getItem('pvpSide');
+          if (savedSide && (savedSide === 'p1' || savedSide === 'p2')) {
+            battleUI.playerSide = savedSide;
+            console.log(`[Main] ⚠️ 从 localStorage 获取玩家身份: ${savedSide}`);
+          } else {
+            console.warn(`[Main] ⚠️ 无法确定玩家身份，使用默认值 p1`);
+          }
+        }
+      } else {
+        // AI 模式下，玩家总是 p1
+        battleUI.playerSide = 'p1';
+        console.log(`[Main] AI 模式，玩家身份固定为 p1`);
+      }
       const animationManager = new AnimationManager({
         sprites: {
           p1: domElements.playerActive.sprite,

@@ -662,6 +662,11 @@
       document.getElementById('room-id-display').style.display = 'none';
     }
 
+    // 将函数暴露到全局作用域，以便HTML的onclick可以访问
+    window.createRoom = createRoom;
+    window.joinRoom = joinRoom;
+    window.startBattle = startBattle;
+    
     // 页面加载时加载队伍
     window.addEventListener('load', () => {
       loadTeam();

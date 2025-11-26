@@ -3,8 +3,33 @@ import SpriteLoader from '../utils/SpriteLoader.js';
 import Localization from '../utils/Localization.js';
 
 /**
- * 阶段2：队伍预览
- * 负责显示双方队伍，处理首发宝可梦选择
+ * ═══════════════════════════════════════════════════════════════════════════
+ * 阶段 2：队伍预览（TeamPreviewPhase.js）
+ * ═══════════════════════════════════════════════════════════════════════════
+ * 
+ * 📋 核心职责
+ * ──────────────────────────────────────────────────────────────────────────
+ * TeamPreviewPhase 是队伍预览和首发选择阶段，负责：
+ *   1. 队伍展示
+ *      - 显示双方队伍的所有宝可梦
+ *      - 展示宝可梦的贴图、名称、类型等信息
+ *      - 支持鼠标悬停查看详细信息
+ * 
+ *   2. 首发选择
+ *      - 处理玩家选择首发宝可梦
+ *      - 验证选择的合法性
+ *      - 发送选择命令到服务器
+ * 
+ *   3. 协议处理
+ *      - 处理 |teampreview| 协议（如果有）
+ *      - 处理 |request| 协议（包含队伍信息）
+ *      - 等待服务器确认后进入下一阶段
+ * 
+ * ⚠️ 关键修复
+ * ──────────────────────────────────────────────────────────────────────────
+ * - 使用实际的 playerSide 而不是硬编码 'p1'
+ * - 支持 PvP 模式下的双方选择
+ * - 确保选择命令格式正确
  */
 class TeamPreviewPhase extends PhaseBase {
   constructor(battleEngine, stateManager, ui) {
@@ -197,9 +222,11 @@ class TeamPreviewPhase extends PhaseBase {
    * 处理 |request| 协议（队伍预览请求）
    */
   handleRequestProtocol(line) {
+    console.log(`[TeamPreviewPhase] 🔥 收到 request 协议，原始长度: ${line.length}`);
+    console.log(`[TeamPreviewPhase] request 协议前200字符: ${line.substring(0, 200)}...`);
     try {
       const req = JSON.parse(line.slice('|request|'.length));
-      console.log('[TeamPreviewPhase] 收到 request 协议');
+      console.log('[TeamPreviewPhase] ✅ request 协议解析成功');
       console.log('[TeamPreviewPhase] request.side.id:', req?.side?.id);
       console.log('[TeamPreviewPhase] request.teamPreview:', req?.teamPreview);
       console.log('[TeamPreviewPhase] request.active:', req?.active ? '存在' : '不存在');
@@ -319,21 +346,24 @@ class TeamPreviewPhase extends PhaseBase {
       if (selectedPokemon) {
         console.log(`[TeamPreviewPhase] 从 request 协议获取选中的宝可梦:`, selectedPokemon.ident);
         
+        // 关键修复：从 request 协议中获取玩家身份，而不是硬编码 'p1'
+        const playerSide = currentRequest.side.id;
+        
         // 更新状态
         const pokemonData = {
           ident: selectedPokemon.ident,
           species: SpriteLoader.extractSpeciesFromDetails(selectedPokemon.details),
           details: selectedPokemon.details,
           condition: selectedPokemon.condition || '100/100',
-          side: 'p1',
+          side: playerSide,
           moves: selectedPokemon.moves || []
         };
         
-        this.stateManager.updateActivePokemon('p1', pokemonData);
+        this.stateManager.updateActivePokemon(playerSide, pokemonData);
         
         // 更新UI
         if (this.ui) {
-          this.ui.updatePokemonDisplay('p1', pokemonData);
+          this.ui.updatePokemonDisplay(playerSide, pokemonData);
         }
       }
     }

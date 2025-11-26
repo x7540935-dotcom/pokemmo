@@ -272,6 +272,18 @@ class TeamLoadingPhase extends PhaseBase {
    * 处理协议消息
    */
   handleProtocol(line) {
+    // 关键修复：如果收到 |request| 协议，说明需要队伍预览，立即转换到 team-preview 阶段
+    // 这在 PvP 重连场景下很重要，因为可能先收到 request 而不是 poke
+    if (line.startsWith('|request|')) {
+      console.log('[TeamLoadingPhase] 收到 request 协议，立即转换到队伍预览阶段');
+      if (!this.hasReceivedPoke) {
+        this.hasReceivedPoke = true;
+        this.transitionTo('team-preview');
+        // 注意：转换后，主循环会重新处理这条消息给新阶段
+        return; // 转换后立即返回，让新阶段处理这条协议
+      }
+    }
+    
     // 处理 |poke| 协议（队伍预览信息）
     // 收到第一个 poke 时，立即转换到 team-preview 阶段，以便处理后续的 poke 协议
     if (line.startsWith('|poke|') && !this.hasReceivedPoke) {
@@ -279,6 +291,7 @@ class TeamLoadingPhase extends PhaseBase {
       this.hasReceivedPoke = true;
       this.transitionTo('team-preview');
       // 注意：转换后，主循环会重新处理这条消息给新阶段
+      return; // 转换后立即返回，让新阶段处理这条协议
     }
     
     // 检查是否收到 teampreview，表示队伍已加载完成
@@ -286,7 +299,9 @@ class TeamLoadingPhase extends PhaseBase {
       console.log('[TeamLoadingPhase] 收到 teampreview 协议');
       // 如果还没转换，现在转换
       if (!this.hasReceivedPoke) {
+        this.hasReceivedPoke = true;
         this.transitionTo('team-preview');
+        return; // 转换后立即返回，让新阶段处理这条协议
       }
     }
   }

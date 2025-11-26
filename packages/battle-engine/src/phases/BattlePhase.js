@@ -2,8 +2,60 @@ import PhaseBase from './PhaseBase.js';
 import MoveDataHelper from '../utils/MoveDataHelper.js';
 
 /**
- * 阶段4：对战阶段
- * 负责处理对战中的技能选择、换人等操作
+ * ═══════════════════════════════════════════════════════════════════════════
+ * 阶段 4：对战阶段（BattlePhase.js）
+ * ═══════════════════════════════════════════════════════════════════════════
+ * 
+ * 📋 核心职责
+ * ──────────────────────────────────────────────────────────────────────────
+ * BattlePhase 是对战系统的核心阶段，负责：
+ *   1. 对战流程管理
+ *      - 处理技能选择请求（|request| 协议）
+ *      - 渲染技能按钮和换人选项
+ *      - 处理用户选择（使用技能、换人）
+ *      - 管理回合状态和同步
+ * 
+ *   2. 协议处理
+ *      - |request|: 请求玩家选择（技能/换人）
+ *      - |switch|: 宝可梦切换
+ *      - |move|: 技能使用动画
+ *      - |-damage|: 伤害显示
+ *      - |win|: 对战结束
+ * 
+ *   3. UI 更新
+ *      - 更新技能按钮状态（可用/禁用）
+ *      - 更新换人选项
+ *      - 更新回合状态文本
+ *      - 处理强制换人场景
+ * 
+ *   4. 回合同步
+ *      - 检查 request.wait 字段（是否需要等待对手）
+ *      - 确保双方都选择后才能开始回合
+ *      - 处理蓄力技能等特殊情况
+ * 
+ * 🔄 阶段转换流程
+ * ──────────────────────────────────────────────────────────────────────────
+ * 
+ *   team-preview → BattlePhase (收到 |start| 协议)
+ *                        │
+ *                        ▼
+ *                   处理 |request| → 显示技能按钮
+ *                        │
+ *                        ▼
+ *                   用户选择 → 发送命令
+ *                        │
+ *                        ▼
+ *                   接收协议 → 更新UI
+ *                        │
+ *                        ▼
+ *                   对战结束 → 显示结果
+ * 
+ * ⚠️ 关键修复
+ * ──────────────────────────────────────────────────────────────────────────
+ * - 检查 request.wait 字段，如果为 true 则禁止操作
+ * - 发送选择后清除 request，避免重复发送
+ * - 支持强制换人场景（forceSwitch）
+ * - 处理蓄力技能的回合同步问题
  */
 class BattlePhase extends PhaseBase {
   constructor(battleEngine, stateManager, ui, animationManager = null) {
@@ -16,6 +68,13 @@ class BattlePhase extends PhaseBase {
     this.playerSide = null;
     this.awaitingSecondMoveSide = null;
     this.skipNextMoveForSide = { p1: false, p2: false };
+    
+    // 回合管理
+    this.currentTurn = null;
+    this.turnMoveQueue = [];  // 当前回合的 move 队列
+    this.turnDamageQueue = []; // 当前回合的伤害队列
+    this.isProcessingTurn = false;
+    this.pendingDamageUpdates = new Map(); // 待处理的伤害更新 { side: { condition, ident, timestamp } }
   }
 
   onEnter(data) {
@@ -91,6 +150,9 @@ class BattlePhase extends PhaseBase {
         // 只处理我方玩家的request
         if (req.side.id === this.playerSide) {
           console.log(`[BattlePhase] 这是我方 (${this.playerSide}) 的 request，开始渲染`);
+          console.log(`[BattlePhase] request.wait: ${req.wait}, request.teamPreview: ${req.teamPreview}, request.forceSwitch: ${req.forceSwitch}`);
+          
+          // 关键修复：无论 wait 是否为 true，都要更新 request，这样才能知道是否需要等待
           this.stateManager.setCurrentRequest(req);
           if (this.ui) {
             this.ui.updateTeamFromRequest(req.side.id, req.side.pokemon);
@@ -232,6 +294,7 @@ class BattlePhase extends PhaseBase {
 
   /**
    * 处理伤害协议
+   * 延迟更新 HP，等待 move 动画播放完成
    */
   handleDamageProtocol(line) {
     const parts = line.slice('|-damage|'.length).split('|');
@@ -242,16 +305,24 @@ class BattlePhase extends PhaseBase {
       const sideMatch = pokemonId.match(/^(p\d+)/);
       const side = sideMatch ? sideMatch[1] : null;
       
-      if (side && this.ui) {
-        this.ui.updatePokemonHP(side, condition, pokemonId);
+      if (side) {
+        // 保存伤害信息，等待动画播放后更新
+        this.pendingDamageUpdates.set(side, {
+          condition,
+          ident: pokemonId,
+          timestamp: Date.now()
+        });
+        
         if (this.isFaintedCondition(condition) && this.awaitingSecondMoveSide === side) {
           this.skipNextMoveForSide[side] = true;
         }
-        // 移除damage动画触发，因为move动画已经包含了伤害效果
-        // 这样可以避免move和damage协议都触发动画导致的重复
-        // if (this.animationManager) {
-        //   this.animationManager.play('damage', { side });
-        // }
+        
+        // 延迟处理伤害更新（等待 move 动画播放完成，约 620ms）
+        setTimeout(() => {
+          this.processPendingDamage(side);
+        }, 650);
+        
+        console.log(`[BattlePhase] 记录 ${side} 的伤害更新（将在动画后处理）`);
       }
     }
   }
@@ -279,33 +350,45 @@ class BattlePhase extends PhaseBase {
     }
     
     // 去重检查：如果最近已经处理过相同attacker的move协议，跳过
-    // 这可以防止因为协议重复处理导致的动画重复
     const moveKey = `${attackerSide}-${moveName}-${targetIdent || ''}`;
     const now = Date.now();
     
     if (!this._lastMoveKey || !this._lastMoveTime) {
-      // 第一次处理，记录
       this._lastMoveKey = moveKey;
       this._lastMoveTime = now;
     } else {
-      // 检查是否是重复的move协议（在200ms内，相同的attacker和move）
       const timeDiff = now - this._lastMoveTime;
       if (this._lastMoveKey === moveKey && timeDiff < 200) {
         console.log(`[BattlePhase] 检测到重复的move协议（${timeDiff}ms内），跳过动画: ${attackerSide} 使用 ${moveName}`);
         return;
       }
-      // 更新记录
       this._lastMoveKey = moveKey;
       this._lastMoveTime = now;
     }
     
     this.trackMoveOrder(attackerSide);
+    
+    // 将 move 动画加入回合队列，并立即播放
+    // AnimationManager 会处理回合内的动画顺序和间隔
     this.animationManager.play('move', {
       side: attackerSide,
       targetSide,
       moveType: moveInfo.category,
-      elementType: moveInfo.type
+      elementType: moveInfo.type,
+      moveName: moveName
     });
+  }
+
+  /**
+   * 处理待处理的伤害更新（在动画播放后调用）
+   */
+  processPendingDamage(side) {
+    const pending = this.pendingDamageUpdates.get(side);
+    if (pending && this.ui) {
+      console.log(`[BattlePhase] 处理 ${side} 的伤害更新（动画后）`);
+      this.ui.updatePokemonHP(side, pending.condition, pending.ident);
+      this.pendingDamageUpdates.delete(side);
+    }
   }
 
   extractSideFromIdent(ident = '') {
@@ -352,6 +435,7 @@ class BattlePhase extends PhaseBase {
 
   /**
    * 处理回复协议
+   * 回复也延迟更新，保持与伤害更新的一致性
    */
   handleHealProtocol(line) {
     const parts = line.slice('|-heal|'.length).split('|');
@@ -363,7 +447,10 @@ class BattlePhase extends PhaseBase {
       const side = sideMatch ? sideMatch[1] : null;
       
       if (side && this.ui) {
-        this.ui.updatePokemonHP(side, condition, pokemonId);
+        // 延迟更新，与伤害更新保持一致
+        setTimeout(() => {
+          this.ui.updatePokemonHP(side, condition, pokemonId);
+        }, 650);
       }
     }
   }
@@ -400,13 +487,41 @@ class BattlePhase extends PhaseBase {
   handleTurnProtocol(line) {
     const parts = line.slice('|turn|'.length).split('|');
     const turn = parseInt(parts[0]) || 0;
-    this.stateManager.updateBattleState({ turn: turn });
+    
+    // 如果回合数变化，结束上一回合的动画处理
+    if (this.currentTurn !== null && this.currentTurn !== turn) {
+      this.endTurnAnimations();
+    }
+    
+    // 开始新回合
+    this.currentTurn = turn;
+    this.turnMoveQueue = [];
+    this.turnDamageQueue = [];
+    this.isProcessingTurn = false;
     this.awaitingSecondMoveSide = null;
     this.skipNextMoveForSide = { p1: false, p2: false };
+    
+    this.stateManager.updateBattleState({ turn: turn });
+    
+    if (this.animationManager) {
+      this.animationManager.startTurn(turn);
+    }
     
     if (this.ui) {
       this.ui.updateTurnNumber(turn);
     }
+    
+    console.log(`[BattlePhase] 开始回合 ${turn}`);
+  }
+
+  /**
+   * 结束当前回合的动画处理
+   */
+  endTurnAnimations() {
+    if (this.animationManager) {
+      this.animationManager.endTurn();
+    }
+    console.log(`[BattlePhase] 结束回合 ${this.currentTurn} 的动画处理`);
   }
 
   /**
@@ -574,11 +689,32 @@ class BattlePhase extends PhaseBase {
     console.log(`[BattlePhase] ========== 处理用户操作 ==========`);
     console.log(`[BattlePhase] action: ${action}`, data);
     
+    // 关键修复：检查当前 request 是否允许选择
+    const req = this.stateManager.getCurrentRequest();
+    if (!req) {
+      console.warn(`[BattlePhase] ⚠️ 没有当前的 request，无法处理操作`);
+      return;
+    }
+    
+    // 检查 wait 字段，如果为 true，说明需要等待对手，不允许选择
+    if (req.wait === true) {
+      console.warn(`[BattlePhase] ⚠️ request.wait 为 true，需要等待对手，不允许选择`);
+      if (this.ui) {
+        this.ui.updateTurnStatus('等待对手...');
+      }
+      return;
+    }
+    
+    // 检查是否是队伍预览请求
+    if (req.teamPreview) {
+      console.warn(`[BattlePhase] ⚠️ 这是队伍预览请求，不应该在这里处理`);
+      return;
+    }
+    
     if (action === 'use-move') {
       const moveIndex = data.moveIndex;
       console.log(`[BattlePhase] 使用技能，索引: ${moveIndex}`);
       
-      const req = this.stateManager.getCurrentRequest();
       console.log(`[BattlePhase] 当前 request:`, req ? '存在' : '不存在');
       
       if (req) {
@@ -594,9 +730,14 @@ class BattlePhase extends PhaseBase {
       const sent = this.battleEngine.sendChoice(command);
       console.log(`[BattlePhase] 命令发送${sent ? '成功' : '失败'}`);
       
-      // 暂时禁用UI
+      // 关键修复：发送选择后，清除当前的 request，避免重复发送
+      // 但是保留 UI 禁用状态，等待新的 request 到达
+      this.stateManager.setCurrentRequest(null);
+      
+      // 暂时禁用UI，等待新的 request
       if (this.ui) {
         this.ui.disableAllActions();
+        this.ui.updateTurnStatus('等待对手...');
       }
     } else if (action === 'switch-pokemon') {
       const position = data.position;
@@ -606,9 +747,14 @@ class BattlePhase extends PhaseBase {
       const sent = this.battleEngine.sendChoice(command);
       console.log(`[BattlePhase] 命令发送${sent ? '成功' : '失败'}`);
       
-      // 暂时禁用UI
+      // 关键修复：发送选择后，清除当前的 request，避免重复发送
+      // 但是保留 UI 禁用状态，等待新的 request 到达
+      this.stateManager.setCurrentRequest(null);
+      
+      // 暂时禁用UI，等待新的 request
       if (this.ui) {
         this.ui.disableAllActions();
+        this.ui.updateTurnStatus('等待对手...');
       }
     } else {
       console.warn(`[BattlePhase] 未知的操作类型: ${action}`);
@@ -617,6 +763,13 @@ class BattlePhase extends PhaseBase {
 
   onExit() {
     // 清理工作
+    if (this.currentTurn !== null) {
+      this.endTurnAnimations();
+    }
+    this.currentTurn = null;
+    this.turnMoveQueue = [];
+    this.turnDamageQueue = [];
+    this.pendingDamageUpdates.clear();
   }
 }
 

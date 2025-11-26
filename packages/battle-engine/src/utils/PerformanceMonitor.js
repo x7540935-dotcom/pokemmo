@@ -94,12 +94,21 @@ class PerformanceMonitor {
     }
 
     // 输出到控制台（开发环境）
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(`[PerformanceMonitor] ${name.toUpperCase()}:`, {
-        value: metric.value,
-        rating: metric.rating,
-        unit: metric.name === 'CLS' ? '' : 'ms'
-      });
+    // 浏览器环境中没有 process.env，使用其他方式检测开发环境
+    try {
+      const isDevelopment = typeof process === 'undefined' || 
+                           (typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== 'production') ||
+                           (typeof window !== 'undefined' && window.location && 
+                            (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'));
+      if (isDevelopment) {
+        console.log(`[PerformanceMonitor] ${name.toUpperCase()}:`, {
+          value: metric.value,
+          rating: metric.rating,
+          unit: metric.name === 'CLS' ? '' : 'ms'
+        });
+      }
+    } catch (e) {
+      // 忽略错误，避免影响性能监控
     }
   }
 
@@ -128,8 +137,17 @@ class PerformanceMonitor {
     }
 
     // 输出到控制台（开发环境）
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(`[PerformanceMonitor] 自定义指标 ${name}:`, value, metadata);
+    // 浏览器环境中没有 process.env，使用其他方式检测开发环境
+    try {
+      const isDevelopment = typeof process === 'undefined' || 
+                           (typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== 'production') ||
+                           (typeof window !== 'undefined' && window.location && 
+                            (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'));
+      if (isDevelopment) {
+        console.log(`[PerformanceMonitor] 自定义指标 ${name}:`, value, metadata);
+      }
+    } catch (e) {
+      // 忽略错误，避免影响性能监控
     }
   }
 
